@@ -60,5 +60,13 @@ Access in browser:
 
 Should see page with "The install worked successfully! Congratulations!"
 
+### 3. Use the django-admin command to run startapp
+
+```
+# Run in virtualenv window
+cd /var/www/artsyvisions.com/htdocs/artsyvisions.com   # `goa`
+cd Site/
+django-admin startapp content
+```
 
 
