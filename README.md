@@ -41,3 +41,24 @@ which python         ## /var/www/artsyvisions.com/htdocs/artsyvisions.com/virtua
 python               ## Python 3.5.2 - OK to use with django 2.1
 pip install Django   ## Successfully installed Django-2.1 pytz-2018.5
 ```
+
+### 2. Use the django-admin command to run startproject
+
+```
+cd /var/www/artsyvisions.com/htdocs/artsyvisions.com   # `goa`
+. bin/artsyvisions_env.sh
+django-admin startproject Site
+cd Site
+python manage.py runserver 0.0.0.0:8001     ## Ignore warnings about migrations
+```
+
+Note: seeourminds.com uses port 8000.
+
+Access in browser:
+
+- http://127.0.0.1:8001/
+
+Should see page with "The install worked successfully! Congratulations!"
+
+
+
