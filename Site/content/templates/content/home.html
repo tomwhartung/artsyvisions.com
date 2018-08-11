@@ -1,0 +1,138 @@
+{% extends "content/base.html" %}
+Yo homie!!
+
+{% load static %}
+
+{% block content %}
+ <!-- First Parallax Container -->
+ <div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+   <div class="container">
+    <h1 class="header center black-text"><b>ArtsyVisions.com</b></h1>
+    <div class="row center">
+     <h4 class="header col s12 black-text"><b><q>Visualizing Personalities and Relationships Since 1989</q>&nbsp;&trade;</b></h4>
+    </div>
+    <div class="center row">
+     <a href="#visions-all" class="btn-large waves-effect waves-light blue-grey darken-2 z-depth-5">See All Visions</a>
+    </div>
+   </div>
+  </div>
+  <div class="parallax">
+   <img src="{% static 'content/images/Washington-background_1.jpg' %}"
+        alt="Large image of George Washington's personality, ISTJ, containing more Green and Yellow squares and fewer Red and Blue squares">
+  </div><!-- .parallax -->
+ </div><!-- .parallax-container -->
+
+ <!-- Icon Section -->
+ <div class="container">
+  <div class="section">
+   <div class="row z-depth-3">
+    <div class="col s12 m4">
+     <div class="icon-block">
+      <h2 class="center red-text"><i class="material-icons">person</i></h2>
+      <h4 class="center">Persons</h4>
+      <p class="dark">
+       See the personalities of selected individuals &mdash; both real and fictional &mdash; from
+        <a href='https://SeeOurMinds.com' title='Link to the Home page at SeeOurMinds.com' target='_blank'>SeeOurMinds.com</a>,
+        and read stories about how the <q>Spiritual Portraits</q> &trade; depict the personalities.
+      </p>
+      <div class="row center">
+       <a href="#visions-persons" class="btn-small waves-effect waves-light red darken-2 z-depth-3">Visions of Individuals
+        <i class="material-icons">person</i></a>
+      </div>
+     </div>
+    </div><!-- .col -->
+    <div class="col s12 m4">
+     <div class="icon-block">
+      <h2 class="center green-text"><i class="material-icons">group</i></h2>
+      <h4 class="center">People</h4>
+      <p class="dark">
+       See the difference between the <a href='https://groja.com' title='Link to the Home page at Groja.com' target='_blank'>Grojas</a>
+        &mdash; the Graphical Representations of Jungian Archetypes &mdash; of two people,
+        and read stories about how the images reflect the similarities and differences in their personalities.
+      </p>
+      <div class="row center">
+       <a href="#visions-pairs" class="btn-small waves-effect waves-light green darken-2 z-depth-3">Visions of Pairs
+        <i class="material-icons">group</i></a>
+      </div>
+     </div>
+    </div><!-- .col -->
+    <div class="col s12 m4">
+     <div class="icon-block">
+      <h2 class="center blue-text"><i class="material-icons">group_add</i></h2>
+      <h4 class="center">Groups</h4>
+      <p class="dark">
+       See how people with different personalities can complement one another on a team,
+        and learn how a diverse team is more than the sum of its parts.
+      </p>
+      <div class="row center">
+       <a href="#visions-groups" class="btn-small waves-effect waves-light blue darken-2 z-depth-3">Visions of Groups
+        <i class="material-icons">group_add</i></a>
+      </div>
+     </div>
+    </div><!-- .col -->
+   </div><!-- .row -->
+  </div><!-- .section -->
+ </div><!-- .container -->
+
+ <!-- Second Parallax Container -->
+ <div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+   <div class="container">
+    <div class="row center">
+     <h4 class="header col s12 black-text"><b>Join Our Email List and Get Your Personal Spiritual Portrait &trade; &mdash; Free!</b></h4>
+    </div>
+   </div><!-- .container -->
+  </div><!-- .section -->
+  <div class="parallax">
+   <img src="{% static 'content/images/Franklin-background_2.jpg' %}"
+        alt="Large image of Benjamin Franklin's personality, ENTP, containing more Blue and Green squares and fewer Yellow and Red squares">
+  </div><!-- .parallax -->
+ </div><!-- .parallax-container -->
+
+
+ <!-- Bottom Section -->
+ <div class="container">
+  <div class="section">
+   <div class="row z-depth-3">
+    <div class="col s12 center">
+     <h3><i class="mdi-content-send brown-text"></i></h3>
+     <h4><b>Limited Time Free Offer!</b></h4>
+     <p class="left-align dark">
+      We are pleased to offer &mdash; for a <em>limited time only</em> &mdash; a free Spiritual Portrait &trade; to people who join our email list.
+      To take advantage of this <em>free</em> offer, follow these steps:
+     </p>
+     <ol class="left-align dark">
+      <li>Join our email list &mdash; we send only one or two emails per month, <em>at most</em>
+      </li>
+      <li>Take the SeeOurMinds Quiz at SeeOurMinds.com &mdash; the more questions you can find time to answer, the better
+      </li>
+      <li>Send your results in an email to freeoffer@seeourminds.com &mdash; being sure to send it from the account you used to join the list
+      </li>
+     </ol>
+     <p class="left-align dark">
+      Give us a few days and &mdash; within a week &mdash; we will create and send you your personalized Spiritual Portrait, &trade; based on
+       your score on the SeeOurMinds Quiz.
+     </p>
+    </div><!-- .col -->
+   </div><!-- .row -->
+  </div><!-- .section -->
+ </div><!-- .container -->
+
+ <!-- Third Parallax Container -->
+ <div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+   <div class="container">
+    <div class="center row">
+     <a href="https://groja.com/conversions/free_offer" class="btn-large waves-effect waves-light blue-grey darken-2 z-depth-5">
+      Get Your Free Spiritual Portrait! &trade;</a>
+    </div>
+   </div>
+  </div><!-- .section -->
+  <div class="parallax">
+   <img src="{% static 'content/images/Henry-background_3.jpg' %}"
+        alt="Large image of Patrick Henry's personality, ESFJ, containing more Red and Yellow squares and fewer Green and Blue squares">
+  </div><!-- .parallax -->
+ </div><!-- .parallax-container -->
+
+{% endblock %}
