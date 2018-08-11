@@ -15,6 +15,18 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('home', views.home, name='home'),
+    path('legal/affiliate_marketing_disclosure',
+        views.affiliate_marketing_disclosure,
+        name='affiliate_marketing_disclosure'),
+    path('legal/privacy_policy',
+        views.privacy_policy,
+        name='privacy_policy'),
+    path('legal/questionnaire_disclaimer',
+        views.questionnaire_disclaimer,
+        name='questionnaire_disclaimer'),
+    path('legal/terms_of_service',
+        views.terms_of_service,
+        name='terms_of_service'),
 
 ]
 
