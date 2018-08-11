@@ -13,6 +13,11 @@ New version of artsyvisions.com .
 - Install django: https://docs.djangoproject.com/en/2.1/topics/install/
 - Version check: https://docs.djangoproject.com/en/2.1/faq/install/#faq-python-version-support
 
+### Django Templates
+
+- Template tutorial for 2.1: https://docs.djangoproject.com/en/2.1/intro/tutorial03/
+- Template confusion fixer: https://tutorial.djangogirls.org/en/template_extending/
+
 ### Front End: Using Materialize
 
 - https://github.com/tomwhartung/always_learning_google_products/blob/master/material_design/README.md
@@ -151,6 +156,53 @@ Should see the "Hello world" message.
 
 ### 5. Add in the Materialize code
 
-Here we deviate from the process used for seeourminds.com a bit, because we are using Materialize.
+Here we deviate from the process used for seeourminds.com just a little bit, because we are using Materialize.
+The steps are essentially the same, it's just we are getting the files from a different place, i.e.:
 
+- `/var/www/always_learning/always_learning_google_products/material_design/04-prototypes/Site`
+
+#### 5.1 Add Templates
+
+Copy the materialize `index.html` into `content/templates/content` , rename to home.html , and edit as appropriate
+
+```
+cd /var/www/artsyvisions.com/htdocs/artsyvisions.com/Site/content     ## `goavsc`
+mkdir -p templates/content/
+cd templates/content/
+cp ...
+mv index.html home.html
+vi home.html
+```
+
+We will need to separate out the markup we want to use on all pages, e.g., head tag markup, navigation, and footer markup, into base.html .
+Might as well do it now.
+
+Using the templates in seeourminds.com as a guide....
+
+#### 5.2 Add Static Files
+
+Copy the supporting materialize css and js into the proper directories, `static/content/css` and `static/content/js`
+
+```
+cd /var/www/artsyvisions.com/htdocs/artsyvisions.com/Site/content     ## `goavsc`
+mkdir -p Static/content/
+cd Static/content/
+cp ...
+```
+
+#### 5.3 Update the View
+
+Update views.py to use the template instead of just returning the "hello world" text.
+
+Using the templates in seeourminds.com as a guide....
+
+These two references were quite helpful:
+
+- https://docs.djangoproject.com/en/2.1/intro/tutorial03/
+- https://tutorial.djangogirls.org/en/template_extending/
+
+### 6. Apache Setup?
+
+Not sure whether we will do that.
+Might take it straight to the cloud.
 
