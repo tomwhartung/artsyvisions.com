@@ -102,22 +102,52 @@ Edit `gitignored/Site/Site/settings.py` , using the `settings.py` file from seeo
     - Or similar
 - Add code to set `DEBUG` based on values from the run environment
 - Update `ALLOWED_HOSTS`
+  - Add '.artsyvisions.com'
+  - Add '0.0.0.0'
+  - Add '127.0.0.1'
 - Add `'content',` at the end of the list of `INSTALLED_APPS`
 - Comment out the definition of `DATABASES` for now (and possibly forever!)
 - Update the section at the end concerning static files
   - Add the comments
   - Add the declaration of STATIC_ROOT, changing `seeourminds` to `artsyvisions` as necessary
 
+Run and check in browser, to ensure it still works:
+
 ```
-vi settings.py
+cd /var/www/artsyvisions.com/htdocs/artsyvisions.com   # `goa`
+cd Site/bin
+./run.sh
+```
+
+Access in browser:
+
+- http://127.0.0.1:8001/
+
+When it works ok, check the new `settings.py` file into **RCS** - NOT github!!
+
+```
+cd /var/www/artsyvisions.com/htdocs/artsyvisions.com   # `goa`
+cd gitignored/Site/Site/
 ci -l settings.py   # Check in to RCS - "First pass at updates needed.  For details, see Step 4.1 in the README.md file."
 ```
 
 #### 4.2 The Other Files
 
-Add routes to content/urls.py, so that visitors are "taken to" views.index
-Edit content/views.py
-Edit Site/urls.py, so that we use the routes in content/urls.py
+Edit the other important files, using the versions in seeourminds.com as a guide, as follows:
+
+- Edit `Site/content/views.py`, adding code from the tutorial:
+  - https://docs.djangoproject.com/en/2.1/intro/tutorial01/#write-your-first-view
+- Edit `Site/content/urls.py`
+  - Add a route, so that visiting the site invokes `views.index` , the `index()` function in `views.py`
+- Edit `Site/Site/urls.py` , so that we use the routes in `content/urls.py`
+  - Add route for content:
+    - `path('', include('content.urls')),`
+
+Access in browser:
+
+- http://127.0.0.1:8001/
+
+Should see the "Hello world" message.
 
 ### 5. Add in the Materialize code
 
