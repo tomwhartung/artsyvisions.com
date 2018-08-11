@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% block head %}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>
+    {% if title %}
+      {{ title }}
+    {% else %}
+      {{ 'ArtsyVisions.com' }}
+    {% endif %}
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'content/css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'content/css/artsyvisions.css' %}">
+    <link rel="shortcut icon" href="{% static 'content/favicon.ico' %}">
+  {% endblock %}
+</head>
+
+<body>
+  <!-- Navigation Section -->
+  <div id="main-navigation">
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="left-align brand-logo">
+          <img src="{% static 'content/images/jmws_logo-from_github.jpg' %}" width="55" height="55" class="z-depth-3"
+               alt="Image of INFP containing more blue and red squares and fewer yellow and green squares.">
+        </a>
+        <!-- Navigation for Desktop - hides on medium-size and smaller screens -->
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#Home">Home</a></li>
+          <li><a class='dropdown-trigger' href='#' data-target='visions-dropdown'>Visions</a></li>
+          <li><a class='dropdown-trigger' href='#' data-target='privacy-dropdown'>Privacy</a></li>
+        </ul>
+        <ul id='visions-dropdown' class='dropdown-content'>
+          <li><a href="#visions-persons">Persons</a></li>
+          <li><a href="#visions-pairs">Pairs</a></li>
+          <li><a href="#visions-groups">Groups</a></li>
+        </ul>
+        <ul id='privacy-dropdown' class='dropdown-content'>
+          <li><a href="#legal-privacy_policy">Privacy Policy</a></li>
+          <li><a href="#legal-terms_of_service">Terms of Service</a></li>
+          <li><a href="#legal-disclosure">Disclosure</a></li>
+        </ul>
+        <!-- Navigation for Mobile - shows on medium-size and smaller screens -->
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#visions-all">Visions</a></li>
+          <li>
+            <ul>
+              <li class="mobile-submenu-item"><a href="#visions-persons">Persons</a></li>
+              <li class="mobile-submenu-item"><a href="#visions-pairs">Pairs</a></li>
+              <li class="mobile-submenu-item"><a href="#visions-groups">Groups</a></li>
+            </ul>
+          </li>
+          <li><a>Privacy</a></li>
+          <li>
+            <ul>
+              <li class="mobile-submenu-item"><a href="#legal-disclosure">Disclosure</a></li>
+              <li class="mobile-submenu-item"><a href="#legal-privacy_policy">Privacy Policy</a></li>
+              <li class="mobile-submenu-item"><a href="#legal-terms_of_service">Terms of Service</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- .nav-wrapper .container -->
+    </nav>
+  </div><!-- #main-navigation -->
+
+  {% block content %}
+  {% endblock %}
+
+  {% block footer %}
+  <!-- Footer -->
+  <footer class="page-footer black lighten-2">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <p class="center white-text">
+            Copyright &copy; 2018&nbsp;by&nbsp;
+              <a class="blue-text text-lighten-3" href="https://tomwhartung.com">Tom W. Hartung</a>&nbsp;and&nbsp;
+              <a class="blue-text text-lighten-3" href="https://JooMooWebSites.com">JooMooWebSites LLC</a>.
+            All Rights Reserved.
+          </p>
+          <p class="center white-text">
+            <b>Your use of this site implies you consent to our&nbsp;
+              <a class="blue-text text-lighten-3" href="/legal/terms_of_service">Terms of Service</a>&nbsp;and&nbsp;
+              <a class="blue-text text-lighten-3" href="/legal/privacy_policy">Privacy Policy</a>.</b>
+          </p>
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </footer>
+  {% endblock %}
+
+  <!-- JavaScript - Note: Import jQuery before materialize.js -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{% static 'content/js/materialize.js' %}"></script>
+  <script src="{% static 'content/js/init.js' %}"></script>
+
+</body>
+</html>
