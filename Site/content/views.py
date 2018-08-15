@@ -27,6 +27,61 @@ def home(request):
 
 ##
 ## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+##   Views for Visions Pages
+## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+##
+
+
+def visions_all(request):
+
+    """ Load and render the visions/all template """
+
+    title = 'All Visions - ArtsyVisions.com';
+    template = 'content/visions/all.html'
+    context = {
+        'title': title,
+    }
+    return render(request, template, context)
+
+
+def visions_groups(request):
+
+    """ Load and render the visions/groups template """
+
+    title = 'Groups - ArtsyVisions.com';
+    template = 'content/visions/groups.html'
+    context = {
+        'title': title,
+    }
+    return render(request, template, context)
+
+
+def visions_people(request):
+
+    """ Load and render the visions/people template """
+
+    title = 'Pairs of People - ArtsyVisions.com';
+    template = 'content/visions/people.html'
+    context = {
+        'title': title,
+    }
+    return render(request, template, context)
+
+
+def visions_person(request):
+
+    """ Load and render the visions/person template """
+
+    title = 'Individuals - ArtsyVisions.com';
+    template = 'content/visions/person.html'
+    context = {
+        'title': title,
+    }
+    return render(request, template, context)
+
+
+##
+## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ##   Views for Legal Pages
 ## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ##
