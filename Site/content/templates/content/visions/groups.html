@@ -1,14 +1,47 @@
 {% extends "content/base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="container">
  <div class="section">
   <div class="row z-depth-3">
    <div class="col s12">
-    <h1>Template for All Visions</h1>
+    <h1 class="center">Visions of Groups</h1>
 
    </div><!-- .col -->
   </div><!-- .row -->
  </div><!-- .section -->
 </div><!-- .container -->
+
+<div class="container">
+ <div class="section">
+  <div class="row">
+
+   <div class="col s12">
+    <h2 class="header">Horizontal Card</h2>
+    <div class="card horizontal">
+     <div class="card-image">
+      <img src="{% static 'content/images/visions/groups/esfj-patrick_henry-1.jpg' %}">
+     </div>
+     <div class="card-image">
+      <img src="{% static 'content/images/visions/groups/esfj-charles_foster_kane-1.jpg' %}">
+     </div>
+     <div class="card-image">
+      <img src="{% static 'content/images/visions/groups/esfj-donald_trump-1.jpg' %}">
+     </div>
+     <div class="card-stacked">
+      <div class="card-content">
+       <p>I am a very simple card. I am good at containing small bits of information.</p>
+      </div>
+      <div class="card-action">
+       <a href="#">This is a link</a>
+      </div>
+     </div>
+    </div><!-- .card -->
+   </div><!-- .col -->
+
+  </div><!-- .row -->
+ </div><!-- .section -->
+</div><!-- .container -->
+
 {% endblock %}
