@@ -44,18 +44,6 @@ def visions_all(request):
     return render(request, template, context)
 
 
-def visions_groups(request):
-
-    """ Load and render the visions/groups template """
-
-    title = 'Groups - ArtsyVisions.com';
-    template = 'content/visions/groups.html'
-    context = {
-        'title': title,
-    }
-    return render(request, template, context)
-
-
 def visions_people(request):
 
     """ Load and render the visions/people template """
@@ -74,6 +62,30 @@ def visions_person(request):
 
     title = 'Individuals - ArtsyVisions.com';
     template = 'content/visions/person.html'
+    context = {
+        'title': title,
+    }
+    return render(request, template, context)
+
+
+def visions_groups(request):
+
+    """ Load and render the visions/groups template """
+
+    title = 'Groups - ArtsyVisions.com';
+    template = 'content/visions/groups.html'
+    context = {
+        'title': title,
+    }
+    return render(request, template, context)
+
+
+def visions_story(request):
+
+    """ Load and render the visions/story template """
+
+    title = 'Story - ArtsyVisions.com';
+    template = 'content/visions/story.html'
     context = {
         'title': title,
     }
