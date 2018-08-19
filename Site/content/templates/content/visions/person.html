@@ -17,24 +17,23 @@
   <div class="row">
 
    <div class="col s6 m6 l4">
-    <div class="card">
+    <div class="card sticky-action">
      <h4>Luke Skywalker</h4>
      <div class="card-image waves-effect waves-block waves-light">
       <img class="activator"
            src="{% static 'content/images/visions/person/entp-luke_skywalker-1.jpg' %}">
-      <span class="card-title">Card Title</span>
      </div>
      <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <span class="card-title grey-text text-darken-4">Luke Skywalker<i class="material-icons right">close</i></span>
       <p>Here is some more information about this product that is only revealed once clicked on.</p>
      </div>
      <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+      <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
       <p>I am a very simple card. I am good at containing small bits of information.</p>
       <p>I am convenient because I require little markup to use effectively.</p>
      </div>
      <div class="card-action">
-      <a href="#">This is a link</a>
+      <a href="/visions/story" class="waves-effect waves-light btn">Read the Story</a>
      </div>
      <div class="card-content">
       <p>What if I add another card-content div?</p>
@@ -44,45 +43,23 @@
 
 
    <div class="col s6 m6 l4">
-    <div class="card">
-     <h4>Luke Skywalker</h4>
-     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator"
-           src="{% static 'content/images/visions/person/entp-luke_skywalker-1.jpg' %}">
-      <span class="card-title">Card Title</span>
-     </div>
-     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-     </div>
-     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p>I am a very simple card. I am good at containing small bits of information.</p>
-      <p>I am convenient because I require little markup to use effectively.</p>
-     </div>
-     <div class="card-action">
-      <a href="#">This is a link</a>
-     </div>
-     <div class="card-content">
-      <p>What if I add another card-content div?</p>
-     </div>
-    </div><!-- .card -->
-   </div><!-- .col -->
-
-
-   <div class="col s6 m6 l4">
-    <div class="card">
+    <div class="card sticky-action">
      <h4>Theodore Roosevelt</h4>
-      <div class="card-image">
-        <img src="{% static 'content/images/visions/person/estj-theodore_roosevelt-1.jpg' %}">
-        <span class="card-title">Card Title</span>
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator"
+             src="{% static 'content/images/visions/person/estj-theodore_roosevelt-1.jpg' %}">
+      </div>
+      <div class="card-reveal">
+       <span class="card-title grey-text text-darken-4">Theodore Roosevelt<i class="material-icons right">close</i></span>
+       <p>Here is some more information about this product that is only revealed once clicked on.</p>
       </div>
       <div class="card-content">
         <p>I am a very simple card. I am good at containing small bits of information.</p>
         <p>I am convenient because I require little markup to use effectively.</p>
       </div>
       <div class="card-action">
-        <a href="#">This is a link</a>
+       <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+       <a href="/visions/story" class="waves-effect waves-light btn">Read the Story</a>
       </div>
      <div class="card-content">
       <p>What if I add another card-content div?</p>
@@ -92,17 +69,20 @@
 
 
    <div class="col s6 m6 l4">
-    <div class="card">
+    <div class="card sticky-action">
      <h4>Imelda Marcos</h4>
      <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="{% static 'content/images/visions/person/enfp-imelda_romualdez_marcos-1.jpg' %}">
+      <img class="activator"
+           src="{% static 'content/images/visions/person/enfp-imelda_romualdez_marcos-1.jpg' %}">
      </div>
      <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+      <p>
+       <a href="/visions/story" class="waves-effect waves-light btn">Read the Story</a>
+      </p>
      </div>
      <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <span class="card-title grey-text text-darken-4">Imelda Marcos<i class="material-icons right">close</i></span>
       <p>Here is some more information about this product that is only revealed once clicked on.</p>
      </div>
     </div><!-- .card -->
@@ -110,19 +90,74 @@
 
 
    <div class="col s6 m6 l4">
-    <div class="card">
+    <div class="card sticky-action">
      <h4>Captain James T. Kirk</h4>
-     <div class="card-image">
-      <img src="{% static 'content/images/visions/person/estj-captain_kirk-2.jpg' %}"
-               class="card-image">
-      <span class="card-title">Card Title</span>
+     <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator"
+           src="{% static 'content/images/visions/person/estj-captain_kirk-2.jpg' %}">
      </div>
      <div class="card-content">
       <p>I am a very simple card. I am good at containing small bits of information.
          I am convenient because I require little markup to use effectively.</p>
      </div>
+     <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Imelda Marcos<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+     </div>
      <div class="card-action">
-      <a href="#">This is a link</a>
+      <a href="/visions/story" class="waves-effect waves-light btn">Read the Story</a>
+     </div>
+    </div><!-- .card -->
+   </div><!-- .col -->
+
+
+   <div class="col s6 m6 l4">
+    <div class="card sticky-action">
+     <h4>Luke Skywalker</h4>
+     <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator"
+           src="{% static 'content/images/visions/person/entp-luke_skywalker-1.jpg' %}">
+     </div>
+     <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Luke Skywalker<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+     </div>
+     <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+      <p>I am a very simple card. I am good at containing small bits of information.</p>
+      <p>I am convenient because I require little markup to use effectively.</p>
+     </div>
+     <div class="card-action">
+      <a href="/visions/story" class="waves-effect waves-light btn">Read the Story</a>
+     </div>
+     <div class="card-content">
+      <p>What if I add another card-content div?</p>
+     </div>
+    </div><!-- .card -->
+   </div><!-- .col -->
+
+
+   <div class="col s6 m6 l4">
+    <div class="card sticky-action">
+     <h4 class="card-action"><a href="#">Luke Skywalker</a></h4>
+     <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator"
+           src="{% static 'content/images/visions/person/entp-luke_skywalker-1.jpg' %}">
+     </div>
+     <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Luke Skywalker<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+     </div>
+     <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Luke Skywalker<i class="material-icons right">more_vert</i></span>
+      <p>I am a very simple card. I am good at containing small bits of information.</p>
+      <p>I am convenient because I require little markup to use effectively.</p>
+     </div>
+     <div class="card-action">
+      <a href="/visions/story" class="waves-effect waves-light btn">Read the Story</a>
+     </div>
+     <div class="card-content">
+      <p>What if I add another card-content div?</p>
      </div>
     </div><!-- .card -->
    </div><!-- .col -->
@@ -134,10 +169,9 @@
      <div class="card-image waves-effect waves-block waves-light">
       <img class="activator"
            src="{% static 'content/images/visions/person/entp-luke_skywalker-1.jpg' %}">
-      <span class="card-title">Card Title</span>
      </div>
      <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <span class="card-title grey-text text-darken-4">Luke Skywalker<i class="material-icons right">close</i></span>
       <p>Here is some more information about this product that is only revealed once clicked on.</p>
      </div>
      <div class="card-content">
@@ -146,7 +180,7 @@
       <p>I am convenient because I require little markup to use effectively.</p>
      </div>
      <div class="card-action">
-      <a href="#">This is a link</a>
+      <a href="/visions/story" class="waves-effect waves-light btn">Read the Story</a>
      </div>
      <div class="card-content">
       <p>What if I add another card-content div?</p>
