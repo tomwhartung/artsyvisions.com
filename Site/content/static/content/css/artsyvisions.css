@@ -68,6 +68,9 @@ footer.page-footer {
   margin-left: 2em;
 }
 
-.card .group-image {
+.sticky-action {
+  padding: 5%;
+}
+.group-image {
   padding: .5%;
 }
