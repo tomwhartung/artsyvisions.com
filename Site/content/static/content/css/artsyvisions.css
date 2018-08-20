@@ -67,3 +67,7 @@ footer.page-footer {
 .mobile-submenu-item {
   margin-left: 2em;
 }
+
+.card .group-image {
+  padding: .5%;
+}
