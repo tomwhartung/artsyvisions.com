@@ -71,6 +71,10 @@ footer.page-footer {
 .sticky-action {
   padding: 5%;
 }
+.pairs-card {
+  margin: 2% 0 2% 0;
+  padding: .5% 2% .5% 2%;
+}
 .group-image {
   padding: .5%;
 }
