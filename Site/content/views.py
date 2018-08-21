@@ -40,12 +40,11 @@ def visions_all(request):
     visions_list_obj = VisionsList('all')
     visions_list_obj.set_visions_list_data()
 
-
     title = 'All Visions - ArtsyVisions.com';
     template = 'content/visions/all.html'
     context = {
-        'visions_list_obj': visions_list_obj,
         'title': title,
+        'visions_list_obj': visions_list_obj,
     }
     return render(request, template, context)
 
@@ -61,6 +60,7 @@ def visions_person(request):
     template = 'content/visions/person.html'
     context = {
         'title': title,
+        'visions_list_obj': visions_list_obj,
     }
     return render(request, template, context)
 
@@ -76,6 +76,7 @@ def visions_people(request):
     template = 'content/visions/people.html'
     context = {
         'title': title,
+        'visions_list_obj': visions_list_obj,
     }
     return render(request, template, context)
 
@@ -91,6 +92,7 @@ def visions_groups(request):
     template = 'content/visions/groups.html'
     context = {
         'title': title,
+        'visions_list_obj': visions_list_obj,
     }
     return render(request, template, context)
 
@@ -103,6 +105,7 @@ def visions_story(request):
     template = 'content/visions/story.html'
     context = {
         'title': title,
+        'visions_list_obj': visions_list_obj,
     }
     return render(request, template, context)
 
