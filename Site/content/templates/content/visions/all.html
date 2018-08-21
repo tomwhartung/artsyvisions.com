@@ -1,14 +1,40 @@
 {% extends "content/base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="container">
  <div class="section">
   <div class="row z-depth-3">
    <div class="col s12">
-    <h1>Template for All Visions</h1>
+    <h2 class="center">All Visions</h2>
 
    </div><!-- .col -->
   </div><!-- .row -->
  </div><!-- .section -->
 </div><!-- .container -->
+
+<div class="container">
+ <div class="section">
+  <p>static 'content/images/visions/person/entp-luke_skywalker-1.jpg'
+  </p>
+  <p>
+   <img class="activator" width="100px" height="100px"
+        src="{% static 'content/images/visions/person/entp-luke_skywalker-1.jpg' %}">
+  </p>
+
+{% for vis_dict in visions_list_obj.visions_list_data %}
+
+<h5>{{ vis_dict.title }}</h5>
+<dl>
+ <dt>static vis_dict.image_file_name</dt>
+ <dd>{{ vis_dict.image_file_name }}</dd>
+</dl>
+<img class="activator"
+     src="{% static vis_dict.image_file_name %}">
+
+{% endfor %}
+
+ </div><!-- .section -->
+</div><!-- .container -->
+
 {% endblock %}
