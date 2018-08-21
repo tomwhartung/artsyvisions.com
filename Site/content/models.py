@@ -73,6 +73,7 @@ class VisionsList:
         for vis_file in self.visions_files:
             ### vis_file_name, vis_file_ext = os.path.splitext(vis_file)
             vision_file_obj = VisionFile(vis_file)
+            vision_file_obj.set_image_path_values()
             vis_dict = vision_file_obj.vision_dict
             self.visions_list_data.append(vis_dict)
             if DJANGO_DEBUG:
@@ -104,3 +105,25 @@ class VisionFile:
             vision_json_string = vision_json_file.read()
             vision_json_file.close()
             self.vision_dict = json.loads(vision_json_string)
+
+
+    def set_image_path_values(self):
+        """
+        Set derived values for the image_file_name or in the image_list,
+        as appropriate, in the vision_dict
+        """
+        image_file_sub_dir = 'person'
+        image_file_parent_dir = 'content/images/visions/' \
+            + image_file_sub_dir + '/'
+        print('VisionFile - set_image_path_values - self.vision_dict: ', self.vision_dict)
+        print('VisionFile - set_image_path_values - self.vision_dict[image_file_name]: ', self.vision_dict['image_file_name'])
+        if self.vision_dict['image_file_name'] == "":
+            print('VisionFile - set_image_path_values - self.vision_dict[image_file_list]', self.vision_dict['image_file_list'])
+            #for image_file in self.vision_dict['image_file_list']:
+            #    print('image_file: ', image_file)
+        else:
+            new_file_name = image_file_parent_dir + self.vision_dict['image_file_name']
+            self.vision_dict['image_file_name'] = new_file_name
+            ### image_dict['image_file_path'] = image_file_parent_dir \
+            ###     + image_dict['image_file_name']
+        return self
