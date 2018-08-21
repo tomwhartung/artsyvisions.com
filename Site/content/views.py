@@ -13,6 +13,7 @@ from django.template import loader
 from django.shortcuts import render
 from django.views.generic.base import View
 
+from .models import VisionsList
 
 def home(request):
 
@@ -32,13 +33,18 @@ def home(request):
 ##
 
 
-def visions_all(request):
+def visions_all(request, visions_page_name='all'):
 
     """ Load and render the visions/all template """
+
+    visions_list_obj = VisionsList(visions_page_name)
+    visions_list_obj.set_visions_list_data()
+
 
     title = 'All Visions - ArtsyVisions.com';
     template = 'content/visions/all.html'
     context = {
+        'visions_list_obj': visions_list_obj,
         'title': title,
     }
     return render(request, template, context)
@@ -48,7 +54,7 @@ def visions_people(request):
 
     """ Load and render the visions/people template """
 
-    title = 'Pairs of People - ArtsyVisions.com';
+    title = 'Pairs - ArtsyVisions.com';
     template = 'content/visions/people.html'
     context = {
         'title': title,
