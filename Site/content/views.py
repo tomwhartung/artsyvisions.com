@@ -33,11 +33,11 @@ def home(request):
 ##
 
 
-def visions_all(request, visions_page_name='all'):
+def visions_all(request):
 
     """ Load and render the visions/all template """
 
-    visions_list_obj = VisionsList(visions_page_name)
+    visions_list_obj = VisionsList('all')
     visions_list_obj.set_visions_list_data()
 
 
@@ -50,21 +50,12 @@ def visions_all(request, visions_page_name='all'):
     return render(request, template, context)
 
 
-def visions_people(request):
-
-    """ Load and render the visions/people template """
-
-    title = 'Pairs - ArtsyVisions.com';
-    template = 'content/visions/people.html'
-    context = {
-        'title': title,
-    }
-    return render(request, template, context)
-
-
 def visions_person(request):
 
     """ Load and render the visions/person template """
+
+    visions_list_obj = VisionsList('person')
+    visions_list_obj.set_visions_list_data()
 
     title = 'Individuals - ArtsyVisions.com';
     template = 'content/visions/person.html'
@@ -74,9 +65,27 @@ def visions_person(request):
     return render(request, template, context)
 
 
+def visions_people(request):
+
+    """ Load and render the visions/people template """
+
+    visions_list_obj = VisionsList('people')
+    visions_list_obj.set_visions_list_data()
+
+    title = 'Pairs - ArtsyVisions.com';
+    template = 'content/visions/people.html'
+    context = {
+        'title': title,
+    }
+    return render(request, template, context)
+
+
 def visions_groups(request):
 
     """ Load and render the visions/groups template """
+
+    visions_list_obj = VisionsList('groups')
+    visions_list_obj.set_visions_list_data()
 
     title = 'Groups - ArtsyVisions.com';
     template = 'content/visions/groups.html'
