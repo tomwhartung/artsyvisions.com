@@ -73,8 +73,9 @@ class VisionsList:
         for vis_file in self.visions_files:
             ### vis_file_name, vis_file_ext = os.path.splitext(vis_file)
             vision_file_obj = VisionFile(vis_file)
-            vision_file_obj.set_image_path_values()
+            vision_file_obj.set_image_path_values()  # also sets vision_type
             vis_dict = vision_file_obj.vision_dict
+            vis_dict['vision_file_name'] = vis_file
             self.visions_list_data.append(vis_dict)
             if DJANGO_DEBUG:
                 print('VisionsList - set_visions_list_data - vis_file:', vis_file)
@@ -96,8 +97,7 @@ class VisionFile:
         if vision_file_name == None:
             self.visions_dict = {}
         else:
-            # print('gallery_file_name:', gallery_file_name)
-            ### data_file_name = vision_file_name + '.json'
+            print('VisionFile - __init__ - vision_file_name:', vision_file_name)
             site_content_dir = os.path.abspath(os.path.dirname(__file__))
             data_file_dir = site_content_dir + VisionsList.VISIONS_DIRECTORY
             data_file_path = data_file_dir + vision_file_name
@@ -107,12 +107,29 @@ class VisionFile:
             self.vision_dict = json.loads(vision_json_string)
 
 
+    def set_vision_type(self):
+        """
+        Get the vision_type from the vision_file_name, which is of the form:
+        9999-{vision_type}-{name_or_names}.json
+        vision_type = 'person' , 'people' , or 'groups'
+        """
+        #vision_type = 'person'
+        vision_type = 'people'
+        #vision_type = 'groups'
+
+        # self.vision_file_name
+
+        self.vision_dict['vision_type'] = vision_type
+
+
     def set_image_path_values(self):
         """
         Set derived values for the image_file_name or in the image_list,
         as appropriate, in the vision_dict
+        NOTE: this method uses the vision_type so it calls set_vision_type
         """
-        image_file_sub_dir = 'person'
+        self.set_vision_type()
+        image_file_sub_dir = self.vision_dict['vision_type']
         image_file_parent_dir = 'content/images/visions/' \
             + image_file_sub_dir + '/'
         print('VisionFile - set_image_path_values - self.vision_dict: ', self.vision_dict)
