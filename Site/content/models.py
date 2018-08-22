@@ -74,9 +74,8 @@ class VisionsList:
         for vis_file in self.visions_files:
             ### vis_file_name, vis_file_ext = os.path.splitext(vis_file)
             vision_file_obj = VisionFile(vis_file)
-            vision_file_obj.set_image_path_values()  # also sets vision_type
+            vision_file_obj.set_list_data()
             vis_dict = vision_file_obj.vision_dict
-            vis_dict['vision_file_name'] = vis_file
             self.visions_list_data.append(vis_dict)
             if DJANGO_DEBUG:
                 print('VisionsList - set_visions_list_data - vis_file:', vis_file)
@@ -108,6 +107,14 @@ class VisionFile:
             self.vision_dict = json.loads(vision_json_string)
 
 
+    def set_list_data(self):
+        """ Set the values needed for the template in this object """
+        self.vision_dict['vision_file_name'] = self.vision_file_name
+        self.set_vision_type()   # must call this one first!
+        self.set_group_name()
+        self.set_image_path_values()
+
+
     def set_vision_type(self):
         """
         Get the vision_type from the vision_file_name, which is of the form:
@@ -122,19 +129,37 @@ class VisionFile:
         self.vision_dict['vision_type'] = vision_type
 
 
+    def set_group_name(self):
+        """
+        If it's a group file,
+            get the group_name from the vision_file_name
+        The vision_file_name is of the form:
+            9999-{vision_type}-{name_or_names}.json
+        When vision_type = 'groups',
+            the "name_or_names" part is the group_name
+        """
+
+        if self.vision_dict['vision_type'] == 'groups':
+            pattern = re.compile('-groups-(\w+).json')
+            match = re.search(pattern, self.vision_file_name)
+            group_name = 'group_name'
+            self.vision_dict['group_name'] = group_name
+        else:
+            self.vision_dict['group_name'] = ''
+
+
     def set_image_path_values(self):
         """
         Set derived values for the image_file_name or in the image_list,
         as appropriate, in the vision_dict
-        NOTE: this method uses the vision_type so it calls set_vision_type
+        NOTE: this method uses the vision_type so make sure it's set!
         """
-        self.set_vision_type()
         image_file_sub_dir = self.vision_dict['vision_type']
         image_file_parent_dir = 'content/images/visions/' \
             + image_file_sub_dir + '/'
         print('VisionFile - set_image_path_values - self.vision_dict: ', self.vision_dict)
         print('VisionFile - set_image_path_values - self.vision_dict[image_file_name]: ', self.vision_dict['image_file_name'])
-        if self.vision_dict['vision_type'] == "groups":
+        if self.vision_dict['vision_type'] == 'groups':
             new_image_file_list = []
             print('VisionFile - set_image_path_values - self.vision_dict[image_file_list] BEFORE', self.vision_dict['image_file_list'])
             for img_fn in self.vision_dict['image_file_list']:
