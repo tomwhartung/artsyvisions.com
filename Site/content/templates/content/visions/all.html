@@ -30,11 +30,28 @@
  <dd>{{ vis_dict.vision_file_name }}</dd>
  <dt>vis_dict.vision_type</dt>
  <dd>{{ vis_dict.vision_type }}</dd>
- <dt>static vis_dict.image_file_name</dt>
- <dd>{{ vis_dict.image_file_name }}</dd>
+ {% if vis_dict.vision_type == 'person' or vis_dict.vision_type == 'people' %}
+  <dt>static vis_dict.image_file_name</dt>
+  <dd>{{ vis_dict.image_file_name }}</dd>
+ {% else %}
+  {% for image_file_name in vis_dict.image_file_list %}
+   <dt>static vis_dict.image_file_name</dt>
+   <dd>{{ vis_dict.image_file_name }}</dd>
+  {% endfor %}
+ {% endif %}
 </dl>
-<img class="activator"
-     src="{% static vis_dict.image_file_name %}">
+
+{% if vis_dict.vision_type == 'groups' %}
+ {% for image_file_name in vis_dict.image_file_list %}
+  <img src="{% static image_file_name %}" width="100" height="100">
+ {% endfor %}
+{% elif vis_dict.vision_type == 'people' %}
+ <img class="activator"
+      src="{% static vis_dict.image_file_name %}">
+ {% else %}
+  <img class="activator" width="100" height="100"
+       src="{% static vis_dict.image_file_name %}">
+{% endif %}
 
 {% endfor %}
 
