@@ -14,6 +14,7 @@ Reference:
 import fnmatch
 import json
 import os
+import re
 
 DJANGO_DEBUG = os.environ.get('DJANGO_DEBUG')
 RUNNING_LOCALLY = os.environ.get('RUNNING_LOCALLY')
@@ -113,11 +114,13 @@ class VisionFile:
         9999-{vision_type}-{name_or_names}.json
         vision_type = 'person' , 'people' , or 'groups'
         """
-        #vision_type = 'person'
-        vision_type = 'people'
-        #vision_type = 'groups'
 
-        # self.vision_file_name
+        #vision_type = 'person'
+        #vision_type = 'people'
+        #vision_type = 'groups'
+        # pattern = re.compile('')
+
+        vision_type = self.vision_file_name[5:11]
 
         self.vision_dict['vision_type'] = vision_type
 
