@@ -74,7 +74,7 @@ class VisionsList:
         for vis_file in self.visions_files:
             ### vis_file_name, vis_file_ext = os.path.splitext(vis_file)
             vision_file_obj = VisionFile(vis_file)
-            vision_file_obj.set_list_data()
+            vision_file_obj.set_vision_dict_data()
             vis_dict = vision_file_obj.vision_dict
             self.visions_list_data.append(vis_dict)
             if DJANGO_DEBUG:
@@ -107,7 +107,7 @@ class VisionFile:
             self.vision_dict = json.loads(vision_json_string)
 
 
-    def set_list_data(self):
+    def set_vision_dict_data(self):
         """ Set the values needed for the template in this object """
         self.vision_dict['vision_file_name'] = self.vision_file_name
         self.set_vision_type()   # must call this one first!
@@ -122,10 +122,10 @@ class VisionFile:
         vision_type = 'person' , 'people' , or 'groups'
         """
 
-        # For now, we can keep it simple, but someday, we may need a regex
-        # pattern = re.compile('')
+        pattern = re.compile('\d\d\d\d-(\w+)-')
+        match = re.search(pattern, self.vision_file_name)
+        vision_type = match.group(1)
 
-        vision_type = self.vision_file_name[5:11]
         self.vision_dict['vision_type'] = vision_type
 
 
@@ -137,6 +137,7 @@ class VisionFile:
             9999-{vision_type}-{name_or_names}.json
         When vision_type = 'groups',
             the "name_or_names" part is the group_name
+        NOTE: this method uses the vision_type so make sure it is set!
         """
 
         if self.vision_dict['vision_type'] == 'groups':
@@ -151,8 +152,9 @@ class VisionFile:
     def set_image_path_values(self):
         """
         Set derived values for the image_file_name or in the image_list,
-        as appropriate, in the vision_dict
-        NOTE: this method uses the vision_type so make sure it's set!
+            as appropriate, in the vision_dict
+        NOTE: this method uses the vision_type and group_name (if it's a group)
+            so make sure they are both set!
         """
         vision_type = self.vision_dict['vision_type']
         image_file_parent_dir = 'content/images/visions/' + vision_type + '/'
