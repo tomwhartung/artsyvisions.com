@@ -111,17 +111,14 @@ class VisionFile:
     def set_vision_type(self):
         """
         Get the vision_type from the vision_file_name, which is of the form:
-        9999-{vision_type}-{name_or_names}.json
+            9999-{vision_type}-{name_or_names}.json
         vision_type = 'person' , 'people' , or 'groups'
         """
 
-        #vision_type = 'person'
-        #vision_type = 'people'
-        #vision_type = 'groups'
+        # For now, we can keep it simple, but someday, we may need a regex
         # pattern = re.compile('')
 
         vision_type = self.vision_file_name[5:11]
-
         self.vision_dict['vision_type'] = vision_type
 
 
@@ -137,10 +134,14 @@ class VisionFile:
             + image_file_sub_dir + '/'
         print('VisionFile - set_image_path_values - self.vision_dict: ', self.vision_dict)
         print('VisionFile - set_image_path_values - self.vision_dict[image_file_name]: ', self.vision_dict['image_file_name'])
-        if self.vision_dict['image_file_name'] == "":
-            print('VisionFile - set_image_path_values - self.vision_dict[image_file_list]', self.vision_dict['image_file_list'])
-            #for image_file in self.vision_dict['image_file_list']:
-            #    print('image_file: ', image_file)
+        if self.vision_dict['vision_type'] == "groups":
+            new_image_file_list = []
+            print('VisionFile - set_image_path_values - self.vision_dict[image_file_list] BEFORE', self.vision_dict['image_file_list'])
+            for img_fn in self.vision_dict['image_file_list']:
+                new_img_fn = image_file_parent_dir + img_fn
+                new_image_file_list.append(new_img_fn)
+            self.vision_dict['image_file_list'] = new_image_file_list
+            print('VisionFile - set_image_path_values - self.vision_dict[image_file_list] AFTER', self.vision_dict['image_file_list'])
         else:
             new_file_name = image_file_parent_dir + self.vision_dict['image_file_name']
             self.vision_dict['image_file_name'] = new_file_name
