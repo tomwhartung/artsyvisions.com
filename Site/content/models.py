@@ -142,7 +142,7 @@ class VisionFile:
         if self.vision_dict['vision_type'] == 'groups':
             pattern = re.compile('-groups-(\w+).json')
             match = re.search(pattern, self.vision_file_name)
-            group_name = 'group_name'
+            group_name = match.group(1)
             self.vision_dict['group_name'] = group_name
         else:
             self.vision_dict['group_name'] = ''
@@ -154,16 +154,16 @@ class VisionFile:
         as appropriate, in the vision_dict
         NOTE: this method uses the vision_type so make sure it's set!
         """
-        image_file_sub_dir = self.vision_dict['vision_type']
-        image_file_parent_dir = 'content/images/visions/' \
-            + image_file_sub_dir + '/'
+        vision_type = self.vision_dict['vision_type']
+        image_file_parent_dir = 'content/images/visions/' + vision_type + '/'
         print('VisionFile - set_image_path_values - self.vision_dict: ', self.vision_dict)
         print('VisionFile - set_image_path_values - self.vision_dict[image_file_name]: ', self.vision_dict['image_file_name'])
         if self.vision_dict['vision_type'] == 'groups':
             new_image_file_list = []
+            group_name = self.vision_dict['group_name']
             print('VisionFile - set_image_path_values - self.vision_dict[image_file_list] BEFORE', self.vision_dict['image_file_list'])
             for img_fn in self.vision_dict['image_file_list']:
-                new_img_fn = image_file_parent_dir + img_fn
+                new_img_fn = image_file_parent_dir + group_name + '/' + img_fn
                 new_image_file_list.append(new_img_fn)
             self.vision_dict['image_file_list'] = new_image_file_list
             print('VisionFile - set_image_path_values - self.vision_dict[image_file_list] AFTER', self.vision_dict['image_file_list'])
