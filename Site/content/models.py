@@ -112,7 +112,7 @@ class VisionFile:
         self.vision_dict['vision_file_name'] = self.vision_file_name
         self.set_vision_type()   # must call this one first!
         self.set_group_name()
-        self.set_image_path_values()
+        self.set_image_data()
 
 
     def set_vision_type(self):
@@ -127,6 +127,7 @@ class VisionFile:
         vision_type = match.group(1)
 
         self.vision_dict['vision_type'] = vision_type
+        return self
 
 
     def set_group_name(self):
@@ -147,31 +148,31 @@ class VisionFile:
             self.vision_dict['group_name'] = group_name
         else:
             self.vision_dict['group_name'] = ''
+        return self
 
 
-    def set_image_path_values(self):
+    def set_image_data(self):
         """
-        Set derived values for the image_file_name or in the image_list,
-            as appropriate, in the vision_dict
+        Derive and set values for the image_file_path in the vision_dict
         NOTE: this method uses the vision_type and group_name (if it's a group)
             so make sure they are both set!
         """
         vision_type = self.vision_dict['vision_type']
         image_file_parent_dir = 'content/images/visions/' + vision_type + '/'
-        print('VisionFile - set_image_path_values - self.vision_dict: ', self.vision_dict)
-        print('VisionFile - set_image_path_values - self.vision_dict[image_file_name]: ', self.vision_dict['image_file_name'])
         if self.vision_dict['vision_type'] == 'groups':
-            new_image_file_list = []
-            group_name = self.vision_dict['group_name']
-            print('VisionFile - set_image_path_values - self.vision_dict[image_file_list] BEFORE', self.vision_dict['image_file_list'])
-            for img_fn in self.vision_dict['image_file_list']:
-                new_img_fn = image_file_parent_dir + group_name + '/' + img_fn
-                new_image_file_list.append(new_img_fn)
-            self.vision_dict['image_file_list'] = new_image_file_list
-            print('VisionFile - set_image_path_values - self.vision_dict[image_file_list] AFTER', self.vision_dict['image_file_list'])
-        else:
-            new_file_name = image_file_parent_dir + self.vision_dict['image_file_name']
-            self.vision_dict['image_file_name'] = new_file_name
             ### image_dict['image_file_path'] = image_file_parent_dir \
             ###     + image_dict['image_file_name']
+            image_data = []
+            group_name = self.vision_dict['group_name']
+            print('VisionFile - set_image_data - self.vision_dict[image_file_list]:', self.vision_dict['image_file_list'])
+            for img_fn in self.vision_dict['image_file_list']:
+                image_file_path = image_file_parent_dir + group_name + '/' + img_fn
+                image_data.append(image_file_path)
+            self.vision_dict['image_data'] = image_data
+            print('VisionFile - set_image_data - self.vision_dict[image_data]:', self.vision_dict['image_data'])
+        else:
+            image_file_path = image_file_parent_dir + self.vision_dict['image_file_name']
+            self.vision_dict['image_file_path'] = image_file_path
+            print('VisionFile - set_image_data - self.vision_dict[image_file_name]: ', self.vision_dict['image_file_name'])
+            print('VisionFile - set_image_data - self.vision_dict[image_file_path]: ', self.vision_dict['image_file_path'])
         return self
