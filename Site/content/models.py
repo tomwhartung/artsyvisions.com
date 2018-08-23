@@ -167,7 +167,7 @@ class VisionFile:
             print('VisionFile - set_image_data - self.vision_dict[image_file_list]:', self.vision_dict['image_file_list'])
             print('VisionFile - set_image_data - image_file_parent_dir:', image_file_parent_dir)
             print('VisionFile - set_image_data - group_name:', group_name)
-            for img_dict in self.vision_dict['image_file_data']:
+            for img_dict in self.vision_dict['image_file_list']:
                 img_fn = img_dict['image_file_name']
                 image_file_path = image_file_parent_dir + group_name + '/' + img_fn
                 print('VisionFile - set_image_data - img_dict:', img_dict)
