@@ -6,5 +6,11 @@
     "estp-basil_fawlty-1.jpg",
     "infp-polly_sherman-1.jpg",
     "isfp-manuel-1.jpg"
+  ],
+  "image_file_data": [
+    { "name": "Basil Fawlty", "image_file_name": "estp-basil_fawlty-1.jpg" },
+    { "name": "Sybil Fawlty", "image_file_name": "esfj-sybil_fawlty-1.jpg" },
+    { "name": "Polly Sherman", "image_file_name": "infp-polly_sherman-1.jpg" },
+    { "name": "Manuel", "image_file_name": "isfp-manuel-1.jpg" }
   ]
 }
