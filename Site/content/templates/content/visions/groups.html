@@ -21,10 +21,10 @@
     <div class="col s12 z-depth-3">
      <h2 class="header center">{{ vis_dict.title }}</h2>
      <div class="card horizontal">
-      {% for image_file_path in vis_dict.image_data %}
+      {% for image_data_dict in vis_dict.image_data %}
        <div class="card-image group-image">
-        <h5 class="center">{{ image_file_path }}</h5>
-        <img src="{% static image_file_path %}">
+        <h5 class="center">{{ image_data_dict.name }}</h5>
+        <img src="{% static image_data_dict.image_file_path %}">
        </div>
       {% endfor %}
      </div><!-- .card .horizontal -->
