@@ -17,7 +17,7 @@ import os
 import re
 
 DJANGO_DEBUG = os.environ.get('DJANGO_DEBUG')
-RUNNING_LOCALLY = os.environ.get('RUNNING_LOCALLY')
+RUNNING_LOCALLY = os.environ.get('RUNNING_LOCALLY', '0')
 
 
 class VisionsList:
@@ -46,7 +46,7 @@ class VisionsList:
         #self.visions_files = []
         self.visions_list_data = []
 
-        if RUNNING_LOCALLY == 1:
+        if RUNNING_LOCALLY != '0':
             self.read_visions_list_data(self.DRAFT_VISIONS_JSON_DIRECTORY)
 
         self.read_visions_list_data(self.VISIONS_JSON_DIRECTORY)
@@ -65,15 +65,21 @@ class VisionsList:
         if (self.visions_page_name == 'person' or
             self.visions_page_name == 'people' or
             self.visions_page_name == 'groups'):
-            fnmatch_string = '*' + self.visions_page_name +'*'
+            fnmatch_string = '*' + self.visions_page_name + '*'
         else:
             fnmatch_string = '*'
 
+        fnmatch_all_string = '*-all-*'
         filtered_list = []
 
         for vis_file in all_visions_files:
-            if fnmatch.fnmatch(vis_file, fnmatch_string):
+            matches_all = fnmatch.fnmatch(vis_file, fnmatch_all_string)
+            if matches_all:
                 filtered_list.append(vis_file)
+            else:
+                matches_fnmatch = fnmatch.fnmatch(vis_file, fnmatch_string)
+                if matches_fnmatch:
+                    filtered_list.append(vis_file)
 
         if DJANGO_DEBUG:
             print('VisionsList - __init__ - self.visions_page_name:', self.visions_page_name)
@@ -179,9 +185,11 @@ class VisionFile:
         """
         vision_type = self.vision_dict['vision_type']
         image_file_parent_dir = 'content/images/visions/' + vision_type + '/'
-        if self.vision_dict['vision_type'] == 'groups':
-            ### image_dict['image_file_path'] = image_file_parent_dir \
-            ###     + image_dict['image_file_name']
+        if (self.vision_dict['vision_type'] == 'person' or
+            self.vision_dict['vision_type'] == 'people'):
+            image_file_path = image_file_parent_dir + self.vision_dict['image_file_name']
+            self.vision_dict['image_file_path'] = image_file_path
+        elif self.vision_dict['vision_type'] == 'groups':
             image_data = []
             group_name = self.vision_dict['group_name']
             for img_dict in self.vision_dict['image_file_list']:
@@ -192,7 +200,4 @@ class VisionFile:
                 image_file_dict['image_file_path'] = image_file_path
                 image_data.append(image_file_dict)
             self.vision_dict['image_data'] = image_data
-        else:
-            image_file_path = image_file_parent_dir + self.vision_dict['image_file_name']
-            self.vision_dict['image_file_path'] = image_file_path
         return self
