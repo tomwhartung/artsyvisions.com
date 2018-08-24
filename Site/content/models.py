@@ -29,6 +29,7 @@ class VisionsList:
     """
 
     VISIONS_DIRECTORY = '/static/content/json/visions/'
+    DRAFT_VISIONS_DIRECTORY = '/static/content/json/visions-drafts/'
 
     def __init__(self, visions_page_name='all'):
 
@@ -42,8 +43,15 @@ class VisionsList:
         """
 
         site_content_dir = os.path.abspath(os.path.dirname(__file__))
+
+        """
+        if RUNNING_LOCALLY:
+            visions_root_dir = site_content_dir + self.DRAFT_VISIONS_DIRECTORY
+            all_visions_files = sorted(os.listdir(visions_root_dir), reverse=True)
+        """
+
         visions_root_dir = site_content_dir + self.VISIONS_DIRECTORY
-        all_visions_files = sorted(os.listdir(visions_root_dir))
+        all_visions_files = sorted(os.listdir(visions_root_dir), reverse=True)
 
         if (visions_page_name == 'person' or
             visions_page_name == 'people' or
