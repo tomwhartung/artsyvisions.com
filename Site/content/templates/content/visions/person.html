@@ -17,31 +17,44 @@
   <div class="row">
 
    {% for vis_dict in visions_list_obj.visions_list_data %}
-    <div class="col s12 m6 l4">
-     <div class="card sticky-action z-depth-3">
-      <h4 class="center">{{ vis_dict.title }}</h4>
-      <div class="card-image waves-effect waves-block waves-light">
-       <img class="activator"
-            src="{% static vis_dict.image_file_path %}">
-      </div>
-      <div class="card-reveal">
-       <span class="card-title grey-text text-darken-4">{{ vis_dict.title }}
-        <i class="material-icons right">close</i></span>
-       <p>Here is some more information about this product that is only revealed once clicked on.</p>
-      </div>
-      <div class="card-content">
-       <span class="card-title activator grey-text text-darken-4">
-        <i class="material-icons right">more_vert</i></span>
-       <p>I am a very simple card. I am good at containing small bits of information.</p>
-      </div>
-      <div class="card-content">
-       <p>This is another card-content div.</p>
-      </div>
-      <div class="card-action center">
-       <a href="/visions/story" class="waves-effect waves-light btn">Read the Story</a>
-      </div>
-     </div><!-- .card -->
-    </div><!-- .col -->
+    {% if vis_dict.vision_type == 'person' %}
+     <div class="col s12 m6 l4">
+      <div class="card sticky-action z-depth-3">
+       <h4 class="center">{{ vis_dict.title }}</h4>
+       <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator"
+             src="{% static vis_dict.image_file_path %}">
+       </div>
+       <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{ vis_dict.title }}
+         <i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+       </div>
+       <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+         <i class="material-icons right">more_vert</i></span>
+        <p>I am a very simple card. I am good at containing small bits of information.</p>
+       </div>
+       <div class="card-content">
+        <p>This is another card-content div.</p>
+       </div>
+       <div class="card-action center">
+        <a href="/visions/story" class="waves-effect waves-light btn">Read the Story</a>
+       </div>
+      </div><!-- .card -->
+     </div><!-- .col -->
+    {% else %}
+     <div class="col s6 m4 l3">
+      <div class="card z-depth-3">
+       <h4 class="center">{{ vis_dict.title }}</h4>
+       <div class="card-content">
+         <p>This should be the last card.</p>
+         <p>This card should appear on all pages.</p>
+        </div>
+       </div><!-- .card-content -->
+      </div><!-- .card -->
+     </div><!-- .col -->
+    {% endif %}
    {% endfor %}
 
   </div><!-- .row -->
