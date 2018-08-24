@@ -28,8 +28,8 @@ class VisionsList:
     ________________________________
     """
 
-    VISIONS_DIRECTORY = '/static/content/json/visions/'
-    DRAFT_VISIONS_DIRECTORY = '/static/content/json/visions-drafts/'
+    VISIONS_JSON_DIRECTORY = '/static/content/json/visions/'
+    DRAFT_VISIONS_JSON_DIRECTORY = '/static/content/json/visions-drafts/'
 
     def __init__(self, visions_page_name='all'):
 
@@ -42,52 +42,65 @@ class VisionsList:
         - all - default if missing or invalid
         """
 
-        site_content_dir = os.path.abspath(os.path.dirname(__file__))
+        self.visions_page_name = visions_page_name
+        #self.visions_files = []
+        self.visions_list_data = []
 
-        """
         if RUNNING_LOCALLY:
-            visions_root_dir = site_content_dir + self.DRAFT_VISIONS_DIRECTORY
-            all_visions_files = sorted(os.listdir(visions_root_dir), reverse=True)
+            self.read_visions_list_data(self.DRAFT_VISIONS_JSON_DIRECTORY)
+
+        self.read_visions_list_data(self.VISIONS_JSON_DIRECTORY)
+
+
+    def get_visions_file_list(self, visions_json_directory):
+
+        """
+        Create a list of files containing the data we need
         """
 
-        visions_root_dir = site_content_dir + self.VISIONS_DIRECTORY
+        site_content_dir = os.path.abspath(os.path.dirname(__file__))
+        visions_root_dir = site_content_dir + visions_json_directory
         all_visions_files = sorted(os.listdir(visions_root_dir), reverse=True)
 
-        if (visions_page_name == 'person' or
-            visions_page_name == 'people' or
-            visions_page_name == 'groups'):
-            fnmatch_string = '*' + visions_page_name +'*'
+        if (self.visions_page_name == 'person' or
+            self.visions_page_name == 'people' or
+            self.visions_page_name == 'groups'):
+            fnmatch_string = '*' + self.visions_page_name +'*'
         else:
             fnmatch_string = '*'
 
-        self.visions_files = []
+        filtered_visions_file_list = []
+
         for vis_file in all_visions_files:
             if fnmatch.fnmatch(vis_file, fnmatch_string):
-                self.visions_files.append(vis_file)
+                filtered_visions_file_list.append(vis_file)
 
         if DJANGO_DEBUG:
-            print('VisionsList - __init__ - visions_page_name:', visions_page_name)
+            print('VisionsList - __init__ - self.visions_page_name:', self.visions_page_name)
             print('VisionsList - __init__ - fnmatch_string:', fnmatch_string)
-            print('VisionsList - __init__ - self.visions_files:', self.visions_files)
+            print('VisionsList - __init__ - filtered_visions_file_list:', filtered_visions_file_list)
 
-        self.visions_list_data = []
+        return filtered_visions_file_list
 
 
-    def set_visions_list_data(self):
+    def read_visions_list_data(self, visions_json_directory=None):
 
         """
-        Get the data needed to render the visions list page
+        Create a list of files containing the data we need
+        Create a VisionFile object for each file
+        Get the data needed for the visions list page from the VisionFile object
         """
+        filtered_visions_file_list = self.get_visions_file_list(visions_json_directory)
 
-        for vis_file in self.visions_files:
+        for vis_file in filtered_visions_file_list:
             ### vis_file_name, vis_file_ext = os.path.splitext(vis_file)
-            vision_file_obj = VisionFile(vis_file)
+            vision_file_obj = VisionFile(visions_json_directory, vis_file)
             vision_file_obj.set_vision_dict_data()
             vis_dict = vision_file_obj.vision_dict
             self.visions_list_data.append(vis_dict)
             if DJANGO_DEBUG:
-                print('VisionsList - set_visions_list_data - vis_file:', vis_file)
-                print('VisionsList - set_visions_list_data - vis_dict:', vis_dict)
+                print('VisionsList - read_visions_list_data - vis_file:', vis_file)
+                print('VisionsList - read_visions_list_data - vis_dict:', vis_dict)
 
         return self.visions_list_data
 
@@ -99,15 +112,16 @@ class VisionFile:
     The passed-in vision_file_name must have the .json filename extension
     """
 
-    def __init__(self, vision_file_name=None):
+    def __init__(self, visions_json_directory=None, vision_file_name=None):
         """ Read in all the json for the passed-in vision_file_name """
         self.vision_file_name = vision_file_name
-        if vision_file_name == None:
+        if visions_json_directory == None or vision_file_name == None:
             self.visions_dict = {}
         else:
+            print('VisionFile - __init__ - visions_json_directory:', visions_json_directory)
             print('VisionFile - __init__ - vision_file_name:', vision_file_name)
             site_content_dir = os.path.abspath(os.path.dirname(__file__))
-            data_file_dir = site_content_dir + VisionsList.VISIONS_DIRECTORY
+            data_file_dir = site_content_dir + visions_json_directory
             data_file_path = data_file_dir + vision_file_name
             vision_json_file = open(data_file_path, encoding='utf-8', mode="r")
             vision_json_string = vision_json_file.read()
