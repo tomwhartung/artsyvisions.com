@@ -13,7 +13,10 @@
 # - prints detailed information about how quizzes are scored
 #
 export DJANGO_DEBUG=1
-export RUNNING_LOCALLY=1
+
+export RUNNING_LOCALLY=0
+## export RUNNING_LOCALLY=1
+
 export PYTHONPATH="..:${PYTHONPATH}"
 cd ..
 . /var/www/artsyvisions.com/htdocs/artsyvisions.com/virtualenvs/artsyvisions_env/bin/activate
