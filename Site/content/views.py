@@ -37,9 +37,7 @@ def visions_all(request):
 
     """ Load and render the visions/all template """
 
-    visions_list_obj = VisionsList('all')
-    visions_list_obj.set_visions_list_data()
-
+    visions_list_obj = VisionsList('all')  # Reads the json files, etc.
     title = 'All Visions - ArtsyVisions.com';
     template = 'content/visions/all.html'
     context = {
@@ -53,9 +51,7 @@ def visions_person(request):
 
     """ Load and render the visions/person template """
 
-    visions_list_obj = VisionsList('person')
-    visions_list_obj.set_visions_list_data()
-
+    visions_list_obj = VisionsList('person')  # Reads the json files, etc.
     title = 'Individuals - ArtsyVisions.com';
     template = 'content/visions/person.html'
     context = {
@@ -69,9 +65,7 @@ def visions_people(request):
 
     """ Load and render the visions/people template """
 
-    visions_list_obj = VisionsList('people')
-    visions_list_obj.set_visions_list_data()
-
+    visions_list_obj = VisionsList('people')  # Reads the json files, etc.
     title = 'Pairs - ArtsyVisions.com';
     template = 'content/visions/people.html'
     context = {
@@ -85,9 +79,7 @@ def visions_groups(request):
 
     """ Load and render the visions/groups template """
 
-    visions_list_obj = VisionsList('groups')
-    visions_list_obj.set_visions_list_data()
-
+    visions_list_obj = VisionsList('groups')  # Reads the json files, etc.
     title = 'Groups - ArtsyVisions.com';
     template = 'content/visions/groups.html'
     context = {
