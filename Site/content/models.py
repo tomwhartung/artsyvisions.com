@@ -46,7 +46,7 @@ class VisionsList:
         #self.visions_files = []
         self.visions_list_data = []
 
-        if RUNNING_LOCALLY:
+        if RUNNING_LOCALLY == 1:
             self.read_visions_list_data(self.DRAFT_VISIONS_JSON_DIRECTORY)
 
         self.read_visions_list_data(self.VISIONS_JSON_DIRECTORY)
@@ -69,18 +69,18 @@ class VisionsList:
         else:
             fnmatch_string = '*'
 
-        filtered_visions_file_list = []
+        filtered_list = []
 
         for vis_file in all_visions_files:
             if fnmatch.fnmatch(vis_file, fnmatch_string):
-                filtered_visions_file_list.append(vis_file)
+                filtered_list.append(vis_file)
 
         if DJANGO_DEBUG:
             print('VisionsList - __init__ - self.visions_page_name:', self.visions_page_name)
             print('VisionsList - __init__ - fnmatch_string:', fnmatch_string)
-            print('VisionsList - __init__ - filtered_visions_file_list:', filtered_visions_file_list)
+            print('VisionsList - __init__ - filtered_list:', filtered_list)
 
-        return filtered_visions_file_list
+        return filtered_list
 
 
     def read_visions_list_data(self, visions_json_directory=None):
@@ -90,9 +90,9 @@ class VisionsList:
         Create a VisionFile object for each file
         Get the data needed for the visions list page from the VisionFile object
         """
-        filtered_visions_file_list = self.get_visions_file_list(visions_json_directory)
+        filtered_list = self.get_visions_file_list(visions_json_directory)
 
-        for vis_file in filtered_visions_file_list:
+        for vis_file in filtered_list:
             ### vis_file_name, vis_file_ext = os.path.splitext(vis_file)
             vision_file_obj = VisionFile(visions_json_directory, vis_file)
             vision_file_obj.set_vision_dict_data()
@@ -118,8 +118,6 @@ class VisionFile:
         if visions_json_directory == None or vision_file_name == None:
             self.visions_dict = {}
         else:
-            print('VisionFile - __init__ - visions_json_directory:', visions_json_directory)
-            print('VisionFile - __init__ - vision_file_name:', vision_file_name)
             site_content_dir = os.path.abspath(os.path.dirname(__file__))
             data_file_dir = site_content_dir + visions_json_directory
             data_file_path = data_file_dir + vision_file_name
@@ -186,24 +184,15 @@ class VisionFile:
             ###     + image_dict['image_file_name']
             image_data = []
             group_name = self.vision_dict['group_name']
-            print('VisionFile - set_image_data - self.vision_dict[image_file_list]:', self.vision_dict['image_file_list'])
-            print('VisionFile - set_image_data - image_file_parent_dir:', image_file_parent_dir)
-            print('VisionFile - set_image_data - group_name:', group_name)
             for img_dict in self.vision_dict['image_file_list']:
                 img_fn = img_dict['image_file_name']
                 image_file_path = image_file_parent_dir + group_name + '/' + img_fn
-                print('VisionFile - set_image_data - img_dict:', img_dict)
-                print('VisionFile - set_image_data - img_fn:', img_fn)
-                print('VisionFile - set_image_data - image_file_path:', image_file_path)
                 image_file_dict = {}
                 image_file_dict['name'] = img_dict['name']
                 image_file_dict['image_file_path'] = image_file_path
                 image_data.append(image_file_dict)
             self.vision_dict['image_data'] = image_data
-            print('VisionFile - set_image_data - self.vision_dict[image_data]:', self.vision_dict['image_data'])
         else:
             image_file_path = image_file_parent_dir + self.vision_dict['image_file_name']
             self.vision_dict['image_file_path'] = image_file_path
-            print('VisionFile - set_image_data - self.vision_dict[image_file_name]: ', self.vision_dict['image_file_name'])
-            print('VisionFile - set_image_data - self.vision_dict[image_file_path]: ', self.vision_dict['image_file_path'])
         return self
