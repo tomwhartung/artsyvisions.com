@@ -1,5 +1,7 @@
 {
   "title": "Mr. Spock and Dr. McCoy",
   "image_file_name": "star_trek-spock_and_mccoy.jpg",
-  "image_file_list": ""
+  "col_classes": "s12 m6 l6",
+  "card_content_html": "<p>The logical Mr. Spock's image shows his cool, calm character, and is of course mostly Green.</p><p>The emotional Dr. McCoy's warm image is mostly red and stands in stark contrast to Spock's.</p>",
+  "card_reveal_html": "reveal text"
 }
