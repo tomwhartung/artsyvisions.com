@@ -1,3 +1,5 @@
 {
-  "title": "Last Card"
+  "title": "New Posts!",
+  "col_classes": "s7 m6 l5",
+  "card_content_html": "<p>Look for new Artsy Visions on the <b>first and third Thursdays</b> of each month.</p><hr><h4 class='center'>Join the List!</h4><p>To make sure you never miss a post, <a href='https://groja.com/conversion/seeourminds' target='_blank'>join our email list</a>!</p>"
 }
