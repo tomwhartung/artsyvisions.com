@@ -4,7 +4,9 @@
   "image_file_list": [
     { "name": "Basil Fawlty", "image_file_name": "estp-basil_fawlty-1.jpg" },
     { "name": "Sybil Fawlty", "image_file_name": "esfj-sybil_fawlty-1.jpg" },
-    { "name": "Polly Sherman", "image_file_name": "infp-polly_sherman-1.jpg" },
+    { "name": "Polly", "image_file_name": "infp-polly_sherman-1.jpg" },
     { "name": "Manuel", "image_file_name": "isfp-manuel-1.jpg" }
-  ]
+  ],
+  "col_classes": "s12 m10 l8",
+  "card_content_html": "<p>Starring Monty Python's John Cleese, Fawlty Towers tops the British Film Institute's list of Top 100 TV Shows.</p><p>The Yellow in Basil's portrait shows he can get bored easily, and the Green shows he's can be a schemer.  The Red and Green in Sybil's image shows she's the decisive one in &mdash; and the real boss of &mdash; Team Fawlty.</p><p>The Blue in Polly's image shows she can be good at coming up with fresh ideas to help keep Basil from getting in trouble.  The Red in her and Manuel's images show they're both friendly, and they show this by helping Basil when they can.</p>"
 }
