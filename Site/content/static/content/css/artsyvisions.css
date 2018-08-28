@@ -76,5 +76,6 @@ footer.page-footer {
   padding: .5% 2% .5% 2%;
 }
 .group-image {
-  padding: .5%;
+  margin: .5%;
+  padding: 1%;
 }
