@@ -79,3 +79,6 @@ footer.page-footer {
   margin: .5%;
   padding: 1%;
 }
+.ordinal {
+  vertical-align:super;
+}
