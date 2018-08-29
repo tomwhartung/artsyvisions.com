@@ -5,5 +5,7 @@
     { "name": "Patrick Henry", "image_file_name": "esfj-patrick_henry-1.jpg" },
     { "name": "Citizen Kane", "image_file_name": "esfj-charles_foster_kane-1.jpg" },
     { "name": "Donald Trump", "image_file_name": "esfj-donald_trump-1.jpg" }
-  ]
+  ],
+  "col_classes": "s12 m10 l8",
+  "card_content_html": "<p>Placeholder for card_content_html markup.</p>"
 }
