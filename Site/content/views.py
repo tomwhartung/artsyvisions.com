@@ -89,15 +89,17 @@ def visions_groups(request):
     return render(request, template, context)
 
 
-def visions_story(request):
+def visions_story(request, vision_file_no_ext=''):
 
     """ Load and render the visions/story template """
 
+    visions_story_obj = {}
+    visions_story_obj['vision_file_no_ext'] = vision_file_no_ext
     title = 'Story - ArtsyVisions.com';
     template = 'content/visions/story.html'
     context = {
         'title': title,
-        'visions_list_obj': visions_list_obj,
+        'visions_story_obj': visions_story_obj,
     }
     return render(request, template, context)
 
