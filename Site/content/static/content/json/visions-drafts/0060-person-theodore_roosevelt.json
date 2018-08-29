@@ -1,5 +1,7 @@
 {
   "title": "Theodore Roosevelt",
   "image_file_name": "estj-theodore_roosevelt-1.jpg",
-  "image_file_list": ""
+  "col_classes": "s12 m6 l4",
+  "card_content_html": "<p>Placeholder for card_content_html markup.</p>",
+  "card_reveal_html": "<p>Placeholder for card_reveal_html markup.</p>"
 }
