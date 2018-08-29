@@ -1,5 +1,7 @@
 {
   "title": "Princess Leia and Han Solo",
   "image_file_name": "star_wars-leia_and_han.jpg",
-  "image_file_list": ""
+  "col_classes": "s12 m6 l6",
+  "card_content_html": "<p>Placeholder for card_content_html markup.</p>",
+  "card_reveal_html": "<p>Placeholder for card_reveal_html markup.</p>"
 }
