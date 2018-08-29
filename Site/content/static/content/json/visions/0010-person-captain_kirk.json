@@ -1,6 +1,7 @@
 {
   "title": "Captain James T. Kirk",
   "image_file_name": "estj-captain_kirk-2.jpg",
+  "story_file_name": "captain_kirk.html",
   "col_classes": "s12 m6 l4",
   "card_content_html": "<p>The Green in Captain Kirk's image shows he is decisive and has a strong preference for being logical.</p>",
   "card_reveal_html": "<p>The profiles of the three main characters in Star Trek were among the first I did back in the 1980s.</p>"
