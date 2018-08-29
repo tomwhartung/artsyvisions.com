@@ -136,6 +136,7 @@ class VisionFile:
     def set_vision_dict_data(self):
         """ Set the values needed for the template in this object """
         self.vision_dict['vision_file_name'] = self.vision_file_name
+        self.vision_dict['vision_file_no_ext'] = os.path.splitext(self.vision_file_name)[0]
         self.set_vision_type()   # must call this one first!
         self.set_group_name()
         self.set_image_data()
