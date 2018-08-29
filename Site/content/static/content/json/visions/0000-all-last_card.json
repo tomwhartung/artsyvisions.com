@@ -1,5 +1,4 @@
 {
-  "title": "New Posts!",
-  "col_classes": "s7 m6 l5",
-  "card_content_html": "<p>Look for new Artsy Visions on the <b>first and third Thursdays</b> of each month.</p><hr><h4 class='center'>Join the List!</h4><p>To make sure you never miss a post, <a href='https://groja.com/conversion/seeourminds' target='_blank'>join our email list</a>!</p>"
+  "col_classes": "s7 m6 l3",
+  "card_content_html": "<h5 class='center'>Coming Soon:<br>New Posts!</h5><p>Look for new Artsy Visions on the <b>1<span class='ordinal'>st</span>&nbsp;and 3<span class='ordinal'>rd</span>&nbsp;Thursdays</b> of each month.</p><hr><h5 class='center'>Join the List!</h5><p>Make sure you never miss a post by signing up to receive <a href='https://groja.com/conversion/seeourminds' target='_blank'>our monthly newsletter</a>!</p>"
 }
