@@ -39,7 +39,8 @@
       {{ vis_dict.card_content_html|safe }}
      </div>
      <div class="card-action center">
-      <a href="/visions/story" class="waves-effect waves-light btn">Read the Story</a>
+      <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
+         class="waves-effect waves-light btn">Read the Story</a>
      </div>
     </div><!-- .card -->
    {% else %}
