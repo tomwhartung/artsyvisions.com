@@ -27,7 +27,10 @@ urlpatterns = [
     path('visions/groups',
         views.visions_groups,
         name='visions_groups'),
-    path('visions/story',
+    path('visions/story/',
+        views.visions_story,
+        name='visions_story'),
+    path('visions/story/<vision_file_no_ext>',
         views.visions_story,
         name='visions_story'),
     path('legal/affiliate_marketing_disclosure',
@@ -44,4 +47,3 @@ urlpatterns = [
         name='terms_of_service'),
 
 ]
-
