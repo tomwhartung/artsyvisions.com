@@ -1,6 +1,7 @@
 {
   "title": "The Team at Fawlty Towers",
   "image_file_name": "",
+  "story_file_name": "team_fawlty.html",
   "image_file_list": [
     { "name": "Basil Fawlty", "image_file_name": "estp-basil_fawlty-1.jpg" },
     { "name": "Sybil Fawlty", "image_file_name": "esfj-sybil_fawlty-1.jpg" },
