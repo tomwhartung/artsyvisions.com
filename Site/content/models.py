@@ -23,9 +23,8 @@ RUNNING_LOCALLY = os.environ.get('RUNNING_LOCALLY', '0')
 class VisionsList:
 
     """
-    Gather a list of visions json files appropriate for the optional
-    specified visions_page_name and ...
-    ________________________________
+    Gather a list of visions json files for the specified visions_page_name
+    Read them and set other, derived values needed for the templates
     """
 
     VISIONS_JSON_DIRECTORY = '/static/content/json/visions/'
@@ -109,6 +108,31 @@ class VisionsList:
                 print('VisionsList - read_visions_list_data - vis_dict:', vis_dict)
 
         return self.visions_list_data
+
+
+class VisionStory:
+
+    """
+    Gather the data needed for the story specified by vision_file_no_ext
+    """
+
+    def __init__(self, vision_file_no_ext='best_one_so_far'):
+
+        """
+        """
+
+        self.read_visions_story_data(vision_file_no_ext)
+
+
+    def read_visions_story_data(self, vision_file_no_ext):
+
+        """
+        """
+
+        self.visions_story_data = {}
+        self.visions_story_data['vision_file_no_ext'] = vision_file_no_ext
+
+        return self.visions_story_data
 
 
 class VisionFile:
