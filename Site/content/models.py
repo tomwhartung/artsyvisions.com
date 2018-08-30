@@ -11,6 +11,7 @@ Reference:
 ### from django.db import models
 ### # Create your models here.
 
+import codecs
 import fnmatch
 import json
 import os
@@ -146,16 +147,17 @@ class VisionStory:
 
         self.visions_story_data['vision_dict'] = vision_file_obj.vision_dict
         story_file_name = vision_file_obj.vision_dict['story_file_name']
-        self.read_story_html(story_file_name)
+        vision_type = vision_file_obj.vision_dict['vision_type']
+        self.read_story_html(vision_type, story_file_name)
         return self.visions_story_data
 
 
-    def read_story_html(self, story_file_name):
+    def read_story_html(self, vision_type, story_file_name):
         """
         """
 
         site_content_dir = os.path.abspath(os.path.dirname(__file__))
-        story_file_dir = site_content_dir + '/static/content/html/person/'
+        story_file_dir = site_content_dir + '/static/content/html/' + vision_type + '/'
         story_file_path = story_file_dir + story_file_name
         file_exists = os.path.isfile(story_file_path)
         print('VisionStory - read_story_html - site_content_dir:', site_content_dir)
@@ -163,16 +165,17 @@ class VisionStory:
         print('VisionStory - read_story_html - story_file_path:', story_file_path)
         print('VisionStory - read_story_html - file_exists:', file_exists)
         if file_exists:
+            story_html_file = codecs.open(story_file_path, encoding='utf-8', mode="r")
+            story_html_string = story_html_file.read()
+            story_html_file.close()
+            self.visions_story_data['story_html'] = story_html_string
             print('VisionStory - read_story_html - story file exists!')
+            print('VisionStory - read_story_html - story_html_string:', story_html_string)
         else:
-            print('VisionStory - read_story_html - story file does NOT exist!')
-
-            #vision_json_file = open(vision_file_path, encoding='utf-8', mode="r")
-            #vision_json_string = vision_json_file.read()
-            #vision_json_file.close()
-            #self.vision_dict = json.loads(vision_json_string)
-
-            #self.visions_story_data['story_html'] =
+            print('ERROR: VisionStory - read_story_html - story file does NOT exist!')
+            story_html = '<p>File missing.</p>'
+            story_html += '<p>story_file_path: ' + story_file_path + '</p>'
+            self.visions_story_data['story_html'] = story_html
 
 
 
