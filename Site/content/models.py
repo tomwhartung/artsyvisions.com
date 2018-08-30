@@ -182,17 +182,19 @@ class VisionFile:
         Read it and set the values needed for the template in this object
         If the file exists, return True, else return False
         """
+
+        self.vision_dict = {}
         if self.visions_json_directory == None or self.vision_file_name == None:
-            self.visions_dict = {}
             return False
         else:
-            self.read_visions_file()
-            self.vision_dict['vision_file_name'] = self.vision_file_name
-            self.vision_dict['vision_file_no_ext'] = os.path.splitext(self.vision_file_name)[0]
-            self.set_vision_type()   # must call this one first!
-            self.set_group_name()
-            self.set_image_data()
-            return True
+            file_exists = self.read_visions_file()
+            if file_exists:
+                self.vision_dict['vision_file_name'] = self.vision_file_name
+                self.vision_dict['vision_file_no_ext'] = os.path.splitext(self.vision_file_name)[0]
+                self.set_vision_type()   # must call this one first!
+                self.set_group_name()
+                self.set_image_data()
+            return file_exists
 
 
     def read_visions_file(self):
@@ -211,7 +213,6 @@ class VisionFile:
             self.vision_dict = json.loads(vision_json_string)
             return True
         else:
-            self.visions_dict = {}
             return False
 
 
