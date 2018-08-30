@@ -14,6 +14,7 @@ from django.shortcuts import render
 from django.views.generic.base import View
 
 from .models import VisionsList
+from .models import VisionStory
 
 def home(request):
 
@@ -35,7 +36,7 @@ def home(request):
 
 def visions_all(request):
 
-    """ Load and render the visions/all template """
+    """ Get the data needed and load and render the visions/all template """
 
     visions_list_obj = VisionsList('all')  # Reads the json files, etc.
     title = 'All Visions - ArtsyVisions.com';
@@ -49,7 +50,7 @@ def visions_all(request):
 
 def visions_person(request):
 
-    """ Load and render the visions/person template """
+    """ Get the data needed and load and render the visions/person template """
 
     visions_list_obj = VisionsList('person')  # Reads the json files, etc.
     title = 'Individuals - ArtsyVisions.com';
@@ -63,7 +64,7 @@ def visions_person(request):
 
 def visions_people(request):
 
-    """ Load and render the visions/people template """
+    """ Get the data needed and load and render the visions/people template """
 
     visions_list_obj = VisionsList('people')  # Reads the json files, etc.
     title = 'Pairs - ArtsyVisions.com';
@@ -77,7 +78,7 @@ def visions_people(request):
 
 def visions_groups(request):
 
-    """ Load and render the visions/groups template """
+    """ Get the data needed and load and render the visions/groups template """
 
     visions_list_obj = VisionsList('groups')  # Reads the json files, etc.
     title = 'Groups - ArtsyVisions.com';
@@ -91,15 +92,18 @@ def visions_groups(request):
 
 def visions_story(request, vision_file_no_ext=''):
 
-    """ Load and render the visions/story template """
+    """
+    Get the data needed for the passed-in parameter, then
+    Load and render the visions/story template
+    """
 
-    visions_story_obj = {}
-    visions_story_obj['vision_file_no_ext'] = vision_file_no_ext
+    visions_story_obj = VisionStory(vision_file_no_ext)
+    visions_story_data = visions_story_obj.visions_story_data
     title = 'Story - ArtsyVisions.com';
     template = 'content/visions/story.html'
     context = {
         'title': title,
-        'visions_story_obj': visions_story_obj,
+        'visions_story_data': visions_story_data,
     }
     return render(request, template, context)
 
