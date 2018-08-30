@@ -127,6 +127,8 @@ class VisionStory:
     def read_visions_story_data(self, vision_file_no_ext):
 
         """
+        Read in the data for a single vision from the vision .json file
+        Read in the html for the story and set that in the data
         """
 
         self.visions_story_data = {}
@@ -135,19 +137,14 @@ class VisionStory:
         vision_file_name = self.visions_story_data['vision_file_no_ext'] + '.json'
         vision_file_obj = VisionFile(VISIONS_JSON_DIRECTORY, vision_file_name)
         published_file_exists = vision_file_obj.set_vision_dict_data()
-        print( 'VisionStory - read_visions_story_data - vision_file_name:', vision_file_name)
-        print( 'VisionStory - read_visions_story_data - published_file_exists:', published_file_exists)
-        if published_file_exists:
-            self.visions_story_data['vision_dict'] = vision_file_obj.vision_dict
-        else:
+        if not published_file_exists:
             vision_file_obj = VisionFile(DRAFT_VISIONS_JSON_DIRECTORY, vision_file_name)
             draft_file_exists = vision_file_obj.set_vision_dict_data()
-            print( 'VisionStory - read_visions_story_data - vision_file_name:', vision_file_name)
-            print( 'VisionStory - read_visions_story_data - draft_file_exists:', draft_file_exists)
-            if draft_file_exists:
-                self.visions_story_data['vision_dict'] = vision_file_obj.vision_dict
-            else:
+            if not draft_file_exists:
                 print('ERROR: VisionStory - read_visions_story_data - Unable to find vision_file_no_ext:', vision_file_no_ext)
+                return False
+
+        self.visions_story_data['vision_dict'] = vision_file_obj.vision_dict
 
         return self.visions_story_data
 
