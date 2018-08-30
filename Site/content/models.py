@@ -93,7 +93,7 @@ class VisionsList:
         """
         Create a list of files containing the data we need
         Create a VisionFile object for each file
-        Get the data needed for the visions list page from the VisionFile object
+        Use the object to get the data needed for the visions list page
         """
         filtered_list = self.get_visions_file_list(visions_json_directory)
 
@@ -124,6 +124,23 @@ class VisionStory:
         self.read_visions_story_data(vision_file_no_ext)
 
 
+    def read_visions_story_data(self, vision_file_no_ext):
+
+        """
+        """
+
+        self.visions_story_data = {}
+        self.visions_story_data['vision_file_no_ext'] = vision_file_no_ext
+
+        vision_file_name = self.visions_story_data['vision_file_no_ext'] + '.json'
+        vision_file_obj = VisionFile(VISIONS_JSON_DIRECTORY, vision_file_name)
+        published_file_exists = vision_file_obj.set_vision_dict_data()
+        print( 'VisionStory - read_visions_story_data - vision_file_name:', vision_file_name)
+        print( 'VisionStory - read_visions_story_data - published_file_exists:', published_file_exists)
+
+        return self.visions_story_data
+
+
     def get_visions_file_path(self, visions_json_directory, draft_visions_json_directory):
 
         """
@@ -133,27 +150,15 @@ class VisionStory:
         - Return the file path, or false if the file does not exist
         """
 
+        """
         site_content_dir = os.path.abspath(os.path.dirname(__file__))
         visions_root_dir = site_content_dir + visions_json_directory
-        published_file_path = visions_root_dir \
-            + self.visions_story_data['vision_file_no_ext'] + '.json'
-        published_file_exists = os.path.isfile(published_file_path)
-        print( 'VisionStory - get_visions_file_path - published_file_path:', published_file_path)
-        print( 'VisionStory - get_visions_file_path - published_file_exists:', published_file_exists)
-
-
-
-    def read_visions_story_data(self, vision_file_no_ext):
-
-        """
+        vision_file_name = self.visions_story_data['vision_file_no_ext'] + '.json'
+        vision_file_obj = VisionFile(visions_json_directory, vision_file_name)
+        vision_file_obj.set_vision_dict_data()
+        vision_type = VisionFile.set_vision_type(vision_file_name)
         """
 
-        self.visions_story_data = {}
-        self.visions_story_data['vision_file_no_ext'] = vision_file_no_ext
-        vision_json_file = self.get_visions_file_path(
-            VISIONS_JSON_DIRECTORY, DRAFT_VISIONS_JSON_DIRECTORY)
-
-        return self.visions_story_data
 
 
 class VisionFile:
@@ -164,27 +169,50 @@ class VisionFile:
     """
 
     def __init__(self, visions_json_directory=None, vision_file_name=None):
-        """ Read in all the json for the passed-in vision_file_name """
+
+        """ Save the passed-in values for use by methods called later """
+
+        self.visions_json_directory = visions_json_directory
         self.vision_file_name = vision_file_name
-        if visions_json_directory == None or vision_file_name == None:
-            self.visions_dict = {}
-        else:
-            site_content_dir = os.path.abspath(os.path.dirname(__file__))
-            data_file_dir = site_content_dir + visions_json_directory
-            data_file_path = data_file_dir + vision_file_name
-            vision_json_file = open(data_file_path, encoding='utf-8', mode="r")
-            vision_json_string = vision_json_file.read()
-            vision_json_file.close()
-            self.vision_dict = json.loads(vision_json_string)
 
 
     def set_vision_dict_data(self):
-        """ Set the values needed for the template in this object """
-        self.vision_dict['vision_file_name'] = self.vision_file_name
-        self.vision_dict['vision_file_no_ext'] = os.path.splitext(self.vision_file_name)[0]
-        self.set_vision_type()   # must call this one first!
-        self.set_group_name()
-        self.set_image_data()
+        """
+        Ensure we have the file directory and name, return False if not
+        Read it and set the values needed for the template in this object
+        If the file exists, return True, else return False
+        """
+        if self.visions_json_directory == None or self.vision_file_name == None:
+            self.visions_dict = {}
+            return False
+        else:
+            self.read_visions_file()
+            self.vision_dict['vision_file_name'] = self.vision_file_name
+            self.vision_dict['vision_file_no_ext'] = os.path.splitext(self.vision_file_name)[0]
+            self.set_vision_type()   # must call this one first!
+            self.set_group_name()
+            self.set_image_data()
+            return True
+
+
+    def read_visions_file(self):
+        """
+        (Try to) read in all the json for the passed-in vision_file_name
+        If the file exists, return True, else return False
+        """
+        site_content_dir = os.path.abspath(os.path.dirname(__file__))
+        data_file_dir = site_content_dir + self.visions_json_directory
+        vision_file_path = data_file_dir + self.vision_file_name
+        file_exists = os.path.isfile(vision_file_path)
+        if file_exists:
+            vision_json_file = open(vision_file_path, encoding='utf-8', mode="r")
+            vision_json_string = vision_json_file.read()
+            vision_json_file.close()
+            self.vision_dict = json.loads(vision_json_string)
+            return True
+        else:
+            self.visions_dict = {}
+            return False
 
 
     def set_vision_type(self):
@@ -199,7 +227,7 @@ class VisionFile:
         vision_type = match.group(1)
 
         self.vision_dict['vision_type'] = vision_type
-        return self
+        return vision_type
 
 
     def set_group_name(self):
