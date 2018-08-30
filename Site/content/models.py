@@ -101,11 +101,11 @@ class VisionsList:
             ### vis_file_name, vis_file_ext = os.path.splitext(vis_file)
             vision_file_obj = VisionFile(visions_json_directory, vis_file)
             vision_file_obj.set_vision_dict_data()
-            vis_dict = vision_file_obj.vision_dict
-            self.visions_list_data.append(vis_dict)
+            vision_dict = vision_file_obj.vision_dict
+            self.visions_list_data.append(vision_dict)
             if DJANGO_DEBUG:
                 print('VisionsList - read_visions_list_data - vis_file:', vis_file)
-                print('VisionsList - read_visions_list_data - vis_dict:', vis_dict)
+                print('VisionsList - read_visions_list_data - vision_dict:', vision_dict)
 
         return self.visions_list_data
 
@@ -117,10 +117,10 @@ class VisionStory:
     """
 
     def __init__(self, vision_file_no_ext='best_one_so_far'):
-
         """
+        Read in the data for a single vision from the vision .json file
+        Read in the html for the story and set that in the data
         """
-
         self.read_visions_story_data(vision_file_no_ext)
 
 
@@ -139,25 +139,6 @@ class VisionStory:
         print( 'VisionStory - read_visions_story_data - published_file_exists:', published_file_exists)
 
         return self.visions_story_data
-
-
-    def get_visions_file_path(self, visions_json_directory, draft_visions_json_directory):
-
-        """
-        Find the json file for the story to be viewed
-        - First check the visions_json_directory, if it's not there,
-        - Then check the draft_visions_json_directory
-        - Return the file path, or false if the file does not exist
-        """
-
-        """
-        site_content_dir = os.path.abspath(os.path.dirname(__file__))
-        visions_root_dir = site_content_dir + visions_json_directory
-        vision_file_name = self.visions_story_data['vision_file_no_ext'] + '.json'
-        vision_file_obj = VisionFile(visions_json_directory, vision_file_name)
-        vision_file_obj.set_vision_dict_data()
-        vision_type = VisionFile.set_vision_type(vision_file_name)
-        """
 
 
 
