@@ -124,6 +124,25 @@ class VisionStory:
         self.read_visions_story_data(vision_file_no_ext)
 
 
+    def get_visions_file_path(self, visions_json_directory, draft_visions_json_directory):
+
+        """
+        Find the json file for the story to be viewed
+        - First check the visions_json_directory, if it's not there,
+        - Then check the draft_visions_json_directory
+        - Return the file path, or false if the file does not exist
+        """
+
+        site_content_dir = os.path.abspath(os.path.dirname(__file__))
+        visions_root_dir = site_content_dir + visions_json_directory
+        published_file_path = visions_root_dir \
+            + self.visions_story_data['vision_file_no_ext'] + '.json'
+        published_file_exists = os.path.isfile(published_file_path)
+        print( 'VisionStory - get_visions_file_path - published_file_path:', published_file_path)
+        print( 'VisionStory - get_visions_file_path - published_file_exists:', published_file_exists)
+
+
+
     def read_visions_story_data(self, vision_file_no_ext):
 
         """
@@ -131,6 +150,8 @@ class VisionStory:
 
         self.visions_story_data = {}
         self.visions_story_data['vision_file_no_ext'] = vision_file_no_ext
+        vision_json_file = self.get_visions_file_path(
+            VISIONS_JSON_DIRECTORY, DRAFT_VISIONS_JSON_DIRECTORY)
 
         return self.visions_story_data
 
