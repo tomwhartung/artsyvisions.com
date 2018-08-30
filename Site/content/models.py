@@ -19,6 +19,9 @@ import re
 DJANGO_DEBUG = os.environ.get('DJANGO_DEBUG')
 RUNNING_LOCALLY = os.environ.get('RUNNING_LOCALLY', '0')
 
+VISIONS_JSON_DIRECTORY = '/static/content/json/visions/'
+DRAFT_VISIONS_JSON_DIRECTORY = '/static/content/json/visions-drafts/'
+
 
 class VisionsList:
 
@@ -26,9 +29,6 @@ class VisionsList:
     Gather a list of visions json files for the specified visions_page_name
     Read them and set other, derived values needed for the templates
     """
-
-    VISIONS_JSON_DIRECTORY = '/static/content/json/visions/'
-    DRAFT_VISIONS_JSON_DIRECTORY = '/static/content/json/visions-drafts/'
 
     def __init__(self, visions_page_name='all'):
 
@@ -46,9 +46,9 @@ class VisionsList:
         self.visions_list_data = []
 
         if RUNNING_LOCALLY != '0':
-            self.read_visions_list_data(self.DRAFT_VISIONS_JSON_DIRECTORY)
+            self.read_visions_list_data(DRAFT_VISIONS_JSON_DIRECTORY)
 
-        self.read_visions_list_data(self.VISIONS_JSON_DIRECTORY)
+        self.read_visions_list_data(VISIONS_JSON_DIRECTORY)
 
 
     def get_visions_file_list(self, visions_json_directory):
