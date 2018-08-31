@@ -5,7 +5,12 @@
  <div class="section">
   <div class="row z-depth-3">
    <div class="col s12">
+
+   {% if visions_story_data.vision_dict.title %}
     <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
+   {% else %}
+    <h2 class="center">Error!</h2>
+   {% endif %}
 
     <div>{{ visions_story_data.story_html|safe }}</div>
 
