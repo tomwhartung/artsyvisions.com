@@ -5,13 +5,9 @@
  <div class="section">
   <div class="row z-depth-3">
    <div class="col s12">
-    <h2 class="center">Story Time</h2>
-    <dl>
-     <dt>visions_story_data.vision_file_no_ext</dt>
-     <dd>{{ visions_story_data.vision_file_no_ext }}</dd>
-     <dt>visions_story_data.vision_dict.story_file_name</dt>
-     <dd>{{ visions_story_data.vision_dict.story_file_name }}</dd>
-    </dl>
+    <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
+
+    <div>{{ visions_story_data.story_html|safe }}</div>
 
    </div><!-- .col -->
   </div><!-- .row -->
