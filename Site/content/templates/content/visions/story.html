@@ -1,4 +1,5 @@
 {% extends "content/base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="container">
@@ -8,11 +9,28 @@
 
    {% if visions_story_data.vision_dict.title %}
     <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
+    {% if visions_story_data.vision_dict.image_file_name %}
+     <div>
+      <img src="{% static visions_story_data.vision_dict.image_file_path %}">
+     </div>
+    {% endif %}
+    {% if visions_story_data.vision_dict.image_file_list %}
+     <div>
+      {% for image_data_dict in vision_dict.image_data %}
+       <div class="">
+        <h5 class="center">{{ image_data_dict.name }}</h5>
+        <img src="{% static image_data_dict.image_file_path %}">
+       </div>
+      {% endfor %}
+     </div>
+    {% endif %}
    {% else %}
     <h2 class="center">Error!</h2>
    {% endif %}
 
+   {% if visions_story_data.story_html %}
     <div>{{ visions_story_data.story_html|safe }}</div>
+   {% endif %}
 
    </div><!-- .col -->
   </div><!-- .row -->
