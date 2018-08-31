@@ -72,9 +72,9 @@
    {% elif vis_dict.vision_type == 'groups' %}
     <div class="groups-card z-depth-3">
      <h2 class="header center">{{ vis_dict.title }}</h2>
-     <div class="card horizontal">
+     <div class="card horizontal hoverable">
       {% for image_data_dict in vis_dict.image_data %}
-       <div class="card-image group-image hoverable">
+       <div class="card-image group-image">
         <h5 class="center">{{ image_data_dict.name }}</h5>
         <img src="{% static image_data_dict.image_file_path %}">
        </div>
