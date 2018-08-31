@@ -17,14 +17,14 @@
   <div class="row">
   {% for vis_dict in visions_list_obj.visions_list_data %}
    {% if vis_dict.col_classes %}
-   <div class="col {{ vis_dict.col_classes }}">
+   <div class="col hoverable {{ vis_dict.col_classes }}">
    {% else %}
-   <div class="col s12 m6 l6">
+   <div class="col hoverable s12 m6 l6">
    {% endif %}
    {% if vis_dict.vision_type == 'people' %}
     <div class="pairs-card z-depth-3">
      <h4 class="center">{{ vis_dict.title }}</h4>
-     <div class="card sticky-action">
+     <div class="card sticky-action hoverable">
       <div class="card-image waves-effect waves-block waves-light">
        <img class="activator" src="{% static vis_dict.image_file_path %}">
       </div>
