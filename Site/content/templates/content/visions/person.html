@@ -17,38 +17,42 @@
   <div class="row">
   {% for vis_dict in visions_list_obj.visions_list_data %}
    {% if vis_dict.col_classes %}
-   <div class="col {{ vis_dict.col_classes }}">
+   <div class="col hoverable {{ vis_dict.col_classes }}">
    {% else %}
-   <div class="col s12 m6 l4">
+   <div class="col hoverable s12 m6 l4">
    {% endif %}
    {% if vis_dict.vision_type == 'person' %}
-    <div class="card sticky-action z-depth-3">
-     <h4 class="center">{{ vis_dict.title }}</h4>
-     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator"
-           src="{% static vis_dict.image_file_path %}">
-     </div>
-     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">{{ vis_dict.title }}
-       <i class="material-icons right medium">arrow_drop_down</i></span>
-      {{ vis_dict.card_reveal_html|safe }}
-     </div>
-     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">
-       <i class="material-icons right medium">arrow_drop_up</i></span>
-      {{ vis_dict.card_content_html|safe }}
-     </div>
-     <div class="card-action center">
-      <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
-         class="waves-effect waves-light btn">Read the Story</a>
-     </div>
-    </div><!-- .card -->
+    <div class="person-card z-depth-3">
+     <div class="card sticky-action hoverable">
+      <h4 class="center">{{ vis_dict.title }}</h4>
+      <div class="card-image waves-effect waves-block waves-light">
+       <img class="activator"
+            src="{% static vis_dict.image_file_path %}">
+      </div>
+      <div class="card-reveal">
+       <span class="card-title grey-text text-darken-4">{{ vis_dict.title }}
+        <i class="material-icons right medium">arrow_drop_down</i></span>
+       {{ vis_dict.card_reveal_html|safe }}
+      </div>
+      <div class="card-content">
+       <span class="card-title activator grey-text text-darken-4">
+        <i class="material-icons right medium">arrow_drop_up</i></span>
+       {{ vis_dict.card_content_html|safe }}
+      </div>
+      <div class="card-action center">
+       <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
+          class="waves-effect waves-light btn">Read the Story</a>
+      </div>
+     </div><!-- .card -->
+    </div><!-- .person-card -->
    {% else %}
-    <div class="card z-depth-3">
-     <div class="card-content">
-      {{ vis_dict.card_content_html|safe }}
-     </div><!-- .card-content -->
-    </div><!-- .card -->
+    <div class="all-card z-depth-3">
+     <div class="card">
+      <div class="card-content">
+       {{ vis_dict.card_content_html|safe }}
+      </div><!-- .card-content -->
+     </div><!-- .card -->
+    </div><!-- .all-card -->
    {% endif %}
    </div><!-- .col -->
   {% endfor %}
