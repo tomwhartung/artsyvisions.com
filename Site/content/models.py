@@ -146,33 +146,33 @@ class VisionStory:
                 return False
 
         self.visions_story_data['vision_dict'] = vision_file_obj.vision_dict
-        story_file_name = vision_file_obj.vision_dict['story_file_name']
-        vision_type = vision_file_obj.vision_dict['vision_type']
-        self.read_story_html(vision_type, story_file_name)
+        self.visions_story_data['story_html'] = self.get_story_html(vision_file_obj)
         return self.visions_story_data
 
 
-    def read_story_html(self, vision_type, story_file_name):
+    def get_story_html(self, vision_file_obj):
         """
         """
+        story_file_name = vision_file_obj.vision_dict['story_file_name']
+        vision_type = vision_file_obj.vision_dict['vision_type']
 
         site_content_dir = os.path.abspath(os.path.dirname(__file__))
         story_file_dir = site_content_dir + '/static/content/html/' + vision_type + '/'
         story_file_path = story_file_dir + story_file_name
         file_exists = os.path.isfile(story_file_path)
-        print('VisionStory - read_story_html - site_content_dir:', site_content_dir)
-        print('VisionStory - read_story_html - story_file_dir:', story_file_dir)
-        print('VisionStory - read_story_html - story_file_path:', story_file_path)
-        print('VisionStory - read_story_html - file_exists:', file_exists)
+        print('VisionStory - get_story_html - site_content_dir:', site_content_dir)
+        print('VisionStory - get_story_html - story_file_dir:', story_file_dir)
+        print('VisionStory - get_story_html - story_file_path:', story_file_path)
+        print('VisionStory - get_story_html - file_exists:', file_exists)
         if file_exists:
             story_html_file = codecs.open(story_file_path, encoding='utf-8', mode="r")
             story_html_string = story_html_file.read()
             story_html_file.close()
             self.visions_story_data['story_html'] = story_html_string
-            print('VisionStory - read_story_html - story file exists!')
-            print('VisionStory - read_story_html - story_html_string:', story_html_string)
+            print('VisionStory - get_story_html - story file exists!')
+            print('VisionStory - get_story_html - story_html_string:', story_html_string)
         else:
-            print('ERROR: VisionStory - read_story_html - story file does NOT exist!')
+            print('ERROR: VisionStory - get_story_html - story file does NOT exist!')
             story_html = '<p>File missing.</p>'
             story_html += '<p>story_file_path: ' + story_file_path + '</p>'
             self.visions_story_data['story_html'] = story_html
