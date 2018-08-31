@@ -122,10 +122,13 @@ class VisionStory:
         Read in the data for a single vision from the vision .json file
         Read in the html for the story and set that in the data
         """
-        self.read_visions_story_data(vision_file_no_ext)
+        self.get_visions_story_data(vision_file_no_ext)
+        if DJANGO_DEBUG:
+            story_html = self.visions_story_data['story_html']
+            print('VisionStory - __init__ - story_html:', story_html)
 
 
-    def read_visions_story_data(self, vision_file_no_ext):
+    def get_visions_story_data(self, vision_file_no_ext):
 
         """
         Read in the data for a single vision from the vision .json file
@@ -134,15 +137,17 @@ class VisionStory:
 
         self.visions_story_data = {}
         self.visions_story_data['vision_file_no_ext'] = vision_file_no_ext
-
         vision_file_name = self.visions_story_data['vision_file_no_ext'] + '.json'
         vision_file_obj = VisionFile(VISIONS_JSON_DIRECTORY, vision_file_name)
         published_file_exists = vision_file_obj.set_vision_dict_data()
+
         if not published_file_exists:
             vision_file_obj = VisionFile(DRAFT_VISIONS_JSON_DIRECTORY, vision_file_name)
             draft_file_exists = vision_file_obj.set_vision_dict_data()
             if not draft_file_exists:
-                print('ERROR: VisionStory - read_visions_story_data - Unable to find vision_file_no_ext:', vision_file_no_ext)
+                print('ERROR: VisionStory - get_visions_story_data - Unable to find vision_file_no_ext:', vision_file_no_ext)
+                story_html = '<p>Unable to find file vision_file_name <q>' + vision_file_name + '</q>!!</p>'
+                self.visions_story_data['story_html'] = story_html
                 return False
 
         self.visions_story_data['vision_dict'] = vision_file_obj.vision_dict
@@ -153,30 +158,34 @@ class VisionStory:
     def get_story_html(self, vision_file_obj):
         """
         """
+        if 'story_file_name' in vision_file_obj.vision_dict:
+            story_html_string = self.read_story_html_file(vision_file_obj)
+        else:
+            story_html_string = '<p>The story_file_path is not set in the json file!</p>'
+
+        return story_html_string
+
+    def read_story_html_file(self, vision_file_obj):
+        """
+        """
         story_file_name = vision_file_obj.vision_dict['story_file_name']
         vision_type = vision_file_obj.vision_dict['vision_type']
-
         site_content_dir = os.path.abspath(os.path.dirname(__file__))
         story_file_dir = site_content_dir + '/static/content/html/' + vision_type + '/'
         story_file_path = story_file_dir + story_file_name
+        #print('VisionStory - get_story_html - story_file_path:', story_file_path)
         file_exists = os.path.isfile(story_file_path)
-        print('VisionStory - get_story_html - site_content_dir:', site_content_dir)
-        print('VisionStory - get_story_html - story_file_dir:', story_file_dir)
-        print('VisionStory - get_story_html - story_file_path:', story_file_path)
-        print('VisionStory - get_story_html - file_exists:', file_exists)
         if file_exists:
             story_html_file = codecs.open(story_file_path, encoding='utf-8', mode="r")
             story_html_string = story_html_file.read()
             story_html_file.close()
-            self.visions_story_data['story_html'] = story_html_string
             print('VisionStory - get_story_html - story file exists!')
-            print('VisionStory - get_story_html - story_html_string:', story_html_string)
         else:
             print('ERROR: VisionStory - get_story_html - story file does NOT exist!')
-            story_html = '<p>File missing.</p>'
-            story_html += '<p>story_file_path: ' + story_file_path + '</p>'
-            self.visions_story_data['story_html'] = story_html
+            story_html_string = '<p>File missing.</p>'
+            story_html_string += '<p>story_file_path: <q>' + story_file_path + '</q></p>'
 
+        return story_html_string
 
 
 
