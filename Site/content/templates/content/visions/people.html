@@ -28,6 +28,9 @@
       <div class="card-image waves-effect waves-block waves-light">
        <img class="activator" src="{% static vis_dict.image_file_path %}">
       </div>
+      {% if vis_dict.subtitle %}
+       <h5 class='center'>{{ vis_dict.subtitle }}</h5>
+      {% endif %}
       <div class="card-reveal">
        <span class="card-title grey-text text-darken-4">{{ vis_dict.title }}
         <i class="material-icons right medium">arrow_drop_down</i></span>
