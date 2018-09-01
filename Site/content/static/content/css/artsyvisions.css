@@ -67,7 +67,11 @@ footer.page-footer {
 .mobile-submenu-item {
   margin-left: 2em;
 }
+.ordinal {
+  vertical-align:super;
+}
 
+/* For the cards on the person, people, groups, and all pages */
 .sticky-action {
   padding: 5%;
 }
@@ -85,6 +89,15 @@ footer.page-footer {
   margin: .5%;
   padding: 1%;
 }
-.ordinal {
-  vertical-align:super;
+
+/* Story Page */
+.titles-images {
+  padding: 2%;
+}
+.author-date,
+.short-disclosure {
+  padding: 5%;
+}
+.story-html {
+  padding: 3%;
 }
