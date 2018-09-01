@@ -78,7 +78,10 @@ footer.page-footer {
   margin: 2% 0 2% 0;
   padding: .5% 2% .5% 2%;
 }
-.group-image {
+.groups-images {  /* div wraps all images + subtitle in a group */
+  padding: .5% 1% 2% 1%;
+}
+.group-image {    /* div wraps a single image in a group */
   margin: .5%;
   padding: 1%;
 }
