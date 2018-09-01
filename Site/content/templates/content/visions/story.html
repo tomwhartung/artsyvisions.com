@@ -35,32 +35,41 @@
   </div><!-- .row -->
   <div class="row valign-wrapper">
    <div class="col s6 m6 l6">
+    <div class="hoverable">
     {% if visions_story_data.vision_dict.author or visions_story_data.vision_dict.date %}
      {% if visions_story_data.vision_dict.author %}
-      <p>By {{ visions_story_data.vision_dict.author }}
+      <p class="author-date">
+       By {{ visions_story_data.vision_dict.author }}
      {% else %}
-      <p>By Tom Hartung
+      <p class="author-date">
+       By Tom Hartung
      {% endif %}
      {% if visions_story_data.vision_dict.date %}
      &ndash; {{ visions_story_data.vision_dict.date }}.</p>
      {% endif %}
     {% endif %}
+    </div><!-- .hoverable -->
    </div><!-- .col -->
    <div class="col s6 m6 l6">
-    <p>
-     This page contains affiliate links.
-     Using them to make a purchase helps support this site, without
-     any additional cost to you.
-     <span class="hoverable">
-      <a href="/legal/affiliate_marketing_disclosure" class="waves-effect waves-light btn-flat right"
-        title="Affiliate Marketing Disclosure">Learn More</a></span></p>
+    <div class="hoverable">
+     <p class="short-disclosure">
+      This page contains affiliate links.
+      Using them to make a purchase helps support this site, without
+      any additional cost to you.
+      <span class="hoverable right valign-wrapper">
+       <i class="material-icons">info_outline</i>
+       <a href="/legal/affiliate_marketing_disclosure" class="waves-effect waves-light btn-flat"
+          title="Affiliate Marketing Disclosure">Learn More</a></span></p>
+    </div><!-- .hoverable -->
    </div><!-- .col -->
   </div><!-- .row -->
   <div class="row">
    <div class="col s12">
-    {% if visions_story_data.story_html %}
-     <div>{{ visions_story_data.story_html|safe }}</div>
-    {% endif %}
+    <div class="hoverable story-html">
+     {% if visions_story_data.story_html %}
+      <div>{{ visions_story_data.story_html|safe }}</div>
+     {% endif %}
+    </div><!-- .hoverable -->
    </div><!-- .col -->
   </div><!-- .row -->
  </div><!-- .section -->
