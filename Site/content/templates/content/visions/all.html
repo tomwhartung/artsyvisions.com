@@ -30,6 +30,9 @@
        <img class="activator"
             src="{% static vis_dict.image_file_path %}">
       </div>
+      {% if vis_dict.subtitle %}
+       <h5 class='center'>{{ vis_dict.subtitle }}</h5>
+      {% endif %}
       <div class="card-reveal">
        <span class="card-title grey-text text-darken-4">{{ vis_dict.title }}
         <i class="material-icons right medium">arrow_drop_down</i></span>
@@ -53,6 +56,9 @@
       <div class="card-image waves-effect waves-block waves-light">
        <img class="activator" src="{% static vis_dict.image_file_path %}">
       </div>
+      {% if vis_dict.subtitle %}
+       <h5 class='center'>{{ vis_dict.subtitle }}</h5>
+      {% endif %}
       <div class="card-reveal">
        <span class="card-title grey-text text-darken-4">{{ vis_dict.title }}
         <i class="material-icons right medium">arrow_drop_down</i></span>
@@ -72,14 +78,19 @@
    {% elif vis_dict.vision_type == 'groups' %}
     <div class="groups-card z-depth-3">
      <h2 class="header center">{{ vis_dict.title }}</h2>
-     <div class="card horizontal hoverable">
-      {% for image_data_dict in vis_dict.image_data %}
-       <div class="card-image group-image">
-        <h5 class="center">{{ image_data_dict.name }}</h5>
-        <img src="{% static image_data_dict.image_file_path %}">
-       </div>
-      {% endfor %}
-     </div><!-- .card .horizontal -->
+     <div class="z-depth-3 groups-images">
+      <div class="card horizontal">
+       {% for image_data_dict in vis_dict.image_data %}
+        <div class="card-image group-image">
+         <h5 class="center">{{ image_data_dict.name }}</h5>
+         <img src="{% static image_data_dict.image_file_path %}">
+        </div>
+       {% endfor %}
+      </div><!-- .card .horizontal -->
+      {% if vis_dict.subtitle %}
+       <h4 class='center'>{{ vis_dict.subtitle }}</h4>
+      {% endif %}
+     </div><!-- .z-depth-3 -->
      <div class="card">
       <div class="card-content">
        {{ vis_dict.card_content_html|safe }}
