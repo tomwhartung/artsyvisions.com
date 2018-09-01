@@ -6,31 +6,33 @@
  <div class="section z-depth-3">
   <div class="row">
    <div class="col s12">
-    {% if visions_story_data.vision_dict.title %}
-     <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
-     {% if visions_story_data.vision_dict.image_file_name %}
-      <div class="center">
-       <img class="responsive-img"
-            src="{% static visions_story_data.vision_dict.image_file_path %}">
-      </div>
+    <div class="hoverable titles-images">
+     {% if visions_story_data.vision_dict.title %}
+      <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
+      {% if visions_story_data.vision_dict.image_file_name %}
+       <div class="center">
+        <img class="responsive-img"
+             src="{% static visions_story_data.vision_dict.image_file_path %}">
+       </div>
+      {% endif %}
+      {% if visions_story_data.vision_dict.image_file_list %}
+       <div class="card horizontal">
+        {% for image_data_dict in visions_story_data.vision_dict.image_data %}
+         <div class="card-image group-image">
+          <h5 class="center">{{ image_data_dict.name }}</h5>
+          <img width="200px" height="200px"
+               class="responsive-img" src="{% static image_data_dict.image_file_path %}">
+         </div>
+        {% endfor %}
+       </div><!-- .card .horizontal -->
+      {% endif %}
+      {% if visions_story_data.vision_dict.subtitle %}
+       <h4 class='center'><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
+      {% endif %}
+     {% else %}
+      <h2 class="center">Error!</h2>
      {% endif %}
-     {% if visions_story_data.vision_dict.image_file_list %}
-      <div class="card horizontal">
-       {% for image_data_dict in visions_story_data.vision_dict.image_data %}
-        <div class="card-image group-image">
-         <h5 class="center">{{ image_data_dict.name }}</h5>
-         <img width="200px" height="200px"
-              class="responsive-img" src="{% static image_data_dict.image_file_path %}">
-        </div>
-       {% endfor %}
-      </div><!-- .card .horizontal -->
-     {% endif %}
-     {% if visions_story_data.vision_dict.subtitle %}
-      <h4 class='center'><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
-     {% endif %}
-    {% else %}
-     <h2 class="center">Error!</h2>
-    {% endif %}
+    </div><!-- .hoverable -->
    </div><!-- .col -->
   </div><!-- .row -->
   <div class="row valign-wrapper">
