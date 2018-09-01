@@ -6,7 +6,6 @@
  <div class="section z-depth-3">
   <div class="row">
    <div class="col s12">
-
    {% if visions_story_data.vision_dict.title %}
     <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
     {% if visions_story_data.vision_dict.image_file_name %}
@@ -32,6 +31,29 @@
    {% else %}
     <h2 class="center">Error!</h2>
    {% endif %}
+   </div><!-- .col -->
+  </div><!-- .row -->
+  <div class="row valign-wrapper">
+   <div class="col s6 m6 l6">
+    {% if visions_story_data.vision_dict.author or visions_story_data.vision_dict.date %}
+     {% if visions_story_data.vision_dict.author %}
+      <p>By {{ visions_story_data.vision_dict.author }}
+     {% else %}
+      <p>By Tom Hartung
+     {% endif %}
+     {% if visions_story_data.vision_dict.date %}
+     &ndash; {{ visions_story_data.vision_dict.date }}.</p>
+     {% endif %}
+    {% endif %}
+   </div><!-- .col -->
+   <div class="col s6 m6 l6">
+    <p>
+     This page contains affiliate links.
+     Using them to make a purchase helps support this site, without
+     any additional cost to you.
+     <span class="hoverable">
+      <a href="/legal/affiliate_marketing_disclosure" class="waves-effect waves-light btn right"
+        title="Affiliate Marketing Disclosure">Learn More</a></span></p>
    </div><!-- .col -->
   </div><!-- .row -->
   <div class="row">
