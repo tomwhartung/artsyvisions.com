@@ -1,5 +1,8 @@
 {
   "title": "Captain James T. Kirk",
+  "subtitle": "Captain of the U.S.S. Enterprise",
+  "author": "Tom W. Hartung",
+  "date": "August, 2018",
   "image_file_name": "estj-captain_kirk-2.jpg",
   "story_file_name": "captain_kirk.html",
   "col_classes": "s12 m6 l4",
