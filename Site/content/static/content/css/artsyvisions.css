@@ -94,9 +94,14 @@ footer.page-footer {
 .titles-images {
   padding: 2%;
 }
-.author-date,
+.author-date {
+  padding: 1% 6% 1% 6%;
+}
 .short-disclosure {
-  padding: 5%;
+  padding: 1% 6% 1% 6%;
+}
+.icon-and-link {
+  padding-left: 2%;
 }
 .story-html {
   padding: 3%;
