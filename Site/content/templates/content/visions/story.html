@@ -41,14 +41,13 @@
      <div class="author-date">
       <p>
        By {{ visions_story_data.vision_dict.author }}.<br>
-        &copy; Copyright
-         {{ visions_story_data.vision_dict.date }}.<br>
+       Copyright {{ visions_story_data.vision_dict.date }}.<br>
        <span class="hoverable left valign-wrapper">
-         <a href="/legal/terms_of_service#intellectual_property_rights"
-            class="waves-effect waves-light btn-flat"
-            title="Terms of Service - Intellectual Property Rights">
-        All rights reserved.</a>
-       </span>
+        <i class="material-icons">copyright</i>
+        <a href="/legal/terms_of_service#intellectual_property_rights"
+           class="waves-effect waves-light btn-flat"
+           title="Terms of Service - Intellectual Property Rights">
+         All rights reserved.</a></span>
       </p>
      </div><!-- .author-date -->
     </div><!-- .hoverable -->
@@ -57,13 +56,13 @@
     <div class="hoverable">
      <div class="short-disclosure">
       <p>
-       {{ visions_story_data.vision_dict.disclosure_text }}.
-      <span class="hoverable right valign-wrapper">
-       <i class="material-icons">info_outline</i>
-        <a href="/legal/affiliate_marketing_disclosure#about_affiliate_marketing"
-           class="waves-effect waves-light btn-flat"
-           title="Affiliate Marketing Disclosure">
-         {{ visions_story_data.vision_dict.disclosure_btn_text }}</a></span>
+       {{ visions_story_data.vision_dict.disclosure_text }}<br>
+       <span class="hoverable center valign-wrapper">
+        <i class="material-icons">info_outline</i>
+         <a href="/legal/affiliate_marketing_disclosure#about_affiliate_marketing"
+            class="waves-effect waves-light btn-flat"
+            title="Affiliate Marketing Disclosure">
+          {{ visions_story_data.vision_dict.disclosure_btn_text }}</a></span>
       </p>
      </div><!-- .short-disclosure -->
     </div><!-- .hoverable -->
