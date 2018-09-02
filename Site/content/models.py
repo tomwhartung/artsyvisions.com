@@ -221,6 +221,7 @@ class VisionFile:
                 self.vision_dict['vision_file_no_ext'] = os.path.splitext(self.vision_file_name)[0]
                 self.set_vision_type()   # must call this one first!
                 self.set_group_name()
+                self.set_defaults()
                 self.set_image_data()
             return file_exists
 
@@ -278,6 +279,19 @@ class VisionFile:
         else:
             self.vision_dict['group_name'] = ''
         return self
+
+
+    def set_defaults(self):
+        """
+        If any of the author, date, or disclsure_* parameters are not set,
+            Set an appropriate default value
+        """
+
+        if 'author' not in self.vision_dict or self.vision_dict['author'] == "":
+            self.vision_dict['author'] = 'Tom Hartung'
+        if 'date' not in self.vision_dict or self.vision_dict['date'] == "":
+            self.vision_dict['date'] = '2018'
+
 
 
     def set_image_data(self):
