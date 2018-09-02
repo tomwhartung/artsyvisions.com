@@ -40,23 +40,14 @@
     <div class="hoverable">
      <div class="author-date">
       <p>
-       By
-       {% if visions_story_data.vision_dict.author %}
-        {{ visions_story_data.vision_dict.author }}.
-       {% else %}
-        Tom Hartung.
-       {% endif %}<br>
+       By {{ visions_story_data.vision_dict.author }}.<br>
        <span class="hoverable left valign-wrapper">
         <a href="/legal/terms_of_service#intellectual_property_rights"
            class="waves-effect waves-light btn-flat"
            title="Terms of Service - Intellectual Property Rights">
          <i class="material-icons">copyright</i>
         Copyright</a></span>
-         {% if visions_story_data.vision_dict.date %}
-          {{ visions_story_data.vision_dict.date }}.
-         {% else %}
-          2018.
-        {% endif %}<br>
+         {{ visions_story_data.vision_dict.date }}.<br>
        All rights reserved.</p>
      </div><!-- .author-date -->
     </div><!-- .hoverable -->
