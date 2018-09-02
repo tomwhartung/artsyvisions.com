@@ -41,8 +41,8 @@
      <div class="author-date">
       <p>
        By {{ visions_story_data.vision_dict.author }}.<br>
-       Copyright {{ visions_story_data.vision_dict.date }}.<br>
-       <span class="hoverable left valign-wrapper">
+       Copyright &copy; {{ visions_story_data.vision_dict.date }}.<br>
+       <span class="hoverable valign-wrapper icon-and-link">
         <i class="material-icons">copyright</i>
         <a href="/legal/terms_of_service#intellectual_property_rights"
            class="waves-effect waves-light btn-flat"
@@ -57,12 +57,12 @@
      <div class="short-disclosure">
       <p>
        {{ visions_story_data.vision_dict.disclosure_text }}<br>
-       <span class="hoverable center valign-wrapper">
+       <span class="hoverable valign-wrapper icon-and-link">
         <i class="material-icons">info_outline</i>
-         <a href="/legal/affiliate_marketing_disclosure#about_affiliate_marketing"
-            class="waves-effect waves-light btn-flat"
-            title="Affiliate Marketing Disclosure">
-          {{ visions_story_data.vision_dict.disclosure_btn_text }}</a></span>
+        <a href="/legal/affiliate_marketing_disclosure#about_affiliate_marketing"
+           class="waves-effect waves-light btn-flat"
+           title="Affiliate Marketing Disclosure">
+         {{ visions_story_data.vision_dict.disclosure_btn_text }}</a></span>
       </p>
      </div><!-- .short-disclosure -->
     </div><!-- .hoverable -->
