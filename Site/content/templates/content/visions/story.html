@@ -38,26 +38,26 @@
   <div class="row valign-wrapper">
    <div class="col s6 m6 l6">
     <div class="hoverable">
-     {% if visions_story_data.vision_dict.author or visions_story_data.vision_dict.date %}
-      <p class="author-date">
+     <div class="author-date">
+      <p>
        By
        {% if visions_story_data.vision_dict.author %}
-        {{ visions_story_data.vision_dict.author }}
+        {{ visions_story_data.vision_dict.author }}.
        {% else %}
-        Tom Hartung
+        Tom Hartung.
        {% endif %}
-      </p>
-      <p class="author-date">
+      <br>
+       <i class="material-icons">copyright</i>
        Copyright
-        <i class="material-icons">copyright</i>
         {% if visions_story_data.vision_dict.date %}
          {{ visions_story_data.vision_dict.date }}.
         {% else %}
          2018.
         {% endif %}
+       <br>
         All rights reserved.
-      {% endif %}
-     </p>
+      </p>
+     </div><!-- .author-date -->
     </div><!-- .hoverable -->
    </div><!-- .col -->
    <div class="col s6 m6 l6">
