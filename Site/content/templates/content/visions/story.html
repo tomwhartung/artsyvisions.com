@@ -45,31 +45,39 @@
         {{ visions_story_data.vision_dict.author }}.
        {% else %}
         Tom Hartung.
-       {% endif %}
-      <br>
+       {% endif %}<br>
        <i class="material-icons">copyright</i>
        Copyright
         {% if visions_story_data.vision_dict.date %}
          {{ visions_story_data.vision_dict.date }}.
         {% else %}
          2018.
-        {% endif %}
-       <br>
-        All rights reserved.
-      </p>
+        {% endif %}<br>
+       All rights reserved.</p>
      </div><!-- .author-date -->
     </div><!-- .hoverable -->
    </div><!-- .col -->
    <div class="col s6 m6 l6">
     <div class="hoverable">
-     <p class="short-disclosure">
-      This page contains affiliate links.
-      Using them to make a purchase helps support this site, without
-      any additional cost to you.
+     <div class="short-disclosure">
+      <p>
+       {% if visions_story_data.vision_dict.disclosure_text %}
+        {{ visions_story_data.vision_dict.disclosure_text }}.
+       {% else %}
+        This page may contain affiliate marketing links, which
+         help cover the cost of creating and maintaining this site.
+       {% endif %}
       <span class="hoverable right valign-wrapper">
        <i class="material-icons">info_outline</i>
-       <a href="/legal/affiliate_marketing_disclosure" class="waves-effect waves-light btn-flat"
-          title="Affiliate Marketing Disclosure">Learn More</a></span></p>
+       {% if visions_story_data.vision_dict.disclosure_btn_text %}
+        <a href="/legal/affiliate_marketing_disclosure" class="waves-effect waves-light btn-flat"
+           title="Affiliate Marketing Disclosure">{{ visions_story_data.vision_dict.disclosure_btn_text }}</a></span>
+       {% else %}
+        <a href="/legal/affiliate_marketing_disclosure" class="waves-effect waves-light btn-flat"
+           title="Affiliate Marketing Disclosure">Full Disclosure</a></span>
+       {% endif %}
+      </p>
+     </div><!-- .short-disclosure -->
     </div><!-- .hoverable -->
    </div><!-- .col -->
   </div><!-- .row -->
