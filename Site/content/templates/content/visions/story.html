@@ -56,24 +56,13 @@
     <div class="hoverable">
      <div class="short-disclosure">
       <p>
-       {% if visions_story_data.vision_dict.disclosure_text %}
-        {{ visions_story_data.vision_dict.disclosure_text }}.
-       {% else %}
-        This page may contain affiliate marketing links, which
-         help cover the cost of creating and maintaining this site.
-       {% endif %}
+       {{ visions_story_data.vision_dict.disclosure_text }}.
       <span class="hoverable right valign-wrapper">
        <i class="material-icons">info_outline</i>
-       {% if visions_story_data.vision_dict.disclosure_btn_text %}
         <a href="/legal/affiliate_marketing_disclosure#about_affiliate_marketing"
            class="waves-effect waves-light btn-flat"
            title="Affiliate Marketing Disclosure">
          {{ visions_story_data.vision_dict.disclosure_btn_text }}</a></span>
-       {% else %}
-        <a href="/legal/affiliate_marketing_disclosure#about_affiliate_marketing"
-           class="waves-effect waves-light btn-flat"
-           title="Affiliate Marketing Disclosure">Full Explanation</a></span>
-       {% endif %}
       </p>
      </div><!-- .short-disclosure -->
     </div><!-- .hoverable -->
