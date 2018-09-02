@@ -287,10 +287,20 @@ class VisionFile:
             Set an appropriate default value
         """
 
+        DEFAULT_DISCLOSURE_TEXT = \
+            'This page may contain affiliate marketing links, ' + \
+            'which help cover the cost of creating and maintaining this site.'
+
         if 'author' not in self.vision_dict or self.vision_dict['author'] == "":
             self.vision_dict['author'] = 'Tom Hartung'
         if 'date' not in self.vision_dict or self.vision_dict['date'] == "":
             self.vision_dict['date'] = '2018'
+        if 'disclosure_text' not in self.vision_dict \
+         or self.vision_dict['disclosure_text'] == "":
+            self.vision_dict['disclosure_text'] = DEFAULT_DISCLOSURE_TEXT
+        if 'disclosure_btn_text' not in self.vision_dict \
+         or self.vision_dict['disclosure_btn_text'] == "":
+            self.vision_dict['disclosure_btn_text'] = 'Full Explanation'
 
 
 
