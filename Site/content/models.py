@@ -173,15 +173,15 @@ class VisionStory:
         site_content_dir = os.path.abspath(os.path.dirname(__file__))
         story_file_dir = site_content_dir + '/static/content/html/' + vision_type + '/'
         story_file_path = story_file_dir + story_file_name
-        #print('VisionStory - get_story_html - story_file_path:', story_file_path)
+        #print('VisionStory - read_story_html_file - story_file_path:', story_file_path)
         file_exists = os.path.isfile(story_file_path)
         if file_exists:
             story_html_file = codecs.open(story_file_path, encoding='utf-8', mode="r")
             story_html_string = story_html_file.read()
             story_html_file.close()
-            print('VisionStory - get_story_html - story file exists!')
+            print('VisionStory - read_story_html_file - story file exists!')
         else:
-            print('ERROR: VisionStory - get_story_html - story file does NOT exist!')
+            print('ERROR: VisionStory - read_story_html_file - story file does NOT exist!')
             story_html_string = '<p>File missing.</p>'
             story_html_string += '<p>story_file_path: <q>' + story_file_path + '</q></p>'
 
