@@ -28,25 +28,26 @@
       <div class="card-image waves-effect waves-block waves-light">
        <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
           title="Go to the story about {{ vis_dict.title }}">
-        <img src="{% static vis_dict.image_file_path %}">
-       </a>
+        <img src="{% static vis_dict.image_file_path %}"></a>
       </div>
       {% if vis_dict.subtitle %}
        <h5 class='center'>{{ vis_dict.subtitle }}</h5>
       {% endif %}
       <div class="card-reveal">
-       <span class="card-title grey-text text-darken-4">{{ vis_dict.title }}
-        <i class="material-icons right medium">arrow_drop_down</i></span>
+       <a title="Back to the image">
+        <span class="card-title grey-text text-darken-4">{{ vis_dict.title }}
+         <i class="material-icons right large">arrow_drop_down</i></span></a>
        {{ vis_dict.card_reveal_html|safe }}
       </div>
       <div class="card-content">
        <a title="Show the backstory">
-       <span class="card-title activator grey-text text-darken-4">
-        <i class="material-icons right medium">arrow_drop_up</i></span></a>
+        <span class="card-title activator grey-text text-darken-4">
+         <i class="material-icons right large">arrow_drop_up</i></span></a>
        {{ vis_dict.card_content_html|safe }}
       </div>
       <div class="card-action center">
        <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
+          title="Read the story about {{ vis_dict.title }}"
           class="waves-effect waves-light btn">Read the Story</a>
       </div>
      </div><!-- .card -->
