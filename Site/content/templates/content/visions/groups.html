@@ -28,8 +28,10 @@
       <div class="card horizontal">
        {% for image_data_dict in vis_dict.image_data %}
         <div class="card-image group-image">
-         <h5 class="center">{{ image_data_dict.name }}</h5>
-         <img src="{% static image_data_dict.image_file_path %}">
+         <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
+            title="Go to the story about {{ vis_dict.title }}">
+          <h5 class="grey-text text-darken-4 center">{{ image_data_dict.name }}</h5>
+          <img src="{% static image_data_dict.image_file_path %}"></a>
         </div>
        {% endfor %}
       </div><!-- .card .horizontal -->
