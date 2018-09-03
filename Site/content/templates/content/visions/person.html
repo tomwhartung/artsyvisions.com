@@ -26,8 +26,10 @@
      <div class="card sticky-action hoverable">
       <h4 class="center">{{ vis_dict.title }}</h4>
       <div class="card-image waves-effect waves-block waves-light">
-       <img class="activator"
-            src="{% static vis_dict.image_file_path %}">
+       <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
+          title="Go to the story about {{ vis_dict.title }}">
+        <img src="{% static vis_dict.image_file_path %}">
+       </a>
       </div>
       {% if vis_dict.subtitle %}
        <h5 class='center'>{{ vis_dict.subtitle }}</h5>
@@ -38,8 +40,9 @@
        {{ vis_dict.card_reveal_html|safe }}
       </div>
       <div class="card-content">
+       <a title="Show the backstory">
        <span class="card-title activator grey-text text-darken-4">
-        <i class="material-icons right medium">arrow_drop_up</i></span>
+        <i class="material-icons right medium">arrow_drop_up</i></span></a>
        {{ vis_dict.card_content_html|safe }}
       </div>
       <div class="card-action center">
