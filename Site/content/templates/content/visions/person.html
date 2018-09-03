@@ -23,8 +23,8 @@
    {% endif %}
    {% if vis_dict.vision_type == 'person' %}
     <div class="person-card z-depth-3">
+     <h4 class="center">{{ vis_dict.title }}</h4>
      <div class="card sticky-action hoverable">
-      <h4 class="center">{{ vis_dict.title }}</h4>
       <div class="card-image waves-effect waves-block waves-light">
        <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
           title="Go to the story about {{ vis_dict.title }}">
@@ -35,7 +35,10 @@
       {% endif %}
       <div class="card-reveal">
        <a title="Back to the image">
-        <span class="card-title grey-text text-darken-4">{{ vis_dict.title }}
+        <span class="card-title grey-text text-darken-4">
+         {% if vis_dict.subtitle %}
+          {{ vis_dict.subtitle }}
+         {% endif %}
          <i class="material-icons right large">arrow_drop_down</i></span></a>
        {{ vis_dict.card_reveal_html|safe }}
       </div>
