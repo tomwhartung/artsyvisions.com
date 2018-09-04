@@ -158,6 +158,7 @@ class VisionStory:
 
     def get_story_and_footnotes(self):
         self.visions_story_data['story_html'] = self.get_story_html()
+        self.visions_story_data['footnotes_html'] = self.get_footnotes_html()
 
 
     def get_story_html(self):
@@ -166,9 +167,41 @@ class VisionStory:
         if 'story_file_name' in self.vision_file_obj.vision_dict:
             story_html_string = self.read_story_html_file()
         else:
-            story_html_string = '<p>The story_file_path is not set in the json file.</p>'
+            story_html_string = '<p>No story_file_path in the json file.</p>'
 
         return story_html_string
+
+
+    def get_footnotes_html(self):
+        """
+        """
+        footnotes_html_string = ''
+        if 'footnotes_file_name' in self.vision_file_obj.vision_dict:
+            file_name = self.vision_file_obj.vision_dict['footnotes_file_name']
+            if len(file_name) > 5:
+                footnotes_html_string = self.read_html_file(file_name)
+
+        return footnotes_html_string
+
+
+    def read_html_file(self, file_name):
+        """
+        """
+        vision_type = self.vision_file_obj.vision_dict['vision_type']
+        site_content_dir = os.path.abspath(os.path.dirname(__file__))
+        directory = site_content_dir + '/static/content/html/' + vision_type
+        file_path = directory + '/' + file_name
+        file_exists = os.path.isfile(file_path)
+        if file_exists:
+            html_file = codecs.open(file_path, encoding='utf-8', mode="r")
+            html_string = html_file.read()
+            html_file.close()
+        else:
+            html_string = '<p>Html file missing.</p>'
+            html_string += '<p>file_path: <q>' + file_path + '</q></p>'
+
+        return html_string
+
 
     def read_story_html_file(self):
         """
