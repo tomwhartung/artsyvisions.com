@@ -145,30 +145,36 @@ class VisionStory:
             vision_file_obj = VisionFile(DRAFT_VISIONS_JSON_DIRECTORY, vision_file_name)
             draft_file_exists = vision_file_obj.set_vision_dict_data()
             if not draft_file_exists:
-                story_html = '<p>Unable to find file vision_file_name <q>' + vision_file_name + '</q>!</p>'
+                story_html = '<p>Unable to find file vision_file_name <q>' \
+                    + vision_file_name + '</q>!</p>'
                 self.visions_story_data['story_html'] = story_html
                 return False
 
         self.visions_story_data['vision_dict'] = vision_file_obj.vision_dict
-        self.visions_story_data['story_html'] = self.get_story_html(vision_file_obj)
+        self.vision_file_obj = vision_file_obj
+        self.get_story_and_footnotes()
         return self.visions_story_data
 
 
-    def get_story_html(self, vision_file_obj):
+    def get_story_and_footnotes(self):
+        self.visions_story_data['story_html'] = self.get_story_html()
+
+
+    def get_story_html(self):
         """
         """
-        if 'story_file_name' in vision_file_obj.vision_dict:
-            story_html_string = self.read_story_html_file(vision_file_obj)
+        if 'story_file_name' in self.vision_file_obj.vision_dict:
+            story_html_string = self.read_story_html_file()
         else:
             story_html_string = '<p>The story_file_path is not set in the json file.</p>'
 
         return story_html_string
 
-    def read_story_html_file(self, vision_file_obj):
+    def read_story_html_file(self):
         """
         """
-        story_file_name = vision_file_obj.vision_dict['story_file_name']
-        vision_type = vision_file_obj.vision_dict['vision_type']
+        story_file_name = self.vision_file_obj.vision_dict['story_file_name']
+        vision_type = self.vision_file_obj.vision_dict['vision_type']
         site_content_dir = os.path.abspath(os.path.dirname(__file__))
         story_file_dir = site_content_dir + '/static/content/html/' + vision_type + '/'
         story_file_path = story_file_dir + story_file_name
