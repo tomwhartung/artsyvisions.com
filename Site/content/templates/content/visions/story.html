@@ -77,6 +77,18 @@
     </div><!-- .hoverable -->
    </div><!-- .col -->
   </div><!-- .row -->
+
+  {% if visions_story_data.footnotes_html %}
+   <div class="row">
+    <div class="col s12 m12 l12">
+     <div class="hoverable story-html">
+      <h4 class="center">Footnotes</h4>
+      <div>{{ visions_story_data.footnotes_html|safe }}</div>
+     </div><!-- .hoverable -->
+    </div><!-- .col -->
+   </div><!-- .row -->
+  {% endif %}
+
  </div><!-- .section -->
 </div><!-- .container -->
 {% endblock %}
