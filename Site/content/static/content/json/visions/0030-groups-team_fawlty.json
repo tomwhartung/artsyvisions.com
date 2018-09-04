@@ -1,18 +1,18 @@
 {
   "title": "Team Fawlty",
   "subtitle": "The Team at Fawlty Towers",
+  "col_classes": "s12 m10 l8",
   "author": "Tom W. Hartung",
   "date": "September, 2018",
-  "disclosure_text": "This page contains affiliate marketing links.  In addition to taking you to the merchant's site, clicking on one of these then making a purchase helps to support this site, without any additional cost to you.",
-  "disclosure_btn_text": "More Information",
-  "image_file_name": "",
-  "story_file_name": "team_fawlty.html",
   "image_file_list": [
     { "name": "Basil Fawlty", "image_file_name": "estp-basil_fawlty-1.jpg" },
     { "name": "Sybil Fawlty", "image_file_name": "esfj-sybil_fawlty-1.jpg" },
     { "name": "Polly", "image_file_name": "infp-polly_sherman-1.jpg" },
     { "name": "Manuel", "image_file_name": "isfp-manuel-1.jpg" }
   ],
-  "col_classes": "s12 m10 l8",
-  "card_content_html": "<p>Starring Monty Python's John Cleese, Fawlty Towers tops the <a href='https://www.bfi.org.uk/' title='Home page of the BFI at www.bfi.org.uk' target='_blank'>British Film Institute's</a> list of <a href='https://www.bfi.org.uk/sites/bfi.org.uk/files/downloads/bfi-annual-review-2000-2001.pdf' title='A PDF from www.bfi.org.uk containing the list of the Top 100 TV shows' target='_blank'>Top 100 TV Shows</a>.</p><p>The Yellow in Basil's portrait shows he can get bored easily, and the Green shows he's can be a schemer.  The Red and Green in Sybil's image shows she's the decisive one in &mdash; and the real boss of &mdash; Team Fawlty.</p><p>The Blue in Polly's image shows she can be good at coming up with fresh ideas to help keep Basil from getting in trouble.  The Red in her and Manuel's images show they're both amiable, and they show this by helping Basil when they can.</p>"
+  "card_content_html": "<p>Starring Monty Python's John Cleese, Fawlty Towers tops the <a href='https://www.bfi.org.uk/' title='Home page of the BFI at www.bfi.org.uk' target='_blank'>British Film Institute's</a> list of <a href='https://www.bfi.org.uk/sites/bfi.org.uk/files/downloads/bfi-annual-review-2000-2001.pdf' title='A PDF from www.bfi.org.uk containing the list of the Top 100 TV shows' target='_blank'>Top 100 TV Shows</a>.</p><p>The Yellow in Basil's portrait shows he can get bored easily, and the Green shows he's can be a schemer.  The Red and Green in Sybil's image shows she's the decisive one in &mdash; and the real boss of &mdash; Team Fawlty.</p><p>The Blue in Polly's image shows she can be good at coming up with fresh ideas to help keep Basil from getting in trouble.  The Red in her and Manuel's images show they're both amiable, and they show this by helping Basil when they can.</p>",
+  "card_reveal_html": "<p>So-called <q>reveal text</q> &ndash; put the first-person backstory here.</p>",
+  "disclosure_text": "This page contains affiliate marketing links.  In addition to taking you to the merchant's site, clicking on one of these then making a purchase helps to support this site, without any additional cost to you.",
+  "disclosure_btn_text": "More Information",
+  "story_file_name": "team_fawlty.html"
 }
