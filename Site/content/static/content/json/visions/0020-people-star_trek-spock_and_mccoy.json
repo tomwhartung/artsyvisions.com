@@ -9,5 +9,6 @@
   "card_first_person_html": "<p>Reveal text &ndash; put the first-person backstory here.</p>",
   "disclosure_text": "This page contains affiliate links.  Clicking on one takes you to the merchant's site and sets a cookie in your browser, identifying you as a visitor coming from this site.  If you ultimately make a purchase, it helps to support this site, without any additional cost to you.",
   "disclosure_btn_text": "Find out More",
-  "story_file_name": "star_trek-spock_and_mccoy.html"
+  "story_file_name": "star_trek-spock_and_mccoy.html",
+  "footnotes_file_name": "star_trek-spock_and_mccoy-footnotes.html"
 }
