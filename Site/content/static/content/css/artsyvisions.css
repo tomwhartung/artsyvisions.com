@@ -103,6 +103,7 @@ footer.page-footer {
 .icon-and-link {
   padding-left: 2%;
 }
-.story-html {
+.story-html,
+.footnotes-html {
   padding: 3%;
 }
