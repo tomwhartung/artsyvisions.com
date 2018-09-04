@@ -38,7 +38,7 @@
           {{ vis_dict.subtitle }}
          {% endif %}
          <i class="material-icons right large">arrow_drop_down</i></span></a>
-       {{ vis_dict.card_reveal_html|safe }}
+       {{ vis_dict.card_first_person_html|safe }}
        <span class="right">
         &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
       </div>
@@ -74,7 +74,7 @@
           {{ vis_dict.subtitle }}
          {% endif %}
          <i class="material-icons right large">arrow_drop_down</i></span></a>
-       {{ vis_dict.card_reveal_html|safe }}
+       {{ vis_dict.card_first_person_html|safe }}
        <span class="right">
         &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
       </div>
@@ -115,9 +115,9 @@
      <div class="card">
       <div class="card-content">
        {{ vis_dict.card_content_html|safe }}
-       {% if vis_dict.card_reveal_html %}
+       {% if vis_dict.card_first_person_html %}
         <hr>
-        {{ vis_dict.card_reveal_html|safe }}
+        {{ vis_dict.card_first_person_html|safe }}
         <span class="right">
          &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
        {% endif %}
