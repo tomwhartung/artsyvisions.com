@@ -63,11 +63,11 @@ class VisionsList:
         if (self.visions_page_name == 'person' or
             self.visions_page_name == 'people' or
             self.visions_page_name == 'groups'):
-            fnmatch_string = '*' + self.visions_page_name + '*'
+            fnmatch_string = '*' + self.visions_page_name + '*.json'
         else:
-            fnmatch_string = '*'
+            fnmatch_string = '*.json'
 
-        fnmatch_all_string = '*-all-*'
+        fnmatch_all_string = '*-all-*.json'
         filtered_list = []
 
         for vis_file in all_visions_files:
@@ -256,7 +256,7 @@ class VisionFile:
         vision_file_path = data_file_dir + self.vision_file_name
         file_exists = os.path.isfile(vision_file_path)
         if file_exists:
-            vision_json_file = open(vision_file_path, encoding='utf-8', mode="r")
+            vision_json_file = codecs.open(vision_file_path, encoding='utf-8', mode="r")
             vision_json_string = vision_json_file.read()
             vision_json_file.close()
             self.vision_dict = json.loads(vision_json_string)
