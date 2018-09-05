@@ -104,7 +104,7 @@ class VisionsList:
             vision_file_obj.set_vision_dict_data()
             vision_dict = vision_file_obj.vision_dict
             self.visions_list_data.append(vision_dict)
-            if DJANGO_DEBUG:
+            if DJANGO_DEBUG and RUNNING_LOCALLY != '0':
                 print('VisionsList - read_visions_list_data - vis_file:', vis_file)
                 #print('VisionsList - read_visions_list_data - vision_dict:', vision_dict)
 
@@ -165,7 +165,8 @@ class VisionStory:
         """
         """
         if 'story_file_name' in self.vision_file_obj.vision_dict:
-            story_html_string = self.read_story_html_file()
+            file_name = self.vision_file_obj.vision_dict['story_file_name']
+            story_html_string = self.read_html_file(file_name)
         else:
             story_html_string = '<p>No story_file_path in the json file.</p>'
 
@@ -201,26 +202,6 @@ class VisionStory:
             html_string += '<p>file_path: <q>' + file_path + '</q></p>'
 
         return html_string
-
-
-    def read_story_html_file(self):
-        """
-        """
-        story_file_name = self.vision_file_obj.vision_dict['story_file_name']
-        vision_type = self.vision_file_obj.vision_dict['vision_type']
-        site_content_dir = os.path.abspath(os.path.dirname(__file__))
-        story_file_dir = site_content_dir + '/static/content/html/' + vision_type + '/'
-        story_file_path = story_file_dir + story_file_name
-        file_exists = os.path.isfile(story_file_path)
-        if file_exists:
-            story_html_file = codecs.open(story_file_path, encoding='utf-8', mode="r")
-            story_html_string = story_html_file.read()
-            story_html_file.close()
-        else:
-            story_html_string = '<p>File missing.</p>'
-            story_html_string += '<p>story_file_path: <q>' + story_file_path + '</q></p>'
-
-        return story_html_string
 
 
 
