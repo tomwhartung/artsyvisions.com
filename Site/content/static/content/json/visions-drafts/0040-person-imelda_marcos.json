@@ -1,13 +1,14 @@
 {
   "title": "Imelda Marcos",
   "subtitle": "She's Much More Than Shoes",
-  "author": "",
-  "date": "",
-  "disclosure_text": "",
-  "disclosure_btn_text": "",
-  "image_file_name": "enfp-imelda_romualdez_marcos-1.jpg",
-  "story_file_path": ".html",
   "col_classes": "s12 m6 l4",
+  "author": "Tom H.",
+  "date": "September, 2018",
+  "image_file_name": "enfp-imelda_romualdez_marcos-1.jpg",
   "card_content_html": "<p>Placeholder for card_content_html markup.</p>",
-  "card_reveal_html": "<p>Placeholder for card_reveal_html markup.</p>"
+  "card_first_person_html": "<p>Placeholder for card_first_person_html markup.</p>",
+  "disclosure_text": "This page contains affiliate marketing links.  Following one and purchasing the product helps keep our lights on.",
+  "disclosure_btn_text": "All About Affiliate Links",
+  "story_file_name": "imelda_romualdez_marcos.html",
+  "footnotes_file_name": ""
 }
