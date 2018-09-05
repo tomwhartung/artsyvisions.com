@@ -1,7 +1,14 @@
 {
   "title": "Luke Skywalker",
-  "image_file_name": "entp-luke_skywalker-1.jpg",
+  "subtitle": "",
   "col_classes": "s12 m6 l4",
+  "author": "",
+  "date": "",
+  "image_file_name": "entp-luke_skywalker-1.jpg",
   "card_content_html": "<p>Placeholder for card_content_html markup.</p>",
-  "card_reveal_html": "<p>Placeholder for card_reveal_html markup.</p>"
+  "card_first_person_html": "<p>Placeholder for card_first_person_html markup.</p>",
+  "disclosure_text": "",
+  "disclosure_btn_text": "",
+  "story_file_name": "",
+  "footnotes_file_name": ""
 }
