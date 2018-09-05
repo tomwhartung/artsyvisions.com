@@ -32,7 +32,6 @@ class VisionsList:
     """
 
     def __init__(self, visions_page_name='all'):
-
         """
         Get a list of visions json files
         Valid values for visions_page_name:
@@ -53,7 +52,6 @@ class VisionsList:
 
 
     def get_visions_file_list(self, visions_json_directory):
-
         """
         Create a list of files containing the data we need
         """
@@ -90,12 +88,12 @@ class VisionsList:
 
 
     def read_visions_list_data(self, visions_json_directory=None):
-
         """
         Create a list of files containing the data we need
         Create a VisionFile object for each file
         Use the object to get the data needed for the visions list page
         """
+
         filtered_list = self.get_visions_file_list(visions_json_directory)
 
         for vis_file in filtered_list:
@@ -122,6 +120,7 @@ class VisionStory:
         Read in the data for a single vision from the vision .json file
         Read in the html for the story and set that in the data
         """
+
         self.get_visions_story_data(vision_file_no_ext)
         if DJANGO_DEBUG:
             story_html = self.visions_story_data['story_html']
@@ -129,7 +128,6 @@ class VisionStory:
 
 
     def get_visions_story_data(self, vision_file_no_ext):
-
         """
         Read in the data for a single vision from the vision .json file
         Read in the html for the story and set that in the data
@@ -152,30 +150,32 @@ class VisionStory:
 
         self.visions_story_data['vision_dict'] = vision_file_obj.vision_dict
         self.vision_file_obj = vision_file_obj
-        self.get_story_and_footnotes()
+        self.visions_story_data['story_html'] = self.get_story_html()
+        self.visions_story_data['footnotes_html'] = self.get_footnotes_html()
         return self.visions_story_data
 
 
-    def get_story_and_footnotes(self):
-        self.visions_story_data['story_html'] = self.get_story_html()
-        self.visions_story_data['footnotes_html'] = self.get_footnotes_html()
-
-
     def get_story_html(self):
-        """
-        """
+
+        """ Read the story file and return the html """
+
         if 'story_file_name' in self.vision_file_obj.vision_dict:
             file_name = self.vision_file_obj.vision_dict['story_file_name']
-            story_html_string = self.read_html_file(file_name)
+            if len(file_name) > 5:
+                story_html_string = self.read_html_file(file_name)
+            else:
+                story_html_string = '<p>Invalid story_file_name: '
+                story_html_string += '<q>' + '</q></p>'
         else:
-            story_html_string = '<p>No story_file_path in the json file.</p>'
+            story_html_string = '<p>No story_file_name in the json file.</p>'
 
         return story_html_string
 
 
     def get_footnotes_html(self):
-        """
-        """
+
+        """ Read the footnotes file, if there is one, and return the html """
+
         footnotes_html_string = ''
         if 'footnotes_file_name' in self.vision_file_obj.vision_dict:
             file_name = self.vision_file_obj.vision_dict['footnotes_file_name']
@@ -187,7 +187,10 @@ class VisionStory:
 
     def read_html_file(self, file_name):
         """
+        Try to read the html in the specified file,
+        If successful, return the html, else return an error message
         """
+
         vision_type = self.vision_file_obj.vision_dict['vision_type']
         site_content_dir = os.path.abspath(os.path.dirname(__file__))
         directory = site_content_dir + '/static/content/html/' + vision_type
@@ -247,6 +250,7 @@ class VisionFile:
         (Try to) read in all the json for the passed-in vision_file_name
         If the file exists, return True, else return False
         """
+
         site_content_dir = os.path.abspath(os.path.dirname(__file__))
         data_file_dir = site_content_dir + self.visions_json_directory
         vision_file_path = data_file_dir + self.vision_file_name
@@ -326,6 +330,7 @@ class VisionFile:
         NOTE: this method uses the vision_type and group_name (if it's a group)
             so make sure they are both set!
         """
+
         vision_type = self.vision_dict['vision_type']
         image_file_parent_dir = 'content/images/visions/' + vision_type + '/'
         if (self.vision_dict['vision_type'] == 'person' or
