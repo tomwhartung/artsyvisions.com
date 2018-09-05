@@ -1,7 +1,14 @@
 {
   "title": "Fox Mulder and Dana Scully",
-  "image_file_name": "x_files-mulder_and_scully.jpg",
+  "subtitle": "",
   "col_classes": "s12 m6 l6",
+  "author": "",
+  "date": "",
+  "image_file_name": "x_files-mulder_and_scully.jpg",
   "card_content_html": "<p>Placeholder for card_content_html markup.</p>",
-  "card_reveal_html": "<p>Placeholder for card_reveal_html markup.</p>"
+  "card_first_person_html": "<p>Placeholder for card_first_person_html markup.</p>",
+  "disclosure_text": "",
+  "disclosure_btn_text": "",
+  "story_file_name": "x_files-mulder_and_scully.html",
+  "footnotes_file_name": ""
 }
