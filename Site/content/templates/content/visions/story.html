@@ -6,32 +6,40 @@
  <div class="section z-depth-3">
   <div class="row">
    <div class="col s12">
-    <div class="z-depth-3 titles-images">
+    <div class="titles-images-outer z-depth-3">
      {% if visions_story_data.vision_dict.title %}
-      <h2 class="center hoverable">{{ visions_story_data.vision_dict.title }}</h2>
-      {% if visions_story_data.vision_dict.image_file_name %}
-       <div class="center hoverable">
-        <img class="responsive-img"
-             src="{% static visions_story_data.vision_dict.image_file_path %}">
-       </div>
-      {% elif visions_story_data.vision_dict.image_file_list %}
-       <div class="card horizontal hoverable">
-        {% for image_data_dict in visions_story_data.vision_dict.image_data %}
-         <div class="card-image group-image">
-          <h5 class="center">{{ image_data_dict.name }}</h5>
-          <img width="200px" height="200px"
-               class="responsive-img" src="{% static image_data_dict.image_file_path %}">
-         </div>
-        {% endfor %}
-       </div><!-- .card .horizontal -->
-      {% endif %}
+      <div class="titles-images-inner hoverable">
+       <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
+      </div><!-- .titles-images-inner -->
+      <div class="titles-images-inner hoverable">
+       {% if visions_story_data.vision_dict.image_file_name %}
+        <div class="center">
+         <img class="responsive-img"
+              src="{% static visions_story_data.vision_dict.image_file_path %}">
+        </div>
+       {% elif visions_story_data.vision_dict.image_file_list %}
+        <div class="card horizontal hoverable">
+         {% for image_data_dict in visions_story_data.vision_dict.image_data %}
+          <div class="card-image group-image">
+           <h5 class="center">{{ image_data_dict.name }}</h5>
+           <img width="200px" height="200px"
+                class="responsive-img" src="{% static image_data_dict.image_file_path %}">
+          </div>
+         {% endfor %}
+        </div><!-- .card .horizontal -->
+       {% endif %}
+      </div><!-- .titles-images-inner -->
       {% if visions_story_data.vision_dict.subtitle %}
-       <h4 class="center hoverable"><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
+       <div class="titles-images-inner hoverable">
+        <h4 class="center"><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
+       </div><!-- .titles-images-inner -->
       {% endif %}
      {% else %}
-      <h2 class="center hoverable">No Title!?!</h2>
+      <div class="titles-images-inner hoverable">
+       <h2 class="center">No Title!?!</h2>
+      </div><!-- .titles-images-inner -->
      {% endif %}
-    </div><!-- .z-depth-3 -->
+    </div><!-- .titles-images-outer -->
    </div><!-- .col -->
   </div><!-- .row -->
   <div class="row valign-wrapper">
