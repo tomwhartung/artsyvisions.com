@@ -6,19 +6,17 @@
  <div class="section z-depth-3">
   <div class="row">
    <div class="col s12">
-    <div class="titles-images-outer z-depth-3">
-     {% if visions_story_data.vision_dict.title %}
-      <div class="headings-inner hoverable">
+    <div class="headings-images-outer z-depth-3">
+     <div class="headings-images-inner hoverable">
+      {% if visions_story_data.vision_dict.title %}
        <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
-      </div><!-- .headings-inner -->
-      <div class="images-inner hoverable">
        {% if visions_story_data.vision_dict.image_file_name %}
         <div class="center">
          <img class="responsive-img"
               src="{% static visions_story_data.vision_dict.image_file_path %}">
         </div>
        {% elif visions_story_data.vision_dict.image_file_list %}
-        <div class="card horizontal hoverable">
+        <div class="card horizontal">
          {% for image_data_dict in visions_story_data.vision_dict.image_data %}
           <div class="card-image group-image">
            <h5 class="center">{{ image_data_dict.name }}</h5>
@@ -28,18 +26,14 @@
          {% endfor %}
         </div><!-- .card .horizontal -->
        {% endif %}
-      </div><!-- .images-inner -->
-      {% if visions_story_data.vision_dict.subtitle %}
-       <div class="headings-inner hoverable">
+       {% if visions_story_data.vision_dict.subtitle %}
         <h4 class="center"><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
-       </div><!-- .headings-inner -->
-      {% endif %}
-     {% else %}
-      <div class="headings-inner hoverable">
+       {% endif %}
+      {% else %}
        <h2 class="center">No Title!?!</h2>
-      </div><!-- .headings-inner -->
-     {% endif %}
-    </div><!-- .titles-images-outer -->
+      {% endif %}
+     </div><!-- .headings-images-inner -->
+    </div><!-- .headings-images-outer -->
    </div><!-- .col -->
   </div><!-- .row -->
   <div class="row valign-wrapper">
