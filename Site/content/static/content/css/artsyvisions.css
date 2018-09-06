@@ -96,6 +96,12 @@ footer.page-footer {
 .short-disclosure-outer {
   padding: .5em;
 }
+.story-html-outer,
+.footnotes-html-outer {
+  margin: .5em;
+  padding: .5em;
+}
+
 .headings-inner {
   padding: .5em;
 }
@@ -104,12 +110,13 @@ footer.page-footer {
 }
 .author-date-inner,
 .short-disclosure-inner {
-  padding: 1% 6% 1% 6%;
+  padding: .25em 1em .25em 1em;
 }
 .icon-and-link {
-  padding-left: 2%;
+  padding-left: 1em;
 }
-.story-html,
-.footnotes-html {
-  padding: 3%;
+.story-html-inner,
+.footnotes-html-inner {
+  margin: .5em;
+  padding: 1.5em;
 }
