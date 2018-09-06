@@ -6,17 +6,16 @@
  <div class="section z-depth-3">
   <div class="row">
    <div class="col s12">
-    <div class="hoverable titles-images">
+    <div class="z-depth-3 titles-images">
      {% if visions_story_data.vision_dict.title %}
-      <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
+      <h2 class="center hoverable">{{ visions_story_data.vision_dict.title }}</h2>
       {% if visions_story_data.vision_dict.image_file_name %}
-       <div class="center">
+       <div class="center hoverable">
         <img class="responsive-img"
              src="{% static visions_story_data.vision_dict.image_file_path %}">
        </div>
-      {% endif %}
-      {% if visions_story_data.vision_dict.image_file_list %}
-       <div class="card horizontal">
+      {% elif visions_story_data.vision_dict.image_file_list %}
+       <div class="card horizontal hoverable">
         {% for image_data_dict in visions_story_data.vision_dict.image_data %}
          <div class="card-image group-image">
           <h5 class="center">{{ image_data_dict.name }}</h5>
@@ -27,18 +26,18 @@
        </div><!-- .card .horizontal -->
       {% endif %}
       {% if visions_story_data.vision_dict.subtitle %}
-       <h4 class='center'><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
+       <h4 class="center hoverable"><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
       {% endif %}
      {% else %}
-      <h2 class="center">Error!</h2>
+      <h2 class="center hoverable">No Title!?!</h2>
      {% endif %}
-    </div><!-- .hoverable -->
+    </div><!-- .z-depth-3 -->
    </div><!-- .col -->
   </div><!-- .row -->
   <div class="row valign-wrapper">
    <div class="col s6 m5 l4">
-    <div class="hoverable">
-     <div class="author-date">
+    <div class="author-date-outer z-depth-3">
+     <div class="author-date-inner hoverable">
       <p>
        By {{ visions_story_data.vision_dict.author }}.<br>
        Copyright &copy; {{ visions_story_data.vision_dict.date }}.<br>
@@ -49,12 +48,12 @@
            title="Terms of Service - Intellectual Property Rights">
          All rights reserved.</a></span>
       </p>
-     </div><!-- .author-date -->
-    </div><!-- .hoverable -->
+     </div><!-- .author-date-inner -->
+    </div><!-- .author-date-outer -->
    </div><!-- .col -->
    <div class="col s6 m7 l8">
-    <div class="hoverable">
-     <div class="short-disclosure">
+    <div class="short-disclosure-outer z-depth-3">
+     <div class="short-disclosure-inner hoverable">
       <p>
        {{ visions_story_data.vision_dict.disclosure_text }}<br>
        <span class="hoverable valign-wrapper icon-and-link">
@@ -64,8 +63,8 @@
            title="Affiliate Marketing Disclosure">
          {{ visions_story_data.vision_dict.disclosure_btn_text }}</a></span>
       </p>
-     </div><!-- .short-disclosure -->
-    </div><!-- .hoverable -->
+     </div><!-- .short-disclosure-inner -->
+    </div><!-- .short-disclosure-outer -->
    </div><!-- .col -->
   </div><!-- .row -->
   <div class="row">
@@ -76,7 +75,7 @@
      {% endif %}
     </div><!-- .hoverable -->
   {% if visions_story_data.footnotes_html %}
-     <div class="hoverable story-html">
+     <div class="hoverable footnotes-html">
       <h5 class="center">Footnotes</h5>
       <div>{{ visions_story_data.footnotes_html|safe }}</div>
      </div><!-- .hoverable -->
