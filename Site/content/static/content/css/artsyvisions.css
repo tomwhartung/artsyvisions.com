@@ -96,8 +96,11 @@ footer.page-footer {
 .short-disclosure-outer {
   padding: .5em;
 }
-.titles-images-inner {
+.headings-inner {
   padding: .5em;
+}
+.images-inner {
+  padding: 1em .5em 1em .5em;
 }
 .author-date-inner,
 .short-disclosure-inner {
