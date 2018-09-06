@@ -8,10 +8,10 @@
    <div class="col s12">
     <div class="titles-images-outer z-depth-3">
      {% if visions_story_data.vision_dict.title %}
-      <div class="titles-images-inner hoverable">
+      <div class="headings-inner hoverable">
        <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
-      </div><!-- .titles-images-inner -->
-      <div class="titles-images-inner hoverable">
+      </div><!-- .headings-inner -->
+      <div class="images-inner hoverable">
        {% if visions_story_data.vision_dict.image_file_name %}
         <div class="center">
          <img class="responsive-img"
@@ -28,16 +28,16 @@
          {% endfor %}
         </div><!-- .card .horizontal -->
        {% endif %}
-      </div><!-- .titles-images-inner -->
+      </div><!-- .images-inner -->
       {% if visions_story_data.vision_dict.subtitle %}
-       <div class="titles-images-inner hoverable">
+       <div class="headings-inner hoverable">
         <h4 class="center"><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
-       </div><!-- .titles-images-inner -->
+       </div><!-- .headings-inner -->
       {% endif %}
      {% else %}
-      <div class="titles-images-inner hoverable">
+      <div class="headings-inner hoverable">
        <h2 class="center">No Title!?!</h2>
-      </div><!-- .titles-images-inner -->
+      </div><!-- .headings-inner -->
      {% endif %}
     </div><!-- .titles-images-outer -->
    </div><!-- .col -->
