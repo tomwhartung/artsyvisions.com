@@ -91,7 +91,7 @@ footer.page-footer {
 }
 
 /* Story Page */
-.titles-images-outer,
+.headings-images-outer,
 .author-date-outer,
 .short-disclosure-outer {
   padding: .5em;
@@ -102,18 +102,15 @@ footer.page-footer {
   padding: .5em;
 }
 
-.headings-inner {
-  padding: .5em;
-}
-.images-inner {
-  padding: 1em .5em 1em .5em;
+.headings-images-inner {
+  padding: .5em .75em .5em .75em;
 }
 .author-date-inner,
 .short-disclosure-inner {
   padding: .25em 1em .25em 1em;
 }
 .icon-and-link {
-  padding-left: 1em;
+  padding-top: .5em;
 }
 .story-html-inner,
 .footnotes-html-inner {
