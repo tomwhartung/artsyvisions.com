@@ -91,13 +91,16 @@ footer.page-footer {
 }
 
 /* Story Page */
-.titles-images {
-  padding: 2%;
+.titles-images-outer,
+.author-date-outer,
+.short-disclosure-outer {
+  padding: .5em;
 }
-.author-date {
-  padding: 1% 6% 1% 6%;
+.titles-images-inner {
+  padding: .5em;
 }
-.short-disclosure {
+.author-date-inner,
+.short-disclosure-inner {
   padding: 1% 6% 1% 6%;
 }
 .icon-and-link {
