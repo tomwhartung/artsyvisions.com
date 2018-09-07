@@ -11,11 +11,13 @@
       {% if visions_story_data.vision_dict.title %}
        <h2 class="center">{{ visions_story_data.vision_dict.title }}</h2>
        {% if visions_story_data.vision_dict.image_file_name %}
+        <a name="image"></a>
         <div class="center">
          <img class="responsive-img"
               src="{% static visions_story_data.vision_dict.image_file_path %}">
         </div>
        {% elif visions_story_data.vision_dict.image_file_list %}
+        <a name="images"></a>
         <div class="card horizontal">
          {% for image_data_dict in visions_story_data.vision_dict.image_data %}
           <div class="card-image group-image">
@@ -36,6 +38,7 @@
     </div><!-- .headings-images-outer -->
    </div><!-- .col -->
   </div><!-- .row -->
+  <a name="legal"></a>
   <div class="row valign-wrapper">
    <div class="col s6 m5 l4">
     <div class="author-date-outer z-depth-3">
@@ -69,6 +72,7 @@
     </div><!-- .short-disclosure-outer -->
    </div><!-- .col -->
   </div><!-- .row -->
+  <a name="story"></a>
   <div class="row">
    <div class="col s12 m12 l12">
     <div class="story-html-outer z-depth-3">
@@ -80,6 +84,7 @@
      {% endif %}
     </div><!-- .story-html-outer -->
     {% if visions_story_data.footnotes_html %}
+     <a name="footnotes"></a>
      <div class="footnotes-html-outer z-depth-3">
       <div class="footnotes-html-inner hoverable">
        <h5 class="center">Footnotes</h5>
