@@ -311,6 +311,8 @@ class VisionFile:
             'This page may contain affiliate marketing links, ' + \
             'which help cover the cost of creating and maintaining this site.'
 
+        if 'title' not in self.vision_dict or self.vision_dict['title'] == "":
+            self.vision_dict['title'] = '[No Title]'
         if 'author' not in self.vision_dict or self.vision_dict['author'] == "":
             self.vision_dict['author'] = 'Tom Hartung'
         if 'date' not in self.vision_dict or self.vision_dict['date'] == "":
