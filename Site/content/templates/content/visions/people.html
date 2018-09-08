@@ -31,10 +31,12 @@
         <img src="{% static vis_dict.image_file_path %}"></a>
       </div>
       <div class="card-reveal">
-       <a title="Back to the images">
+       <a title="Back to the images" class="center">
         <span class="card-title grey-text text-darken-4">
          {% if vis_dict.subtitle %}
-          {{ vis_dict.subtitle }}
+          {% autoescape off %}
+           {{ vis_dict.subtitle }}
+          {% endautoescape %}
          {% endif %}
          <i class="material-icons right large">arrow_drop_down</i></span></a>
        {{ vis_dict.card_first_person_html|safe }}
@@ -42,10 +44,12 @@
         &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
       </div>
       <div class="card-content">
-       <a title="Show the backstory">
+       <a title="Show the backstory" class="center">
         <span class="card-title activator grey-text text-darken-4">
          {% if vis_dict.subtitle %}
-          {{ vis_dict.subtitle }}
+          {% autoescape off %}
+           {{ vis_dict.subtitle }}
+          {% endautoescape %}
          {% endif %}
          <i class="material-icons right large">arrow_drop_up</i></span></a>
        {{ vis_dict.card_content_html|safe }}
