@@ -33,9 +33,9 @@
       <div class="card-reveal">
        <a title="Back to the image" class="center">
         <span class="card-title grey-text text-darken-4">
-         {% if vis_dict.subtitle %}
+         {% if vis_dict.subtitle_html %}
           {% autoescape off %}
-           {{ vis_dict.subtitle }}
+           {{ vis_dict.subtitle_html|safe }}
           {% endautoescape %}
          {% endif %}
          <i class="material-icons right large">arrow_drop_down</i></span></a>
@@ -46,9 +46,9 @@
       <div class="card-content">
        <a title="Show the backstory" class="center">
         <span class="card-title activator grey-text text-darken-4">
-         {% if vis_dict.subtitle %}
+         {% if vis_dict.subtitle_html %}
           {% autoescape off %}
-           {{ vis_dict.subtitle }}
+           {{ vis_dict.subtitle_html|safe }}
           {% endautoescape %}
          {% endif %}
          <i class="material-icons right large">arrow_drop_up</i></span></a>
