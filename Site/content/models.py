@@ -98,13 +98,13 @@ class VisionsList:
 
         for vis_file in filtered_list:
             ### vis_file_name, vis_file_ext = os.path.splitext(vis_file)
+            if DJANGO_DEBUG and RUNNING_LOCALLY != '0':
+                print('VisionsList - read_visions_list_data - vis_file:', vis_file)
+                #print('VisionsList - read_visions_list_data - vision_dict:', vision_dict)
             vision_file_obj = VisionFile(visions_json_directory, vis_file)
             vision_file_obj.set_vision_dict_data()
             vision_dict = vision_file_obj.vision_dict
             self.visions_list_data.append(vision_dict)
-            if DJANGO_DEBUG and RUNNING_LOCALLY != '0':
-                print('VisionsList - read_visions_list_data - vis_file:', vis_file)
-                #print('VisionsList - read_visions_list_data - vision_dict:', vision_dict)
 
         return self.visions_list_data
 
@@ -346,7 +346,6 @@ class VisionFile:
         if 'disclosure_btn_text' not in self.vision_dict \
          or self.vision_dict['disclosure_btn_text'] == "":
             self.vision_dict['disclosure_btn_text'] = 'Full Explanation'
-
 
 
     def set_image_data(self):
