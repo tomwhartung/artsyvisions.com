@@ -99,7 +99,7 @@ def visions_story(request, vision_file_no_ext=''):
 
     visions_story_obj = VisionStory(vision_file_no_ext)
     visions_story_data = visions_story_obj.visions_story_data
-    title = 'Story - ArtsyVisions.com';
+    title = visions_story_data['vision_dict']['title'] + ' - ArtsyVisions.com'
     template = 'content/visions/story.html'
     context = {
         'title': title,
