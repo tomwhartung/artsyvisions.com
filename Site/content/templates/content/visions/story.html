@@ -28,7 +28,9 @@
        </div><!-- .card .horizontal -->
       {% endif %}
       {% if visions_story_data.vision_dict.subtitle %}
-       <h4 class="center"><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
+       {% autoescape off %}
+        <h4 class="center"><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
+       {% endautoescape %}
       {% endif %}
      </div><!-- .headings-images-inner -->
     </div><!-- .headings-images-outer -->
