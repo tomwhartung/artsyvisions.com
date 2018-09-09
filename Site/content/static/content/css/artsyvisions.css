@@ -68,7 +68,10 @@ footer.page-footer {
   margin-left: 2em;
 }
 .ordinal {
-  vertical-align:super;
+  vertical-align: super;
+}
+.first-letter {
+  font-size: 200%;
 }
 
 /* For the cards on the person, people, groups, and all pages */
