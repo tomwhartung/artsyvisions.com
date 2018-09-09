@@ -27,9 +27,10 @@
         {% endfor %}
        </div><!-- .card .horizontal -->
       {% endif %}
-      {% if visions_story_data.vision_dict.subtitle %}
+      {% if visions_story_data.vision_dict.subtitle_html %}
        {% autoescape off %}
-        <h4 class="center"><em>{{ visions_story_data.vision_dict.subtitle }}</em></h4>
+        <h4 class="center">
+         <em>{{ visions_story_data.vision_dict.subtitle_html|safe }}</em></h4>
        {% endautoescape %}
       {% endif %}
      </div><!-- .headings-images-inner -->
