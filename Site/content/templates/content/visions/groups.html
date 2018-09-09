@@ -35,9 +35,9 @@
         </div>
        {% endfor %}
       </div><!-- .card .horizontal -->
-      {% if vis_dict.subtitle %}
+      {% if vis_dict.subtitle_html %}
        {% autoescape off %}
-        <h4 class='center'>{{ vis_dict.subtitle }}</h4>
+        <h4 class='center'>{{ vis_dict.subtitle_html|safe }}</h4>
        {% endautoescape %}
       {% endif %}
      </div><!-- .z-depth-3 -->
