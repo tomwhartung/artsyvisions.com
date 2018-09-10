@@ -1,6 +1,6 @@
 {
   "title": "Team Fawlty",
-  "subtitle": "The Team at Fawlty Towers",
+  "subtitle_html": "The Team at Fawlty Towers",
   "col_classes": "s12 m10 l8",
   "author": "Tom W. Hartung",
   "date": "September, 2018",
@@ -10,8 +10,8 @@
     { "name": "Polly", "image_file_name": "infp-polly_sherman-1.jpg" },
     { "name": "Manuel", "image_file_name": "isfp-manuel-1.jpg" }
   ],
-  "card_content_html": "<p>These images of the personalities of the main characters on the show <a href='https://www.imdb.com/title/tt0072500/' title='Link to the page for Fawlty Towers on imdb.com' target='_blank'>Fawlty Towers</a> are all colorful, showing the individuals are all fairly versatile.  These portraits also show each character has their own unique strengths and weaknesses.</p><p>The four form a diverse team, their versatility and diversity combining to enable them to take care of all of the duties required to run the small, quaint hotel near England's southern coast.  They manage to achieve many amazing feats &mdash; even if making a Waldorf Salad isn't one of them.</p>",
-  "card_first_person_html": "<p>Monty Python's <a href='https://www.johncleese.com/' title='Link to the Home page at www.johncleese.com' target='_blank'>John Cleese</a> is Fawlty Towers' creator, writer and star, and it is #1 on the <a href='https://www.bfi.org.uk/' title='Home page of the BFI at www.bfi.org.uk' target='_blank'>British Film Institute's</a> list of <a href='https://www.bfi.org.uk/sites/bfi.org.uk/files/downloads/bfi-annual-review-2000-2001.pdf' title='A PDF from www.bfi.org.uk containing the list of the Top 100 TV shows' target='_blank'>Top 100 TV Shows</a>.</p><p>The entire series consists of just two seasons of six episodes each, for a total of twelve 30-40 minute episodes &mdash; making it a cinch for even the busiest people to watch!</p>",
+  "card_content_html": "<p><span class='first-letter'>T</span>hese images of the personalities of the main characters on the show Fawlty Towers are all colorful, showing the individuals are all fairly versatile.  These portraits also show each character has their own unique strengths and weaknesses.</p><p>The four form a diverse team, their versatility and diversity combining to enable them to take care of all of the duties required to run the small, quaint hotel near England's southern coast.  They manage to achieve many amazing feats &mdash; even if making a Waldorf Salad isn't one of them.</p>",
+  "card_first_person_html": "<p><span class='first-letter'>M</span>onty Python's <a href='https://www.johncleese.com/' title='Link to the Home page at www.johncleese.com' target='_blank'>John Cleese</a> is the creator, writer and star of <a href='https://www.imdb.com/title/tt0072500/' title='Link to the page for Fawlty Towers on imdb.com' target='_blank'>Fawlty Towers</a>, and it is #1 on the <a href='https://www.bfi.org.uk/' title='Home page of the BFI at www.bfi.org.uk' target='_blank'>British Film Institute's</a> list of <a href='https://www.bfi.org.uk/sites/bfi.org.uk/files/downloads/bfi-annual-review-2000-2001.pdf' title='A PDF from www.bfi.org.uk containing the list of the Top 100 TV shows' target='_blank'>Top 100 TV Shows</a>.</p><p>The entire series consists of just two seasons of six episodes each, for a total of twelve 30-40 minute episodes &mdash; making it a cinch for even the busiest people to watch!</p>",
   "disclosure_text": "This page contains affiliate marketing links.  In addition to taking you to the merchant's site, clicking on one of these then making a purchase helps to support this site, without any additional cost to you.",
   "disclosure_btn_text": "More Information",
   "story_file_name": "fawlty_towers-team_fawlty.html",
