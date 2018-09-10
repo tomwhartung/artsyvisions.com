@@ -9,8 +9,8 @@
     { "name": "", "image_file_name": "" },
     { "name": "", "image_file_name": "" }
   ],
-  "card_content_html": "",
-  "card_first_person_html": "",
+  "card_content_html": "<p><span class='first-letter'>T</span>.</p>",
+  "card_first_person_html": "<p><span class='first-letter'>T</span>he blah blah blah me me me part.</p>",
   "disclosure_text": "",
   "disclosure_btn_text": "",
   "story_file_name": "",
