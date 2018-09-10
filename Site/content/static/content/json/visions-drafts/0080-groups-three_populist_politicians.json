@@ -9,8 +9,8 @@
     { "name": "Citizen Kane", "image_file_name": "esfj-charles_foster_kane-1.jpg" },
     { "name": "Donald Trump", "image_file_name": "esfj-donald_trump-1.jpg" }
   ],
-  "card_content_html": "<p>Placeholder for card_content_html markup.</p>",
-  "card_first_person_html": "<p>Put the first-person <q>backstory</q> here.</p>",
+  "card_content_html": "<p><span class='first-letter'>T</span>hese images .</p>",
+  "card_first_person_html": "<p><span class='first-letter'>P</span>ut the first-person <q>backstory</q> here.</p>",
   "disclosure_text": "",
   "disclosure_btn_text": "",
   "story_file_name": "populist_politicians.html",
