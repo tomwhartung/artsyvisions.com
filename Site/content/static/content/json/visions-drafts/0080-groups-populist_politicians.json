@@ -1,5 +1,5 @@
 {
-  "title": "Three Populist Politicians",
+  "title": "Populist Politicians",
   "subtitle_html": "Give the People What They Want",
   "col_classes": "s12 m10 l8",
   "author": "",
@@ -10,7 +10,7 @@
     { "name": "Clay Davis", "image_file_name": "esfj-clay_davis-1.jpg" },
     { "name": "Donald Trump", "image_file_name": "esfj-donald_trump-1.jpg" }
   ],
-  "card_content_html": "<p><span class='first-letter'>T</span>hese images .</p>",
+  "card_content_html": "<p><span class='first-letter'>T</span>hese images of the personalities of Founding Father Patrick Henry, Orson Welles' Charles Foster Kane, the Wire's Clay Davis, and 45<span class='ordinal'>th</span> president of the US Donald Trump all look very similar.</p><p>The spiritual portraits of all four show they are warm, personal, down-to-earth, and outgoing &mdash; and quite different from many other politicians, who tend to be more logical.</p>",
   "card_first_person_html": "<p><span class='first-letter'>P</span>ut the first-person <q>backstory</q> here.</p>",
   "disclosure_text": "",
   "disclosure_btn_text": "",
