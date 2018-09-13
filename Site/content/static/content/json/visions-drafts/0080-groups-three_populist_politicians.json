@@ -7,6 +7,7 @@
   "image_file_list": [
     { "name": "Patrick Henry", "image_file_name": "esfj-patrick_henry-1.jpg" },
     { "name": "Citizen Kane", "image_file_name": "esfj-charles_foster_kane-1.jpg" },
+    { "name": "Clay Davis", "image_file_name": "esfj-clay_davis-1.jpg" },
     { "name": "Donald Trump", "image_file_name": "esfj-donald_trump-1.jpg" }
   ],
   "card_content_html": "<p><span class='first-letter'>T</span>hese images .</p>",
