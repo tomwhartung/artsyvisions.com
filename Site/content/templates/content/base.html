@@ -29,14 +29,20 @@
     <nav class="white" role="navigation">
       <div class="nav-wrapper container">
         <a id="logo-container" href="/" class="left-align brand-logo">
-          <img src="{% static 'content/images/base/jmws_logo-from_github.jpg' %}" width="55" height="55" class="z-depth-3"
+          <img src="{% static 'content/images/base/jmws_logo-from_github.jpg' %}"
+               width="55" height="55" class="z-depth-3"
                alt="Image of INFP containing more blue and red squares and fewer yellow and green squares.">
         </a>
         <!-- Navigation for Desktop - hides on medium-size and smaller screens -->
         <ul class="right hide-on-med-and-down">
-          <li><a href="/home">Home</a></li>
-          <li><a class='dropdown-trigger' href='#' data-target='visions-dropdown'>Visions</a></li>
-          <li><a class='dropdown-trigger' href='#' data-target='privacy-dropdown'>Privacy & Terms</a></li>
+          <li>
+           <a href="/home">Home</a></li>
+          <li>
+           <a class='dropdown-trigger' href='#' data-target='visions-dropdown'>
+            Visions</a></li>
+          <li>
+           <a class='dropdown-trigger' href='#' data-target='privacy-dropdown'>
+            Privacy & Terms</a></li>
         </ul>
         <ul id='visions-dropdown' class='dropdown-content'>
           <li><a href="/visions/all">All</a></li>
@@ -51,25 +57,34 @@
           <li><a href="/legal/questionnaire_disclaimer">Disclclaimer</a></li>
         </ul>
         <!-- Navigation for Mobile - shows on medium-size and smaller screens -->
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+         <i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="sidenav">
           <li><a href="/home">Home</a></li>
           <li><a href="/visions/all">Visions</a></li>
           <li>
             <ul>
-              <li class="mobile-submenu-item"><a href="/visions/all">All</a></li>
-              <li class="mobile-submenu-item"><a href="/visions/person">Persons</a></li>
-              <li class="mobile-submenu-item"><a href="/visions/people">People</a></li>
-              <li class="mobile-submenu-item"><a href="/visions/groups">Groups</a></li>
+              <li class="mobile-submenu-item">
+               <a href="/visions/all">All</a></li>
+              <li class="mobile-submenu-item">
+               <a href="/visions/person">Persons</a></li>
+              <li class="mobile-submenu-item">
+               <a href="/visions/people">People</a></li>
+              <li class="mobile-submenu-item">
+               <a href="/visions/groups">Groups</a></li>
             </ul>
           </li>
           <li><a>Privacy & Terms</a></li>
           <li>
             <ul>
-              <li class="mobile-submenu-item"><a href="/legal/affiliate_marketing_disclosure">Disclosure</a></li>
-              <li class="mobile-submenu-item"><a href="/legal/privacy_policy">Privacy Policy</a></li>
-              <li class="mobile-submenu-item"><a href="/legal/terms_of_service">Terms of Service</a></li>
-              <li class="mobile-submenu-item"><a href="/legal/questionnaire_disclaimer">Disclaimer</a></li>
+              <li class="mobile-submenu-item">
+               <a href="/legal/affiliate_marketing_disclosure">Disclosure</a></li>
+              <li class="mobile-submenu-item">
+               <a href="/legal/privacy_policy">Privacy Policy</a></li>
+              <li class="mobile-submenu-item">
+               <a href="/legal/terms_of_service">Terms of Service</a></li>
+              <li class="mobile-submenu-item">
+               <a href="/legal/questionnaire_disclaimer">Disclaimer</a></li>
             </ul>
           </li>
         </ul>
