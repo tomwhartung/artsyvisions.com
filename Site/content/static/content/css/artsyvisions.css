@@ -74,7 +74,18 @@ footer.page-footer {
   font-size: 200%;
 }
 
-/* For the cards on the person, people, groups, and all pages */
+ul.social-icons {
+  margin: 2em;
+}
+li.social-icon {
+  display: inline;
+  font-size: 1.75em;
+  padding: 1em;
+}
+
+/*
+ * For the cards on the person, people, groups, and all pages
+ */
 .sticky-action {
   padding: 5%;
 }
