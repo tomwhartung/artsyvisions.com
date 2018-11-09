@@ -67,6 +67,14 @@ footer.page-footer {
 .mobile-submenu-item {
   margin-left: 2em;
 }
+
+a {
+  font-weight: bold;
+}
+a.artsy-btn {
+  margin: 1em .5em 0em .5em;
+}
+
 .ordinal {
   vertical-align: super;
 }
