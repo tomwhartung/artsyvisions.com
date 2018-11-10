@@ -5,9 +5,16 @@ How to create and write Artsy Visions stories.
 
 ## Overview
 
-An Artsy Visions story, or "vision," is defined entirely by static files.
+### Goals
+
+The goal of these stories is to provide **content marketing.**
+
+- Content marketing of books and videos - affiliate links
+- Content marketing of the images - get your portrait at Groja.com
 
 ### Directories
+
+An Artsy Visions story, or "vision," is defined entirely by static files.
 
 Following is a list of sub-directories of `Site/content/static/content`
 relevant to creating visions:
@@ -63,6 +70,12 @@ The process calls for creating files in roughly this sequence:
 
 **Note that each article may be the visitor's first exposure to the idea of visualizing a personality.**
 
+### First Person
+
+- Ok in Conclusion or Footnotes **only**
+  - With extremely rare exceptions, maybe?
+  - If "needed," add a footnote and put the "needed" first person phrase there
+
 ### Links
 
 - Use minimal links
@@ -89,7 +102,15 @@ The image above is a spiritual portrait, or <em>Groja</em>¹, representing the p
 The images above are spiritual portraits, or <em>Grojas</em>¹, representing the personalities of ___, ___, and ___.
 ```html
 
-These spiritual portraits show how (overview – the big picture).
+#### Overview
+
+```html
+<p>
+These spiritual portraits show how ....
+</p>
+```html
+
+– **What is the big picture revealed by the image or images?**
 
 Set the scene: who they are and what they do
 Describe what the colors represent in PERSON 1, and give an example
@@ -100,6 +121,11 @@ If they are related, what makes their relationship unique?
 Is there anything else interesting and specific to this pair of images?
 
 #### Conclusion
+
+- What have we learned from this image or these images?
+- This is probably where we should put the affiliate links.
+- Ok to use first person here.
+
 
 #### Footnotes
 
