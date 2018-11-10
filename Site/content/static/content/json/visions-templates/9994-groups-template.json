@@ -5,14 +5,14 @@
   "author": "",
   "date": "",
   "image_file_list": [
-    { "name": "", "image_file_name": "" },
-    { "name": "", "image_file_name": "" },
-    { "name": "", "image_file_name": "" }
+    { "name": "", "image_file_name": "type-person_name.jpg" },
+    { "name": "", "image_file_name": "type-person_name.jpg" },
+    { "name": "", "image_file_name": "type-person_name.jpg" }
   ],
   "card_content_html": "<p><span class='first-letter'>T</span>.</p>",
   "card_first_person_html": "<p><span class='first-letter'>T</span>he blah blah blah me me me part.</p>",
   "disclosure_text": "",
   "disclosure_btn_text": "",
-  "story_file_name": "",
-  "footnotes_file_name": ""
+  "story_file_name": "team_name-body.html",
+  "footnotes_file_name": "team_name-footnotes.html"
 }
