@@ -51,12 +51,36 @@ The process calls for creating files in roughly this sequence:
 
 - No first person or links in `card_content_html`
 - First person OK but still no links in `card_first_person_html`
-- The following fields are optional, fill in values, if desired just for fun:
+- The following fields are optional, fill in values, if desired, just for fun:
   - `author`
   - `date`
   - `disclosure_text`
   - `disclosure_btn_text`
 
-## Format and Content of Visions
+## Step 3. Story and Footnotes
 
+### Links
+
+- Use minimal links
+  - Save the wikipedia, imdb, youtube, and fan site links for the stories at SeeOurMinds.com
+- Affiliate links
+  - Use these exclusively, if at all possible
+  - Unsure what these will look like at this time
+- SeeOurMinds.com links
+  - Certainly are acceptable
+  - Remember this the only place where they can see the score
+  - Make adding affiliate links to these pages a high priority
+
+### Format and Content of Visions
+
+
+## Step 4. Publish
+
+The name of the newly-published file should have a numerical prefix higher than the others in
+the visions directory, so that it will show up at the top of the pages in which it appears.
+
+
+## Step 5. Deploy
+
+This part of the process is outside the scope of this document.
 
