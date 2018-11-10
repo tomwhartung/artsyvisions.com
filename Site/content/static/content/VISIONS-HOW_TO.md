@@ -24,7 +24,9 @@ relevant to creating visions:
 - `html/people` - html files: body and footnotes for stories about pairs
 - `html/person` - html files: body and footnotes for stories about individuals
 
-### Process
+# Process
+
+## Overview of Process
 
 The process calls for creating files in roughly this sequence:
 
@@ -59,6 +61,8 @@ The process calls for creating files in roughly this sequence:
 
 ## Step 3. Story and Footnotes
 
+**Note that each article may be the visitor's first exposure to the idea of visualizing a personality.**
+
 ### Links
 
 - Use minimal links
@@ -66,12 +70,54 @@ The process calls for creating files in roughly this sequence:
 - Affiliate links
   - Use these exclusively, if at all possible
   - Unsure what these will look like at this time
-- SeeOurMinds.com links
-  - Certainly are acceptable
-  - Remember this the only place where they can see the score
-  - Make adding affiliate links to these pages a high priority
+- Links to Groja.com and SeeOurMinds.com - certainly are acceptable
+  - **Never duplicate any information already on Groja.com/about - always provide a link instead**
+  - Remember the original image page at SeeOurMinds.com is the only place where they can see the score
+  - Make adding affiliate links to the linked-to pages at SeeOurMinds.com a high priority
 
 ### Format and Content of Visions
+
+#### Introduction
+
+**Always** open with general information:
+
+```html
+The image above is a spiritual portrait, or <em>Groja</em>¹, representing the personality of___.
+```html
+
+```html
+The images above are spiritual portraits, or <em>Grojas</em>¹, representing the personalities of ___, ___, and ___.
+```html
+
+These spiritual portraits show how (overview – the big picture).
+
+Set the scene: who they are and what they do
+Describe what the colors represent in PERSON 1, and give an example
+Describe what the colors represent in PERSON 2, and give an example
+What do they have in common?
+What makes them different from each other?
+If they are related, what makes their relationship unique?
+Is there anything else interesting and specific to this pair of images?
+
+#### Conclusion
+
+#### Footnotes
+
+**Always** include a brief initial footnote explaining the whole idea and providing a link for more information.
+
+```html
+¹ A spiritual portrait or <em>Groja</em> &mdash; for
+<strong><u>G</u></strong>raphical
+<strong><u>R</u></strong>epresentation
+<strong><u>o</u></strong>f
+<strong><u>J</u></strong>ungian
+<strong><u>A</u></strong>rchetypes &mdash;
+is an image representing the personality of a person.
+Find essential information about these images on the
+<a href='https://www.Groja.com/about' title='Link to the About page at Groja.com' target='_blank'>About</a>
+page at
+<a href='https://www.Groja.com' title='Link to the Home page at Groja.com' target='_blank'>Groja.com</a>.
+```html
 
 
 ## Step 4. Publish
