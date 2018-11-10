@@ -3,11 +3,11 @@
 
 How to create and write Artsy Visions stories.
 
-# Overview
+## Overview
 
 An Artsy Visions story, or "vision," is defined entirely by static files.
 
-## Directories
+### Directories
 
 Following is a list of sub-directories of `Site/content/static/content`
 relevant to creating visions:
@@ -24,7 +24,7 @@ relevant to creating visions:
 - `html/people` - html files: body and footnotes for stories about pairs
 - `html/person` - html files: body and footnotes for stories about individuals
 
-## Process
+### Process
 
 The process calls for creating files in roughly this sequence:
 
@@ -34,5 +34,29 @@ The process calls for creating files in roughly this sequence:
 4. Move the json file from the `visions-drafts` directory to `visions` directory
 5. Deploy on server to publish new stories
 
-#
+## Step 1. Images
+
+- Single person images
+  - Leave image file name the same as on seeourminds.com
+  - No need to create new subdirectory for single images
+- Pairs of images
+  - Create new subdirectory named `images/visions/people/[pair_name]
+  - Populate new subdirectory using the same image file names as on seeourminds.com
+  - Use gimp to create a new image containing both images side-by-side
+- Groups:
+  - Create new subdirectory named `images/visions/groups/[team_name]
+  - Use the same image file names as on seeourminds.com
+
+## Step 2. Using the Templates
+
+- No first person or links in `card_content_html`
+- First person OK but still no links in `card_first_person_html`
+- The following fields are optional, fill in values, if desired just for fun:
+  - `author`
+  - `date`
+  - `disclosure_text`
+  - `disclosure_btn_text`
+
+## Format and Content of Visions
+
 
