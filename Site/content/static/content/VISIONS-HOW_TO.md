@@ -96,11 +96,11 @@ The process calls for creating files in roughly this sequence:
 
 ```html
 The image above is a spiritual portrait, or <em>Groja</em>¹, representing the personality of___.
-```html
+```
 
 ```html
 The images above are spiritual portraits, or <em>Grojas</em>¹, representing the personalities of ___, ___, and ___.
-```html
+```
 
 #### Overview
 
@@ -110,7 +110,7 @@ The images above are spiritual portraits, or <em>Grojas</em>¹, representing the
 <p>
 These spiritual portraits show how ....
 </p>
-```html
+```
 
 #### Context: Where and When
 
@@ -155,7 +155,7 @@ Find essential information about these images on the
 <a href='https://www.Groja.com/about' title='Link to the About page at Groja.com' target='_blank'>About</a>
 page at
 <a href='https://www.Groja.com' title='Link to the Home page at Groja.com' target='_blank'>Groja.com</a>.
-```html
+```
 
 Add other footnotes as appropriate, e.g., for ideas that "need" to be expressed in the first person.
 
@@ -167,4 +167,3 @@ the visions directory, so that it will show up at the top of the pages in which 
 ## Step 5. Deploy
 
 This part of the process is outside the scope of this document.
-
