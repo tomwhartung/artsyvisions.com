@@ -104,17 +104,30 @@ The images above are spiritual portraits, or <em>Grojas</em>¹, representing the
 
 #### Overview
 
+– **What is the big picture revealed by the image or images?**
+
 ```html
 <p>
 These spiritual portraits show how ....
 </p>
 ```html
 
-– **What is the big picture revealed by the image or images?**
+#### Context: Where and When
 
-Set the scene: who they are and what they do
+Set the scene, give the source of the character(s):
+
+- Where they are from (real life, book, film, tv, etc.)
+- Where they are now
+- What they are doing now
+
+#### Who the Image(s) Represent
+
 Describe what the colors represent in PERSON 1, and give an example
-Describe what the colors represent in PERSON 2, and give an example
+[Describe what the colors represent in PERSON 2, and give an example]
+[Describe what the colors represent in PERSON 3, and give an example]
+
+#### People and Groups Only: Compare and Contrast
+
 What do they have in common?
 What makes them different from each other?
 If they are related, what makes their relationship unique?
@@ -125,7 +138,6 @@ Is there anything else interesting and specific to this pair of images?
 - What have we learned from this image or these images?
 - This is probably where we should put the affiliate links.
 - Ok to use first person here.
-
 
 #### Footnotes
 
@@ -145,12 +157,12 @@ page at
 <a href='https://www.Groja.com' title='Link to the Home page at Groja.com' target='_blank'>Groja.com</a>.
 ```html
 
+Add other footnotes as appropriate, e.g., for ideas that "need" to be expressed in the first person.
 
 ## Step 4. Publish
 
 The name of the newly-published file should have a numerical prefix higher than the others in
 the visions directory, so that it will show up at the top of the pages in which it appears.
-
 
 ## Step 5. Deploy
 
