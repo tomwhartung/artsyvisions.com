@@ -20,7 +20,7 @@ Following is a list of sub-directories of `Site/content/static/content`
 relevant to creating visions:
 
 - `images/visions/groups` - jpg files: images featured in stories about groups
-- `images/visions/people` - jpg files: images featured in stories about pairs
+- `images/visions/pairs` - jpg files: images featured in stories about pairs
 - `images/visions/person` - jpg files: images featured in stories about individuals
 
 - `json/visions` - json files for published stories
@@ -28,7 +28,7 @@ relevant to creating visions:
 - `json/visions-templates` - json files serving as story file templates
 
 - `html/groups` - html files: body and footnotes for stories about groups
-- `html/people` - html files: body and footnotes for stories about pairs
+- `html/pairs` - html files: body and footnotes for stories about pairs
 - `html/person` - html files: body and footnotes for stories about individuals
 
 # Process
@@ -49,7 +49,7 @@ The process calls for creating files in roughly this sequence:
   - Leave image file name the same as on seeourminds.com
   - No need to create new subdirectory for single images
 - Pairs of images
-  - Create new subdirectory named `images/visions/people/[pair_name]
+  - Create new subdirectory named `images/visions/pairs/[pair_name]
   - Populate new subdirectory using the same image file names as on seeourminds.com
   - Use gimp to create a new image containing both images side-by-side
 - Groups:
