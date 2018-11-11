@@ -62,13 +62,13 @@ def visions_person(request):
     return render(request, template, context)
 
 
-def visions_people(request):
+def visions_pairs(request):
 
-    """ Get the data needed and load and render the visions/people template """
+    """ Get the data needed and load and render the visions/pairs template """
 
-    visions_list_obj = VisionsList('people')  # Reads the json files, etc.
+    visions_list_obj = VisionsList('pairs')  # Reads the json files, etc.
     title = 'Pairs - ArtsyVisions.com';
-    template = 'content/visions/people.html'
+    template = 'content/visions/pairs.html'
     context = {
         'title': title,
         'visions_list_obj': visions_list_obj,
