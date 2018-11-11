@@ -92,7 +92,7 @@ li.social-icon {
 }
 
 /*
- * For the cards on the person, people, groups, and all pages
+ * For the cards on the person, pairs, groups, and all pages
  */
 .sticky-action {
   padding: 5%;
@@ -100,7 +100,7 @@ li.social-icon {
 .all-card,
 .groups-card,
 .person-card,
-.people-card {
+.pairs-card {
   margin: 2% 0 2% 0;
   padding: .5% 2% .5% 2%;
 }
