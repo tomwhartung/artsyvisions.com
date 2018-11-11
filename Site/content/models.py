@@ -36,7 +36,7 @@ class VisionsList:
         Get a list of visions json files
         Valid values for visions_page_name:
         - person - visions of individuals
-        - people - visions of pairs of people
+        - pairs - visions of pairs of people
         - groups - visions of groups of people
         - all - default if missing or invalid
         """
@@ -61,7 +61,7 @@ class VisionsList:
         all_visions_files = sorted(os.listdir(visions_root_dir), reverse=True)
 
         if (self.visions_page_name == 'person' or
-            self.visions_page_name == 'people' or
+            self.visions_page_name == 'pairs' or
             self.visions_page_name == 'groups'):
             fnmatch_string = '*' + self.visions_page_name + '*.json'
         else:
@@ -292,7 +292,7 @@ class VisionFile:
         """
         Get the vision_type from the vision_file_name, which is of the form:
             9999-{vision_type}-{name_or_names}.json
-        vision_type = 'person' , 'people' , or 'groups'
+        vision_type = 'person' , 'pairs' , or 'groups'
         """
 
         pattern = re.compile('\d\d\d\d-(\w+)-')
@@ -358,7 +358,7 @@ class VisionFile:
         vision_type = self.vision_dict['vision_type']
         image_file_parent_dir = 'content/images/visions/' + vision_type + '/'
         if (self.vision_dict['vision_type'] == 'person' or
-            self.vision_dict['vision_type'] == 'people'):
+            self.vision_dict['vision_type'] == 'pairs'):
             image_file_path = image_file_parent_dir + self.vision_dict['image_file_name']
             self.vision_dict['image_file_path'] = image_file_path
         elif self.vision_dict['vision_type'] == 'groups':
