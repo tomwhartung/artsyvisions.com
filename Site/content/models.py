@@ -315,7 +315,7 @@ class VisionFile:
         """
 
         if self.vision_dict['vision_type'] == 'groups':
-            pattern = re.compile('-groups-(\w+).json')
+            pattern = re.compile('-groups-([-\w]+).json')
             match = re.search(pattern, self.vision_file_name)
             group_name = match.group(1)
             self.vision_dict['group_name'] = group_name
