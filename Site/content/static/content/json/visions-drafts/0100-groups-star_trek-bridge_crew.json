@@ -1,0 +1,19 @@
+{
+  "title": "Star Trek's Bridge Crew",
+  "subtitle_html": "",
+  "col_classes": "s12 m10 l8",
+  "author": "Tom H.",
+  "date": "Fall, 2018",
+  "image_file_list": [
+    { "name": "Uhura", "image_file_name": "esfp-uhura-1.jpg" },
+    { "name": "Sulu", "image_file_name": "estp-pavel_chekov-1.jpg" },
+    { "name": "Chekov", "image_file_name": "estp-sulu-1.jpg" },
+    { "name": "Kirk", "image_file_name": "estj-captain_kirk-3.jpg" }
+  ],
+  "card_content_html": "<p><span class='first-letter'>T</span>.</p>",
+  "card_first_person_html": "<p><span class='first-letter'>T</span>he blah blah blah me me me part.</p>",
+  "disclosure_text": "As an Amazon Associate I earn from qualifying purchases.",
+  "disclosure_btn_text": "About Affiliate Marketing",
+  "story_file_name": "star_trek-bridge_crew-body.html",
+  "footnotes_file_name": "star_trek-bridge_crew-footnotes.html"
+}
