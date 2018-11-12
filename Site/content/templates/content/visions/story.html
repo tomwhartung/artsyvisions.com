@@ -72,27 +72,24 @@
    </div><!-- .col -->
   </div><!-- .row -->
   <a name="story"></a>
-  <div class="row">
-   <div class="col s12 m12 l12">
-    <div class="story-html-outer z-depth-3">
-     {% if visions_story_data.story_html %}
-      <div class="story-html-inner hoverable">
-       {{ visions_story_data.story_html|safe }}
-      </div><!-- .story-html-inner -->
-     {% endif %}
-    </div><!-- .story-html-outer -->
-    {% if visions_story_data.footnotes_html %}
-     <a name="footnotes"></a>
-     <div class="footnotes-html-outer z-depth-3">
-      <div class="footnotes-html-inner hoverable">
-       <h5 class="center">Footnotes</h5>
-       <div>{{ visions_story_data.footnotes_html|safe }}
-       </div>
-      </div><!-- .footnotes-html-inner -->
-     </div><!-- .footnotes-html-outer -->
-    {% endif %}
-   </div><!-- .col -->
-  </div><!-- .row -->
+  {% if visions_story_data.story_html %}
+   {{ visions_story_data.story_html|safe }}
+  {% endif %}
+  <a name="footnotes"></a>
+  <a name="notes"></a>
+  {% if visions_story_data.footnotes_html %}
+   <div class="row">
+    <div class="col s12">
+      <div class="footnotes-html-outer z-depth-3">
+       <div class="footnotes-html-inner hoverable">
+        <h5 class="center">Notes</h5>
+        <div>{{ visions_story_data.footnotes_html|safe }}
+        </div>
+       </div><!-- .footnotes-html-inner -->
+      </div><!-- .footnotes-html-outer -->
+    </div><!-- .col -->
+   </div><!-- .row -->
+  {% endif %}
 
  </div><!-- .section -->
 </div><!-- .container -->
