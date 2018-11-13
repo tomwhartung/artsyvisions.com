@@ -151,7 +151,7 @@ class VisionStory:
         self.visions_story_data['vision_dict'] = vision_file_obj.vision_dict
         self.vision_file_obj = vision_file_obj
         self.visions_story_data['story_html'] = self.get_story_html()
-        self.visions_story_data['footnotes_html'] = self.get_footnotes_html()
+        self.visions_story_data['notes_html'] = self.get_notes_html()
         return self.visions_story_data
 
 
@@ -163,7 +163,8 @@ class VisionStory:
             file_name = self.vision_file_obj.vision_dict['story_file_name']
             if len(file_name) > 5:
                 html_from_file = self.read_html_file(file_name)
-                story_html_string = self.add_new_row_markup(html_from_file)
+                #story_html_string = self.add_new_row_markup(html_from_file)
+                story_html_string = html_from_file
             else:
                 story_html_string = '<p>Invalid story_file_name: '
                 story_html_string += '<q>' + '</q></p>'
@@ -175,7 +176,12 @@ class VisionStory:
 
     def add_new_row_markup(self, html_from_file):
 
-        """ Add html for new rows to the story html, as appropriate """
+        """
+            *** DEPRECATED ***
+            Add html for new rows to the story html, as appropriate
+            Keeping the cruft around in case we change our mind back again
+            *** DEPRECATED - DELETE ME YOU WUSS ***
+        """
 
         NEW_ROW_MATCH_STRING = '<< NEW_ROW_MARKUP >>'
         NEW_ROW_MARKUP = """
@@ -195,17 +201,23 @@ class VisionStory:
         return story_html_string
 
 
-    def get_footnotes_html(self):
+    def get_notes_html(self):
 
-        """ Read the footnotes file, if there is one, and return the html """
+        """ Read the notes file, if there is one, and return the html """
 
-        footnotes_html_string = ''
-        if 'footnotes_file_name' in self.vision_file_obj.vision_dict:
+        notes_html_string = ''
+
+        if 'notes_file_name' in self.vision_file_obj.vision_dict:
+            file_name = self.vision_file_obj.vision_dict['notes_file_name']
+        elif 'footnotes_file_name' in self.vision_file_obj.vision_dict:
             file_name = self.vision_file_obj.vision_dict['footnotes_file_name']
-            if len(file_name) > 5:
-                footnotes_html_string = self.read_html_file(file_name)
+        else:
+            file_name = ''
 
-        return footnotes_html_string
+        if len(file_name) > 5:
+            notes_html_string = self.read_html_file(file_name)
+
+        return notes_html_string
 
 
     def read_html_file(self, file_name):
