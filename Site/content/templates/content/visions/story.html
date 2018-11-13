@@ -77,16 +77,17 @@
   {% endif %}
   <a name="footnotes"></a>
   <a name="notes"></a>
-  {% if visions_story_data.footnotes_html %}
+  {% if visions_story_data.notes_html %}
    <div class="row">
     <div class="col s12">
-      <div class="footnotes-html-outer z-depth-3">
-       <div class="footnotes-html-inner hoverable">
+      <div class="notes-html-outer z-depth-3">
+       <div class="notes-html-inner hoverable">
         <h5 class="center">Notes</h5>
-        <div>{{ visions_story_data.footnotes_html|safe }}
+        <div>
+         {{ visions_story_data.notes_html|safe }}
         </div>
-       </div><!-- .footnotes-html-inner -->
-      </div><!-- .footnotes-html-outer -->
+       </div><!-- .notes-html-inner -->
+      </div><!-- .notes-html-outer -->
     </div><!-- .col -->
    </div><!-- .row -->
   {% endif %}
