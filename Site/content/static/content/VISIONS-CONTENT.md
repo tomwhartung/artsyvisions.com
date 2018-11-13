@@ -1,5 +1,5 @@
 
-# VISIONS-CONTENT.md.md
+# VISIONS-CONTENT.md
 
 Guidelines for writing content for Artsy Visions stories.
 
@@ -14,15 +14,15 @@ The goal of these stories is to provide **content marketing.**
 
 ## Guidelines
 
-Following are details applying to Step 3. Story and Footnotes in VISIONS-HOW_TO.md
+Following are details applying to Step 3. Story and Notes in VISIONS-HOW_TO.md
 
 **Note that each article may be the visitor's first exposure to the idea of visualizing a personality.**
 
 ### First Person
 
-- Ok in Conclusion or Footnotes **only**
+- Ok in Conclusion or Notes **only**
   - With extremely rare exceptions, maybe?
-  - If "needed," add a footnote and put the "needed" first person phrase there
+  - If "needed," add a note and put the "needed" first person phrase there
 
 ### Links
 
@@ -38,27 +38,21 @@ Following are details applying to Step 3. Story and Footnotes in VISIONS-HOW_TO.
 
 ### Format and Content of Visions
 
+- Use `html/templates/body.html` as a starting point
+
 #### Introduction
 
-**Always** open with general information:
+**Always** open with general information.
 
-```html
-The image above is a spiritual portrait, or <em>Groja</em>¹, representing the personality of___.
-```
-
-```html
-The images above are spiritual portraits, or <em>Grojas</em>¹, representing the personalities of ___, ___, and ___.
-```
+- Remember, this may be the first one of these the visitor is seeing
+  - There is no guarantee that they have even read the Groja.com/About page yet
+- See the template for examples
+- Keep it short, though
+- The idea is, repeat visitors will learn to skip it
 
 #### Overview
 
-– **What is the big picture revealed by the image or images?**
-
-```html
-<p>
-These spiritual portraits show how ....
-</p>
-```
+**What is the big picture revealed by the image or images?**
 
 #### Context: Where and When
 
@@ -87,23 +81,13 @@ Is there anything else interesting and specific to this pair of images?
 - This is probably where we should put the affiliate links.
 - Ok to use first person here.
 
-#### Footnotes
+#### Notes
 
-**Always** include a brief initial footnote explaining the whole idea and providing a link for more information.
+Notes appear in a separate file from the body.
 
-```html
-¹ A spiritual portrait or <em>Groja</em> &mdash; for
-<strong><u>G</u></strong>raphical
-<strong><u>R</u></strong>epresentation
-<strong><u>o</u></strong>f
-<strong><u>J</u></strong>ungian
-<strong><u>A</u></strong>rchetypes &mdash;
-is an image representing the personality of a person.
-Find essential information about these images on the
-<a href='https://www.Groja.com/about' title='Link to the About page at Groja.com' target='_blank'>About</a>
-page at
-<a href='https://www.Groja.com' title='Link to the Home page at Groja.com' target='_blank'>Groja.com</a>.
-```
+- Use `html/templates/notes.html` as a starting point
 
-Add other footnotes as appropriate, e.g., for ideas that "need" to be expressed in the first person.
+**Always** include a brief initial note explaining the whole idea and providing a link for more information.
+
+Add other notes as appropriate, e.g., for ideas that "need" to be expressed in the first person.
 
