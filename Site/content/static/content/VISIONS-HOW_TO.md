@@ -5,10 +5,9 @@ How to create and write Artsy Visions stories.
 
 ## Overview
 
+An Artsy Visions story, or "vision," is defined entirely by static files.
 
 ### Directories
-
-An Artsy Visions story, or "vision," is defined entirely by static files.
 
 Following is a list of sub-directories of `Site/content/static/content`
 relevant to creating visions:
@@ -21,9 +20,10 @@ relevant to creating visions:
 - `json/visions-drafts` - json files for drafts of stories
 - `json/visions-templates` - json files serving as story file templates
 
-- `html/groups` - html files: body and footnotes for stories about groups
-- `html/pairs` - html files: body and footnotes for stories about pairs
-- `html/person` - html files: body and footnotes for stories about individuals
+- `html/groups` - html files: body and notes for stories about groups
+- `html/pairs` - html files: body and notes for stories about pairs
+- `html/person` - html files: body and notes for stories about individuals
+- `html/templates` - html files: templates for body and notes files
 
 # Process
 
@@ -33,7 +33,7 @@ The process calls for creating files in roughly this sequence:
 
 1. Add the image or images
 2. Use a template to create the json file in the `visions-drafts` directory
-3. Add the story and footnotes files
+3. Add the story and notes files
 4. Move the json file from the `visions-drafts` directory to `visions` directory
 5. Deploy on server to publish new stories
 
@@ -60,7 +60,7 @@ The process calls for creating files in roughly this sequence:
   - `disclosure_text`
   - `disclosure_btn_text`
 
-## Step 3. Story and Footnotes
+## Step 3. Story and Notes
 
 Guidelines for this step are in a separate file named `VISIONS-CONTENT.md` in this directory.
 
@@ -72,3 +72,4 @@ the visions directory, so that it will show up at the top of the pages in which 
 ## Step 5. Deploy
 
 This part of the process is outside the scope of this document.
+
