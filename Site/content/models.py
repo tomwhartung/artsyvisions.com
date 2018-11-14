@@ -122,9 +122,6 @@ class VisionStory:
         """
 
         self.get_visions_story_data(vision_file_no_ext)
-        if DJANGO_DEBUG:
-            story_html = self.visions_story_data['story_html']
-            print('VisionStory - __init__ - story_html:', story_html)
 
 
     def get_visions_story_data(self, vision_file_no_ext):
