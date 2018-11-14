@@ -1,6 +1,6 @@
 {
   "title": "Star Trek's Bridge Crew",
-  "subtitle_html": "",
+  "subtitle_html": "An Ostensibly Diverse Team",
   "col_classes": "s12 m10 l8",
   "author": "Tom H.",
   "date": "Fall, 2018",
@@ -10,10 +10,10 @@
     { "name": "Chekov", "image_file_name": "estp-sulu-1.jpg" },
     { "name": "Kirk", "image_file_name": "estj-captain_kirk-3.jpg" }
   ],
-  "card_content_html": "<p><span class='first-letter'>T</span>.</p>",
-  "card_first_person_html": "<p><span class='first-letter'>T</span>he blah blah blah me me me part.</p>",
+  "card_content_html": "<p><span class='first-letter'>A</span>merican TV shows in the 1960s were predominantly white.  When Gene Roddenberry created the Original Star Trek Series, he decided to change that.  The ostensibly diverse team on the bridge of the Enterprise broke new ground on the medium in 1966-1968, when changes in race relations in America were on the forefront of everyone's mind.</p>",
+  "card_first_person_html": "<p><span class='first-letter'>O</span>n the surface, the crew on the bridge of the starship in the original series is fairly diverse.  Looking at their personalities, however, shows the main characters &mdash; with the exception of the extremely logical <a href='/visions/story/0020-pairs-star_trek-spock_and_mccoy' title='Link to the story about Mr. Spock and Dr. McCoy on this site' target='_blank'>Mr. Spock</a>, of course &mdash; are fairly <q>normal.</q>  Psychologically speaking, each character is quite well-suited for their role, and any claim that any one of them is out of place in their position is completely unfounded.</p>",
   "disclosure_text": "As an Amazon Associate I earn from qualifying purchases.",
   "disclosure_btn_text": "About Affiliate Marketing",
   "story_file_name": "star_trek-bridge_crew-body.html",
-  "footnotes_file_name": "star_trek-bridge_crew-footnotes.html"
+  "notes_file_name": "star_trek-bridge_crew-notes.html"
 }
