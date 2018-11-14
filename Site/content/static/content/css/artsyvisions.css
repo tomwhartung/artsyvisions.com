@@ -112,7 +112,9 @@ li.social-icon {
   padding: 1%;
 }
 
-/* Story Page */
+/*
+ * Story Page
+ */
 .headings-images-outer,
 .author-date-outer,
 .short-disclosure-outer {
@@ -138,4 +140,12 @@ li.social-icon {
 .notes-html-inner {
   margin: .5em;
   padding: 1.5em;
+}
+
+.book-title,
+.episode-title,
+.movie-title,
+.series-title {
+  font-style: italic;
+  text-decoration: underline;
 }
