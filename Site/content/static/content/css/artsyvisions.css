@@ -75,6 +75,14 @@ a.artsy-btn {
   margin: 1em .5em 0em .5em;
 }
 
+q.dialog {
+  font-style: italic;
+  font-weight: bold;
+}
+q.slang {
+  font-style: italic;
+}
+
 .ordinal {
   vertical-align: super;
 }
