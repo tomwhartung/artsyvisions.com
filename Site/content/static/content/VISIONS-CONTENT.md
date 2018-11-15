@@ -30,7 +30,9 @@ Following are details applying to Step 3. Story and Notes in VISIONS-HOW_TO.md
   - Save the wikipedia, imdb, youtube, and fan site links for the stories at SeeOurMinds.com
 - Affiliate links
   - Use these exclusively, if at all possible
-  - Unsure what these will look like at this time
+  - Idea:
+    - Use at the beginning, when introducing the characters, and
+    - Use at the end, when mentioning the source of the profile
 - Links to Groja.com and SeeOurMinds.com - certainly are acceptable
   - **Never duplicate any information already on Groja.com/about - always provide a link instead**
   - Remember the original image page at SeeOurMinds.com is the only place where they can see the score
