@@ -75,12 +75,23 @@ a.artsy-btn {
   margin: 1em .5em 0em .5em;
 }
 
-q.dialog {
+q.dialog,
+q.document-title,
+q.from-book {
   font-style: italic;
   font-weight: bold;
 }
+q.mantra,
 q.slang {
   font-style: italic;
+}
+
+.book-title,
+.episode-title,
+.movie-title,
+.series-title {
+  font-style: italic;
+  text-decoration: underline;
 }
 
 .ordinal {
@@ -150,10 +161,3 @@ li.social-icon {
   padding: 1.5em;
 }
 
-.book-title,
-.episode-title,
-.movie-title,
-.series-title {
-  font-style: italic;
-  text-decoration: underline;
-}
