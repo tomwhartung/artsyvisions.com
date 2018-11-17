@@ -206,8 +206,6 @@ class VisionStory:
 
         if 'notes_file_name' in self.vision_file_obj.vision_dict:
             file_name = self.vision_file_obj.vision_dict['notes_file_name']
-        elif 'footnotes_file_name' in self.vision_file_obj.vision_dict:
-            file_name = self.vision_file_obj.vision_dict['footnotes_file_name']
         else:
             file_name = ''
 
