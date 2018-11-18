@@ -44,18 +44,29 @@
      <div class="card">
       <div class="card-content">
        {{ vis_dict.card_content_html|safe }}
-       {% if vis_dict.card_first_person_html %}
-        <hr>
-        {{ vis_dict.card_first_person_html|safe }}
-        <span class="right">
-         &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
-       {% endif %}
       </div>
       <div class="card-action center">
+       {% if vis_dict.card_first_person_html %}
+        <ul class="collapsible">
+          <li class="center-align">
+            <div class="collapsible-header">
+             <i class="fa fa-lg fa-window-maximize yellow-text text-darken-2"></i>
+             <i class="fa fa-lg fa-window-maximize yellow-text text-darken-3"></i>
+            </div>
+            <div class="collapsible-body">
+             <span class="left-align">
+              {{ vis_dict.card_first_person_html|safe }}
+              <span class="right">
+               &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
+             </span>
+            </div>
+          </li>
+        </ul>
+       {% endif %}
        <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
           title="Read the story about {{ vis_dict.title }}"
           class="waves-effect waves-light yellow darken-1 black-text btn">Read the Story</a>
-      </div>
+      </div><!-- .card-action -->
      </div><!-- .card -->
     </div><!-- .groups-card  .z-depth-3 -->
    {% else %}
@@ -71,4 +82,13 @@
   </div><!-- .row -->
  </div><!-- .section -->
 </div><!-- .container -->
+{% endblock %}
+
+{% block scripts %}
+ {{ block.super }}
+ <script>
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+ </script>
 {% endblock %}
