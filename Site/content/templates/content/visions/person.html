@@ -39,7 +39,7 @@
           {% endautoescape %}
          {% endif %}
          &nbsp;
-         <i class="fa fa-lg fa-level-down" aria-hidden="true"></i></span></a>
+         <i class="fa fa-lg fa-level-down blue-text darken-1" aria-hidden="true"></i></span></a>
        {{ vis_dict.card_first_person_html|safe }}
        <span class="right">
         &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
@@ -53,13 +53,13 @@
           {% endautoescape %}
          {% endif %}
          &nbsp;
-         <i class="fa fa-lg fa-level-up" aria-hidden="true"></i></span></a>
+         <i class="fa fa-lg fa-level-up blue-text darken-1" aria-hidden="true"></i></span></a>
        {{ vis_dict.card_content_html|safe }}
       </div>
       <div class="card-action center">
        <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
           title="Read the story about {{ vis_dict.title }}"
-          class="waves-effect waves-light btn">Read the Story</a>
+          class="waves-effect waves-light blue darken-1 btn">Read the Story</a>
       </div>
      </div><!-- .card -->
     </div><!-- .person-card -->
