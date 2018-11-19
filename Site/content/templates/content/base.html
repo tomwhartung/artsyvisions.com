@@ -135,10 +135,12 @@
   </footer>
   {% endblock %}
 
+{% block scripts %}
   <!-- JavaScript - Note: Import jQuery before materialize.js -->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="{% static 'content/js/materialize.js' %}"></script>
   <script src="{% static 'content/js/init.js' %}"></script>
+{% endblock %}
 
 </body>
 </html>
