@@ -47,15 +47,13 @@
       </div>
       <div class="card-action center">
        {% if vis_dict.card_first_person_html %}
-       <div class="row">
-       <div class="col s8 offset-s2">
-        <ul class="collapsible center-align">
-          <li class="center-align">
-           <div class="collapsible-header">
-            <span class="center-align">
-             <i class="fa fa-lg fa-window-maximize yellow-text text-darken-3"></i>
-            </span>
-           </div>
+        <div class="row">
+         <div class="col s8 offset-s2">
+          <ul class="collapsible">
+           <li>
+            <div class="collapsible-header">
+             <i class="fa fa-lg fa-comment yellow-text text-darken-3"></i>
+            </div>
             <div class="collapsible-body">
              <span class="left-align">
               {{ vis_dict.card_first_person_html|safe }}
@@ -63,22 +61,14 @@
                &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
              </span>
             </div>
-          </li>
-        </ul>
-       </div><!-- .col -->
-      </div><!-- .row -->
-      <div class="row">
-       <div class="col s6 offset-s3">
-        <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
-           title="Read the story about {{ vis_dict.title }}"
-           class="waves-effect waves-light yellow darken-1 black-text btn">Read the Story</a>
-       </div><!-- .col -->
-      </div><!-- .row -->
-       {% else %}
+           </li>
+          </ul>
+         </div><!-- .col -->
+        </div><!-- .row -->
+       {% endif %}
        <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
           title="Read the story about {{ vis_dict.title }}"
           class="waves-effect waves-light yellow darken-1 black-text btn">Read the Story</a>
-       {% endif %}
       </div><!-- .card-action -->
      </div><!-- .card -->
     </div><!-- .groups-card  .z-depth-3 -->
