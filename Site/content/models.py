@@ -132,8 +132,14 @@ class VisionStory:
 
         self.visions_story_data = {}
         self.visions_story_data['vision_file_no_ext'] = vision_file_no_ext
-        vision_file_name = self.visions_story_data['vision_file_no_ext'] + '.json'
-        vision_file_obj = VisionFile(VISIONS_JSON_DIRECTORY, vision_file_name)
+
+        if vision_file_no_ext == 'index':
+            self.visions_story_data = self.set_story_data_for_index()
+            return self.visions_story_data
+        else:
+            vision_file_name = self.visions_story_data['vision_file_no_ext'] + '.json'
+            vision_file_obj = VisionFile(VISIONS_JSON_DIRECTORY, vision_file_name)
+
         published_file_exists = vision_file_obj.set_vision_dict_data()
 
         if not published_file_exists:
@@ -235,6 +241,38 @@ class VisionStory:
             html_string += '<p>file_path: <q>' + file_path + '</q></p>'
 
         return html_string
+
+
+    def set_story_data_for_index(self):
+
+        """
+        Set data normally in the json file to values that
+        allow us to see the html templates by accessing '/index'
+        """
+
+        story_file_name = 'body.html'
+        notes_file_name = 'notes.html'
+        vision_type = 'templates'
+        subtitle_html = 'html/templates/*'
+
+        self.vision_file_obj = VisionFile()
+        self.vision_file_obj.vision_dict = {}
+        self.vision_file_obj.vision_dict['story_file_name'] = story_file_name
+        self.vision_file_obj.vision_dict['notes_file_name'] = notes_file_name
+        self.vision_file_obj.vision_dict['vision_type'] = vision_type
+        self.vision_file_obj.vision_dict['title'] = 'index'
+        self.vision_file_obj.vision_dict['subtitle_html'] = subtitle_html
+        self.vision_file_obj.vision_dict['author'] = 'Mr. Templates Person'
+        self.vision_file_obj.vision_dict['date'] = '2018'
+        self.vision_file_obj.vision_dict['disclosure_text'] = 'disclosure_text'
+        self.vision_file_obj.vision_dict['disclosure_btn_text'] = 'btn_text'
+
+        self.visions_story_data = {}
+        #self.visions_story_data['vision_dict'] = {}
+        self.visions_story_data['vision_dict'] = self.vision_file_obj.vision_dict
+        self.visions_story_data['story_html'] = self.get_story_html()
+        self.visions_story_data['notes_html'] = self.get_notes_html()
+        return self.visions_story_data
 
 
 
