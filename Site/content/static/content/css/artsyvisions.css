@@ -86,6 +86,9 @@ q.slang {
   font-style: italic;
 }
 
+.foreign-term {
+  font-style: italic;
+}
 .book-title,
 .episode-title,
 .movie-title,
