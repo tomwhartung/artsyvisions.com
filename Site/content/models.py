@@ -170,40 +170,12 @@ class VisionStory:
             file_name = self.vision_file_obj.vision_dict['story_file_name']
             if len(file_name) > 5:
                 html_from_file = self.read_html_file(file_name)
-                #story_html_string = self.add_new_row_markup(html_from_file)
                 story_html_string = html_from_file
             else:
                 story_html_string = '<p>Invalid story_file_name: '
                 story_html_string += '<q>' + '</q></p>'
         else:
             story_html_string = '<p>No story_file_name in the json file.</p>'
-
-        return story_html_string
-
-
-    def add_new_row_markup(self, html_from_file):
-
-        """
-            *** DEPRECATED ***
-            Add html for new rows to the story html, as appropriate
-            Keeping the cruft around in case we change our mind back again
-            *** DEPRECATED - DELETE ME YOU WUSS ***
-        """
-
-        NEW_ROW_MATCH_STRING = '<< NEW_ROW_MARKUP >>'
-        NEW_ROW_MARKUP = """
-     </div><!-- .story-html-inner -->
-    </div><!-- .story-html-outer -->
-   </div><!-- .col -->
-  </div><!-- .row -->
-  <div class="row">
-   <div class="col s12 m12 l12">
-    <div class="story-html-outer z-depth-3">
-     <div class="story-html-inner hoverable">
-        """
-
-        new_row_pattern = re.compile(NEW_ROW_MATCH_STRING)
-        story_html_string = new_row_pattern.sub(NEW_ROW_MARKUP, html_from_file)
 
         return story_html_string
 
