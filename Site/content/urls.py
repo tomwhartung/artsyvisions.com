@@ -15,6 +15,7 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('home', views.home, name='home'),
+    path('index', views.index, name='index'),
     path('visions/all',
         views.visions_all,
         name='visions_all'),
