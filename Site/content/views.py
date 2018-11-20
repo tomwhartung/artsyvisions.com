@@ -16,6 +16,7 @@ from django.views.generic.base import View
 from .models import VisionsList
 from .models import VisionStory
 
+
 def home(request):
 
     """ Load and render the Home page template """
@@ -26,6 +27,23 @@ def home(request):
         'title': title,
     }
     return render(request, template, context)
+
+
+def index(request):
+
+    """ Load and render the Story page using the body and notes templates """
+
+    visions_story_obj = VisionStory('index')
+    visions_story_data = visions_story_obj.visions_story_data
+    title = visions_story_data['vision_dict']['title'] + ' - ArtsyVisions.com'
+    template = 'content/visions/story.html'
+    context = {
+        'title': title,
+        'visions_story_data': visions_story_data,
+    }
+    return render(request, template, context)
+
+
 
 ##
 ## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
