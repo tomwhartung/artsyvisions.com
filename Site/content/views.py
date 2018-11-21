@@ -44,6 +44,16 @@ def index(request):
     return render(request, template, context)
 
 
+def not_found(request, unknown_page='default_unknown_page'):
+
+    """ Load and render the 404 not found template """
+
+    template = loader.get_template('content/404.html')
+    context = {
+        'unknown_page': unknown_page,
+    }
+    return HttpResponse(template.render(context, request))
+
 
 ##
 ## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
