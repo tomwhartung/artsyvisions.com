@@ -44,6 +44,23 @@ def index(request):
     return render(request, template, context)
 
 
+def versions(request):
+
+    """ Load and render the versions template """
+
+    import platform
+    python_version = platform.python_version()
+    import django
+    django_version = django.VERSION
+
+    template = loader.get_template('content/versions.html')
+    context = {
+        'python_version': python_version,
+        'django_version': django_version,
+    }
+    return HttpResponse(template.render(context, request))
+
+
 def not_found(request, unknown_page='default_unknown_page'):
 
     """ Load and render the 404 not found template """
