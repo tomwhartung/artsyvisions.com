@@ -51,12 +51,14 @@ def versions(request):
     import platform
     python_version = platform.python_version()
     import django
-    django_version = django.VERSION
+    django_version_1 = django.VERSION
+    django_version_2 = django.get_version()
 
     template = loader.get_template('content/versions.html')
     context = {
         'python_version': python_version,
-        'django_version': django_version,
+        'django_version_1': django_version_1,
+        'django_version_2': django_version_2,
     }
     return HttpResponse(template.render(context, request))
 
