@@ -1,0 +1,27 @@
+{% extends 'content/base.html' %}
+
+
+{% block content %}
+ <main class="mt-3">
+  <div class="container">
+   <div class="row justify-content-center">
+    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 z-depth-1-half m-5 p-5">
+     <h1 class="text-center">404 &ndash; Not Found</h1>
+     <p class="font-weight-bold">
+      Sorry, we could not find the page: <q><b>{{ unknown_page }}</b></q>.</p>
+     <hr>
+     <p class="text-center">
+      Here's a tip: visit the
+       <a href="/galleries/all/" title="Link to the Galleries page on this site">
+        Galleries.</a>
+     </p>
+     <p>
+      They contain images of famous people's personalities,
+       both real and fictional, and some sample images of
+       generic personality types that do not correspond to actual people.
+     </p>
+    </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+ </div><!-- .container -->
+</main>
+{% endblock %}
