@@ -46,5 +46,8 @@ urlpatterns = [
     path('legal/terms_of_service',
         views.terms_of_service,
         name='terms_of_service'),
+    path('<path:unknown_page>',
+        views.not_found,
+        name='not_found'),
 
 ]
