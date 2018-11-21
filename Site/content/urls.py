@@ -16,6 +16,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('home', views.home, name='home'),
     path('index', views.index, name='index'),
+    path('v', views.versions, name='versions'),
     path('visions/all',
         views.visions_all,
         name='visions_all'),
