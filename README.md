@@ -203,6 +203,10 @@ These two references were quite helpful:
 
 ### 6. Apache Setup
 
+**Goal: consistent versions on `bette` , `jane` , `barbara` , and `ava` .**
+
+#### 6.1 New "v" for "Version" route on all sites
+
 Each site now has a route "v" that displays the versions of python and of either django or flask the site is using.
 
 - ArtsyVisions.com:
@@ -212,9 +216,7 @@ Each site now has a route "v" that displays the versions of python and of either
 - SeeOurMinds.com:
   - http://127.0.0.1:8002/v
 
-#### 6.1 Update Version of python?
-
-**Goal: consistent versions on `bette` , `jane` , `barbara` , and `ava` .**
+#### 6.2 Update Version of python?
 
 As of 2018-11-23, all hosts:
 
@@ -231,10 +233,20 @@ Therefore:
 
 - **Continue using python3.5.2 for now**
 
-#### 6.2 Update Version of django?
-
-
-
 #### 6.3 Update Version of flask?
+
+As of 2018-11-23, all hosts:
+
+- Current version is 0.12
+- Groja.com is the only flask site
+- No pressing need to upgrade
+
+Therefore:
+
+- **Continue using flask 0.12 for now**
+- Upgrade when move site to cloud, which will probably be early next year
+
+#### 6.4 Update Version of django?
+
 
 
