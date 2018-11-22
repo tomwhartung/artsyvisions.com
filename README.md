@@ -201,8 +201,40 @@ These two references were quite helpful:
 - https://docs.djangoproject.com/en/2.1/intro/tutorial03/
 - https://tutorial.djangogirls.org/en/template_extending/
 
-### 6. Apache Setup?
+### 6. Apache Setup
 
-Not sure whether we will do that.
-Might take it straight to the cloud.
+Each site now has a route "v" that displays the versions of python and of either django or flask the site is using.
+
+- ArtsyVisions.com:
+  - http://127.0.0.1:8001/v
+- Groja.com:
+  - http://127.0.0.1:5001/v
+- SeeOurMinds.com:
+  - http://127.0.0.1:8002/v
+
+#### 6.1 Update Version of python?
+
+**Goal: consistent versions on `bette` , `jane` , `barbara` , and `ava` .**
+
+As of 2018-11-23, all hosts:
+
+- Current version is python3.7
+- Sites and rest of OS use Python 3.5.2 for python3
+- python3.6 is installed but not used
+  - OS may depend on using python3.5
+  - All hosts are due for an OS upgrade
+- python3.7 is available but I see no pressing need to install it
+- Planning to start moving sites to the cloud - soon
+- Just want to get the new work online ASAP
+
+Therefore:
+
+- **Continue using python3.5.2 for now**
+
+#### 6.2 Update Version of django?
+
+
+
+#### 6.3 Update Version of flask?
+
 
