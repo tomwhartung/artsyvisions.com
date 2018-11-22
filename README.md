@@ -248,5 +248,24 @@ Therefore:
 
 #### 6.4 Update Version of django?
 
+As of 2018-11-23, all hosts:
+
+- Current global version is 1.10.2
+- New version of ArtsyVisions.com **on bette only** is using 2.1
+- Django version roadmap:
+  - https://www.djangoproject.com/weblog/2015/jun/25/roadmap/
+- A nice graphic version:
+  - https://www.djangoproject.com/download/#supported-versions
+- Choosing which version to use:
+  - 1.11 LTS - Extended support through at least April 2020
+  - 2.0 - Extended support through April 2019
+- For consistency, I'd like both ArtsyVisions.com and SeeOurMinds.com to use 1.11
+
+Therefore:
+
+- Try 1.11 on ArtsyVisions.com **on bette only**
+- Try 1.11 on SeeOurMinds.com **on bette only**
+- If that works OK,
+  - **Update all hosts to have django version 1.11 available globally**
 
 
