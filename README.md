@@ -201,7 +201,7 @@ These two references were quite helpful:
 - https://docs.djangoproject.com/en/2.1/intro/tutorial03/
 - https://tutorial.djangogirls.org/en/template_extending/
 
-### 6. Apache Setup
+### 6. Analyzing Versions in Use vs. Versions Available
 
 **Goal: consistent versions on `bette` , `jane` , `barbara` , and `ava` .**
 
@@ -268,7 +268,7 @@ Therefore:
 - If that works OK,
   - **Update all hosts to have django version 1.11 available globally**
 
-##### 6.4.1 Upgrading Django - Details
+##### 6.5 Upgrading Django - Details
 
 - Current revision available: 1.11.17
   - https://docs.djangoproject.com/en/2.1/releases/1.11.17/
@@ -307,6 +307,40 @@ pip3 install Django==1.11.16         # "Successfully installed Django-1.11.16 py
 
 Had to add '127.0.0.1' to ALLOWED_HOSTS for SeeOurMinds.com and now both it and ArtsyVisions.com seem to be working ok!
 
-##### 6.4.2
+### 7. Apache Setup - on jane
+
+1. Pull code
+1. Copy apache conf files from seeourminds.com to use on artsyvisions.com
+1. Update new artsyvisions.com conf files
+1. Restart apache, test the site, refine conf file, repeat as needed until it works
+
+### 8. Deployment - on jane
+
+### 8.1 Overview of Deployment Process
+
+Deploy the new sites in this sequence:
+
+[ ] 1. artsyvisions.com
+[ ] 1. groja.com
+[ ] 1. seeourminds.com
+
+Process overview:
+
+1. Pull code
+1. Run bin/collectstatic for django sites
+1. Update link if necessary
+1. Restart apache
+1. Test and fix as necessary
+
+
+
+
+### 9. Deployment - on barbara
+
+
+
+### 10. Deployment - on ava
+
+
 
 
