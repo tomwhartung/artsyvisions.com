@@ -18,6 +18,12 @@ export RUNNING_LOCALLY=0
 ## export RUNNING_LOCALLY=1
 
 export PYTHONPATH="..:${PYTHONPATH}"
-cd ..
-. /var/www/artsyvisions.com/htdocs/artsyvisions.com/virtualenvs/artsyvisions_env/bin/activate
-python manage.py runserver 0.0.0.0:8001
+
+### #
+### # Code for running locally under a virtualenv, e.g., when upgrading django:
+### #
+### cd ..
+### . /var/www/artsyvisions.com/htdocs/artsyvisions.com/virtualenvs/artsyvisions_env/bin/activate
+### python manage.py runserver 0.0.0.0:8001
+
+python3 -m manage runserver 0.0.0.0:8001
