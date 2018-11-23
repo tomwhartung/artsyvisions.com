@@ -216,7 +216,7 @@ Each site now has a route "v" that displays the versions of python and of either
 - SeeOurMinds.com:
   - http://127.0.0.1:8002/v
 
-#### 6.2 Update Version of python?
+#### 6.2 Q: Update Version of python? A: NO
 
 As of 2018-11-23, all hosts:
 
@@ -233,7 +233,7 @@ Therefore:
 
 - **Continue using python3.5.2 for now**
 
-#### 6.3 Update Version of flask?
+#### 6.3 Q: Update Version of flask? A: WHEN MOVE TO CLOUD
 
 As of 2018-11-23, all hosts:
 
@@ -246,7 +246,7 @@ Therefore:
 - **Continue using flask 0.12 for now**
 - Upgrade when move site to cloud, which will probably be early next year
 
-#### 6.4 Update Version of django?
+#### 6.4 Q: Update Version of django? A: YES
 
 As of 2018-11-23, all hosts:
 
@@ -267,5 +267,46 @@ Therefore:
 - Try 1.11 on SeeOurMinds.com **on bette only**
 - If that works OK,
   - **Update all hosts to have django version 1.11 available globally**
+
+##### 6.4.1 Upgrading Django - Details
+
+- Current revision available: 1.11.17
+  - https://docs.djangoproject.com/en/2.1/releases/1.11.17/
+- Install using `pip`:
+
+As tomh:
+```
+pip install Django==1.11.17   # Note: two ==
+## Didn't work as hoped, but it suggested running this command, so I did:
+pip install --upgrade pip
+## Yikes, now pip is broken, trying fresh start
+```
+
+- Reference:
+  - https://askubuntu.com/questions/561377/pip-wont-run-throws-errors-instead
+  - **Note: commands used below are from what is currently the second answer**
+
+```
+sudo apt-get purge python-pip
+sudo apt-get purge python3-pip
+sudo apt install python-setuptools
+sudo apt install python3-setuptools  # pip and pip3 are NOT available
+sudo easy_install -U pip             # pip is now available to run
+sudo easy_install3 -U pip            # pip3 is now available to run
+sudo apt autoremove                  # apt install suggested running this
+pip install Django==1.11.17          # "bash: /usr/bin/pip: No such file or directory"
+pip3 install Django==1.11.17         # "No matching distribution found for Django==1.11.17"
+pip3 install Django==1.11.16         # "Could not install packages due to an EnvironmentError: [Errno 13] Permission denied:
+                                     #  '/usr/local/lib/python3.5/dist-packages/pytz-2018.7.dist-info'
+                                     #  Consider using the `--user` option or check the permissions."
+```
+As root:
+```
+pip3 install Django==1.11.16         # "Successfully installed Django-1.11.16 pytz-2018.7"
+```
+
+Had to add '127.0.0.1' to ALLOWED_HOSTS for SeeOurMinds.com and now both it and ArtsyVisions.com seem to be working ok!
+
+##### 6.4.2
 
 
