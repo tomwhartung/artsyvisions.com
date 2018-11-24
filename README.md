@@ -314,21 +314,29 @@ Had to add '127.0.0.1' to ALLOWED_HOSTS for SeeOurMinds.com and now both it and 
 1. Update new artsyvisions.com conf files
 1. Restart apache, test the site, refine conf file, repeat as needed until it works
 
+
+
 ### 8. Deployment - on jane
 
 ### 8.1 Overview of Deployment Process
 
 Deploy the new sites in this sequence:
 
-[ ] 1. artsyvisions.com
-[ ] 1. groja.com
-[ ] 1. seeourminds.com
+- [ ] 1. artsyvisions.com
+- [ ] 1. groja.com
+- [ ] 1. seeourminds.com
 
 Process overview:
 
+1. Upgrade django (see steps above)
 1. Pull code
-1. Run bin/collectstatic for django sites
-1. Update link if necessary
+   1.1. artsyvisions.com
+   1.1. groja.com
+   1.1. seeourminds.com
+1. Run `bin/collectstatic.sh` for django sites
+1. Update links if necessary
+   - to settings.py file in gitignored
+   - to dir referenced in apache conf
 1. Restart apache
 1. Test and fix as necessary
 
