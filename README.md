@@ -309,6 +309,10 @@ Had to add '127.0.0.1' to ALLOWED_HOSTS for SeeOurMinds.com and now both it and 
 
 ### 7. Apache Setup - on jane
 
+1. Upgrade django (if encounter issues, see details above)
+   - As root: `pip3 install Django==1.11.16`
+   - Optional, as root: `pip install --upgrade pip`
+   - NOTE: this broke pip earlier!
 1. Pull code
 1. Copy apache conf files from seeourminds.com to use on artsyvisions.com
 1. Update new artsyvisions.com conf files
@@ -323,16 +327,15 @@ Had to add '127.0.0.1' to ALLOWED_HOSTS for SeeOurMinds.com and now both it and 
 Deploy the new sites in this sequence:
 
 - [ ] 1. artsyvisions.com
-- [ ] 1. groja.com
-- [ ] 1. seeourminds.com
+- [ ] 2. groja.com
+- [ ] 3. seeourminds.com
 
 Process overview:
 
-1. Upgrade django (see steps above)
 1. Pull code
-   1.1. artsyvisions.com
-   1.1. groja.com
-   1.1. seeourminds.com
+   [x] artsyvisions.com (done above)
+   [ ] groja.com
+   [ ] seeourminds.com
 1. Run `bin/collectstatic.sh` for django sites
 1. Update links if necessary
    - to settings.py file in gitignored
@@ -345,6 +348,10 @@ Process overview:
 
 ### 9. Deployment - on barbara
 
+1. Upgrade django (if encounter issues, see details above)
+   - As root: `pip3 install Django==1.11.16`
+   - Optional, as root: `pip install --upgrade pip`
+   - NOTE: this broke pip earlier!
 
 
 ### 10. Deployment - on ava
