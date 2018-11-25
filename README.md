@@ -314,19 +314,21 @@ Had to add '127.0.0.1' to ALLOWED_HOSTS for SeeOurMinds.com and now both it and 
    - Optional, as root: `pip install --upgrade pip`
    - NOTE: this broke pip earlier!
 1. Pull code
-1. Copy apache conf files from seeourminds.com to use on artsyvisions.com
-1. Update new artsyvisions.com conf files
+1. Copy apache conf files from seeourminds.com to use for artsyvisions.com
+1. Update all new artsyvisions.com conf files
+   - Edit: change all "seeourminds.com" to "artsyvisions.com"
+1. Update links to settings.py file in gitignored
 1. Restart apache, test the site, refine conf file, repeat as needed until it works
-
-
+1. Check out versions and environment variables:
+   - http://jane.artsyvisions.com/v
 
 ### 8. Deployment - on jane
 
-### 8.1 Overview of Deployment Process
+#### 8.1 Overview of Deployment Process
 
 Deploy the new sites in this sequence:
 
-- [ ] 1. artsyvisions.com
+- [x] 1. artsyvisions.com
 - [ ] 2. groja.com
 - [ ] 3. seeourminds.com
 
@@ -343,10 +345,35 @@ Process overview:
 1. Restart apache
 1. Test and fix as necessary
 
+#### 8.2 Deployment Details
 
+Groja.com:
 
+##### 8.2.1. Renaming Repos
 
-### 9. Deployment - on barbara
+- Old `groja.com` is now `groja.com-bootstrap`
+- Old `groja.com-mdb` is now `groja.com`
+
+**All hosts: rename directories under `/var/www/groja.com/htdocs` to match these new names.**
+
+Optional: remove old `groja.com-mdb` and clone fresh copy from github.
+
+```
+cd /var/www/groja.com/htdocs
+mv groja.com groja.com-bootstrap
+mv groja.com-mdb groja.com-mdb-old-delete_me_you_wuss
+git clone git@github.com:tomwhartung/groja.com.git
+```
+
+Updated the way we are handing the gitignored files for groja.com to use
+hidden files to make the gitignored directories - just as we do for the django sites.
+
+### 9. Deployment to barbara
+
+- [ ] 1. artsyvisions.com
+- [ ] 2. groja.com
+- [ ] 3. seeourminds.com
+
 
 1. Upgrade django (if encounter issues, see details above)
    - As root: `pip3 install Django==1.11.16`
@@ -354,7 +381,12 @@ Process overview:
    - NOTE: this broke pip earlier!
 
 
-### 10. Deployment - on ava
+### 10. Deployment to ava
+
+- [ ] 1. artsyvisions.com
+- [ ] 2. groja.com
+- [ ] 3. seeourminds.com
+
 
 
 
