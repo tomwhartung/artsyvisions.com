@@ -388,17 +388,17 @@ git clone git@github.com:tomwhartung/seeourminds.com.git
 
 ### 9. Deployment to barbara
 
-- [ ] 1. artsyvisions.com
-- [ ] 2. groja.com
+- [x] 1. artsyvisions.com
+- [x] 2. groja.com
 - [x] 3. seeourminds.com
 
 Decided to do them in reverse order, just for fun.
 
-##### 8.2.1. SeeOurMinds.com on barbara:
+#### 9.1. SeeOurMinds.com on barbara:
 
 1. Rename directories
 1. Clone new repo and supply a copy of settings.py
-1. Run `bin/collectstatic.sh` for django sites
+1. Run `bin/collectstatic.sh`
 1. Upgrade django (if encounter issues, see details above)
    - As root: `pip3 install Django==1.11.16`
 1. Restart apache and test
@@ -422,7 +422,7 @@ pip3 install Django==1.11.16
 service apache2 restart
 ```
 
-##### 8.2.2. Groja.com on barbara:
+#### 9.2. Groja.com on barbara:
 
 1. Rename directories
 1. Clone new repo and supply a copy of gitignored files
@@ -443,9 +443,39 @@ As root:
 service apache2 restart
 ```
 
-##### 8.2.3. ArtsyVisions.com on barbara:
+#### 9.3. ArtsyVisions.com on barbara:
+
+1. Update apache conf files for artsyvisions.com
+1. Rename directories
+1. Clone new repo
+1. Supply a copy of settings.py
+1. Run `bin/collectstatic.sh`
+1. Restart apache and test
 
 
+As tomh on barbara:
+```
+cd /var/www/artsyvisions.com/htdocs
+mv artsyvisions.com artsyvisions.com-static
+git clone git@github.com:tomwhartung/artsyvisions.com.git
+l gitignored/Site/Site/
+cd Site/bin/
+./collectstatic.sh
+```
+
+As tomh on jane:
+```
+goav    # cd /var/www/artsyvisions.com/htdocs/artsyvisions.com
+cd gitignored/Site/Site/
+toBarbara settings.py
+cd RCS
+toBarbara -y settings.py,v
+```
+
+As root:
+```
+service apache2 restart
+```
 
 ### 10. Deployment to ava
 
@@ -453,7 +483,102 @@ service apache2 restart
 - [ ] 2. groja.com
 - [ ] 3. seeourminds.com
 
+#### 10.1. ArtsyVisions.com on ava:
 
+1. Update apache conf files for artsyvisions.com
+1. Rename directories
+1. Clone new repo
+1. Supply a copy of settings.py
+1. Run `bin/collectstatic.sh`
+1. Upgrade django (if encounter issues, see details above)
+   - As root: `pip3 install Django==1.11.16`
+1. Restart apache and test
 
+As tomh on ava:
+```
+cd /var/www/artsyvisions.com/htdocs
+mv artsyvisions.com artsyvisions.com-static
+git clone git@github.com:tomwhartung/artsyvisions.com.git
+l gitignored/Site/Site/
+```
 
+As tomh on jane:
+```
+goav    # cd /var/www/artsyvisions.com/htdocs/artsyvisions.com
+cd gitignored/Site/Site/
+toAva settings.py
+cd RCS
+toAva -y settings.py,v
+```
+
+As tomh on ava:
+```
+l gitignored/Site/Site/
+cd Site/bin/
+./collectstatic.sh
+```
+
+As root:
+```
+pip3 install Django==1.11.16
+service apache2 restart
+```
+
+**Some sort of ssl issue, rats.**
+
+Runs ok for just http though, and it's late.
+
+#### 10.2. Groja.com on ava:
+
+1. Rename directories
+1. Clone new repo and supply a copy of gitignored files
+1. Restart apache and test
+
+As tomh:
+```
+mv groja.com groja.com-bootstrap
+git clone git@github.com:tomwhartung/groja.com.git
+cd groja.com/gitignored/Site/
+cp ../../../groja.com-bootstrap/gitignored/Site/* .
+cd ../db/
+cp ../../../groja.com-bootstrap/gitignored/db/* .
+```
+
+As root:
+```
+service apache2 restart
+```
+
+#### 10.3. SeeOurMinds.com on ava:
+
+1. Rename directories
+1. Clone new repo and supply a copy of settings.py
+1. Run `bin/collectstatic.sh`
+1. Restart apache and test
+
+As tomh:
+```
+gosh   # cd /var/www/seeourminds.com/htdocs
+mv seeourminds.com seeourminds.com-bootstrap
+git clone git@github.com:tomwhartung/seeourminds.com.git
+l
+cd seeourminds.com/gitignored/Site/Site/
+l
+cp ../../../../seeourminds.com-bootstrap/gitignored/Site/Site/settings.py .
+mkdir RCS ; cp ../../../../seeourminds.com-bootstrap/gitignored/Site/Site/RCS/settings.py,v RCS
+rd settings.py
+cd ../../../Site/bin/
+./collectstatic.sh
+```
+
+As root:
+```
+service apache2 restart
+```
+
+### 11. TO-DO
+
+- Fix ssl for artsyvisions.com
+- Check new artsyvisions.com apache conf files into RCS on each host
+- Final review for Fawlty Towers article
 
