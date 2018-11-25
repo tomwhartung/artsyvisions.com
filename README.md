@@ -390,13 +390,61 @@ git clone git@github.com:tomwhartung/seeourminds.com.git
 
 - [ ] 1. artsyvisions.com
 - [ ] 2. groja.com
-- [ ] 3. seeourminds.com
+- [x] 3. seeourminds.com
 
+Decided to do them in reverse order, just for fun.
 
+##### 8.2.1. SeeOurMinds.com on barbara:
+
+1. Rename directories
+1. Clone new repo and supply a copy of settings.py
+1. Run `bin/collectstatic.sh` for django sites
 1. Upgrade django (if encounter issues, see details above)
    - As root: `pip3 install Django==1.11.16`
-   - Optional, as root: `pip install --upgrade pip`
-   - NOTE: this broke pip earlier!
+1. Restart apache and test
+
+As tomh:
+```
+mv seeourminds.com seeourminds.com-bootstrap ; git clone git@github.com:tomwhartung/seeourminds.com.git
+l
+cd seeourminds.com/gitignored/Site/Site/
+l
+cp ../../../../seeourminds.com-bootstrap/gitignored/Site/Site/settings.py .
+mkdir RCS ; cp ../../../../seeourminds.com-bootstrap/gitignored/Site/Site/RCS/settings.py,v RCS
+rd settings.py
+cd ../../../Site/bin/
+./collectstatic.sh
+```
+
+As root:
+```
+pip3 install Django==1.11.16
+service apache2 restart
+```
+
+##### 8.2.2. Groja.com on barbara:
+
+1. Rename directories
+1. Clone new repo and supply a copy of gitignored files
+1. Restart apache and test
+
+As tomh:
+```
+mv groja.com groja.com-bootstrap
+git clone git@github.com:tomwhartung/groja.com.git
+cd groja.com/gitignored/Site/
+cp ../../../groja.com-bootstrap/gitignored/Site/* .
+cd ../db/
+cp ../../../groja.com-bootstrap/gitignored/db/* .
+```
+
+As root:
+```
+service apache2 restart
+```
+
+##### 8.2.3. ArtsyVisions.com on barbara:
+
 
 
 ### 10. Deployment to ava
