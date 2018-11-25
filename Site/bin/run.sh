@@ -26,4 +26,4 @@ export PYTHONPATH="..:${PYTHONPATH}"
 ### . /var/www/artsyvisions.com/htdocs/artsyvisions.com/virtualenvs/artsyvisions_env/bin/activate
 ### python manage.py runserver 0.0.0.0:8001
 
-python3 -m manage runserver 0.0.0.0:8001
+python3 -m manage runserver 0.0.0.0:8000
