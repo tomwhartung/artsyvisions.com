@@ -54,11 +54,16 @@ def versions(request):
     django_version_1 = django.VERSION
     django_version_2 = django.get_version()
 
+    from .models import DJANGO_DEBUG
+    from .models import RUNNING_LOCALLY
+
     template = loader.get_template('content/versions.html')
     context = {
-        'python_version': python_version,
         'django_version_1': django_version_1,
         'django_version_2': django_version_2,
+        'python_version': python_version,
+        'DJANGO_DEBUG': DJANGO_DEBUG,
+        'RUNNING_LOCALLY': RUNNING_LOCALLY,
     }
     return HttpResponse(template.render(context, request))
 
