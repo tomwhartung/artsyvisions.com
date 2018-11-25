@@ -579,6 +579,8 @@ service apache2 restart
 ### 11. TO-DO
 
 - Fix ssl for artsyvisions.com
+- Fix margins on artsyvisions.com, e.g. on legal pages
 - Check new artsyvisions.com apache conf files into RCS on each host
-- Final review for Fawlty Towers article
+- Final review of Fawlty Towers article
+- Reconcile differences between current versions of settings.py and what's in RCS
 
