@@ -324,7 +324,7 @@ Had to add '127.0.0.1' to ALLOWED_HOSTS for SeeOurMinds.com and now both it and 
 
 ### 8. Deployment - on jane
 
-#### 8.1 Overview of Deployment Process
+#### 8.1. Overview of Deployment Process
 
 Deploy the new sites in this sequence:
 
@@ -336,8 +336,8 @@ Process overview:
 
 1. Pull code
    [x] artsyvisions.com (done above)
-   [ ] groja.com
-   [ ] seeourminds.com
+   [x] groja.com
+   [x] seeourminds.com
 1. Run `bin/collectstatic.sh` for django sites
 1. Update links if necessary
    - to settings.py file in gitignored
@@ -345,11 +345,11 @@ Process overview:
 1. Restart apache
 1. Test and fix as necessary
 
-#### 8.2 Deployment Details
+#### 8.2. Deployment Details
 
-Groja.com:
+##### 8.2.1. Groja.com:
 
-##### 8.2.1. Renaming Repos
+Renaming Repos
 
 - Old `groja.com` is now `groja.com-bootstrap`
 - Old `groja.com-mdb` is now `groja.com`
@@ -367,6 +367,24 @@ git clone git@github.com:tomwhartung/groja.com.git
 
 Updated the way we are handing the gitignored files for groja.com to use
 hidden files to make the gitignored directories - just as we do for the django sites.
+
+##### 8.2.2. SeeOurMinds.com:
+
+Renaming Repos
+
+- Old `seeourminds.com` is now `seeourminds.com-bootstrap`
+- Old `seeourminds.com-mdb` is now `seeourminds.com`
+
+**All hosts: rename directories under `/var/www/seeourminds.com/htdocs` to match these new names.**
+
+Optional: remove old `seeourminds.com-mdb` and clone fresh copy from github.
+
+```
+mv seeourminds.com seeourminds.com-bootstrap
+mv seeourminds.com-mdb seeourminds.com-mdb-old-delete_me_you_wuss
+git clone git@github.com:tomwhartung/seeourminds.com.git
+## Put a copy of settings.py in gitignored/Site/Site
+```
 
 ### 9. Deployment to barbara
 
