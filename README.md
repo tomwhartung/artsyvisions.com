@@ -578,9 +578,16 @@ service apache2 restart
 
 ### 11. TO-DO
 
-- Fix ssl for artsyvisions.com
-- Fix margins on artsyvisions.com, e.g. on legal pages
 - Check new artsyvisions.com apache conf files into RCS on each host
+- Fix ssl for artsyvisions.com
+- Test all conversions on groja.com
+  - Ensure process sends emails
+  - Ensure process updates DB
+  - Ensure current version of DB is backed up
+- Fix margins for mobile on all pages on all sites
+  - Margins too big on iPhone, e.g., on About page on groja.com
+- Fix margins for desktop on artsyvisions.com, e.g. on legal pages
+  - Margins too small on desktop
 - Final review of Fawlty Towers article
 - Reconcile differences between current versions of settings.py and what's in RCS
 
