@@ -165,3 +165,13 @@ li.social-icon {
   padding: 1.5em;
 }
 
+/*
+ * Legal Pages
+ */
+.disclosure,
+.privacy-policy,
+.terms-of-service,
+.disclaimer {
+  margin: 2em 0 2em 0;
+  padding: 0 2em 0 2em;
+}
