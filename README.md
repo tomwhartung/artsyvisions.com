@@ -585,14 +585,15 @@ This is the definitive list of things I need to do before publicizing these site
 - [x] Check new artsyvisions.com apache conf files into RCS on each host
 - [x] Fix ssl for artsyvisions.com
   - [x] Margins too small on desktop
-- [ ] Fix font size on home page of Groja.com
+- [x] Fix font size on home page of Groja.com
 - [ ] Fix margins for mobile on all pages on all sites
-  - [ ] Margins too big on iPhone, e.g., on About page on groja.com
+  - [x] Margins too big on iPhone, e.g., on About page on groja.com
   - [ ] Check margins on all pages on groja.com
-  - [ ] Check margins on all pages on seeourminds.com
+  - [x] Check margins on all pages on seeourminds.com
   - [ ] Check margins on all pages on artsyvisions.com
 - [ ] Fix show/hide cloud icon functionality for groups on artsyvisions.com
   - [ ] Use jQuery code similar to "Explain the [Color]" buttons on seeourminds.com
+- [ ] Need responsive score graphs on seeourminds.com
 - [ ] Test all conversions on groja.com
   - [ ] Ensure process sends emails
   - [ ] Ensure process updates DB
