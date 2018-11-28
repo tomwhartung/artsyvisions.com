@@ -612,5 +612,27 @@ but they are super-important:
 - [ ] New promotional business cards
   - [ ] One side: Groja.com/about
   - [ ] Other side: ArtsyVisions.com
+- [ ] Revisit Google Analytics and refine settings and code as necessary
+  - [ ] Add events for ArtsyVisions.com
+  - [ ] Add events for conversions on Groja.com
+  - [ ] They should be ok, but review GA events for SeeOurMinds.com anyway
+
+### 11.3. Ongoing
+
+Once all three sites are stable, split time between the following tasks:
+
+- [ ] ArtsyVisions.com:
+  - [ ] Review existing articles already written and add content
+- [ ] Groja.com:
+  - [ ] Should be ok as-is for awhile
+- [ ] SeeOurMines.com:
+  - [ ] Add affiliate marketing links - see list
+  - [ ] Soon: Firefly!
+- [ ] Social Networking
+  - [ ] Refine profiles on each site
+    - [ ] Consider researching how to increase the SEO of profiles on each site
+    - [ ] Do NOT spend too much time on any single site at this time
+  - [ ] Join groups, follow people, etc. as seems reasonable
+  - [ ] Post at least one or two links to articles on ArtsyVisions.com on each site
 
 
