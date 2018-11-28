@@ -580,24 +580,37 @@ service apache2 restart
 
 ### 11. TO-DO
 
+### 11.1. Showstoppers
+
 This is the definitive list of things I need to do before publicizing these sites:
 
 - [x] Check new artsyvisions.com apache conf files into RCS on each host
 - [x] Fix ssl for artsyvisions.com
   - [x] Margins too small on desktop
 - [x] Fix font size on home page of Groja.com
-- [ ] Fix margins for mobile on all pages on all sites
+- [x] Fix margins for mobile on all pages on all sites
   - [x] Margins too big on iPhone, e.g., on About page on groja.com
-  - [ ] Check margins on all pages on groja.com
+  - [x] Check margins on all pages on groja.com
   - [x] Check margins on all pages on seeourminds.com
-  - [ ] Check margins on all pages on artsyvisions.com
+  - [x] Check margins on all pages on artsyvisions.com
 - [ ] Fix show/hide cloud icon functionality for groups on artsyvisions.com
   - [ ] Use jQuery code similar to "Explain the [Color]" buttons on seeourminds.com
-- [ ] Need responsive score graphs on seeourminds.com
 - [ ] Test all conversions on groja.com
   - [ ] Ensure process sends emails
   - [ ] Ensure process updates DB
   - [ ] Ensure current version of DB is backed up
 - [ ] Final review of Fawlty Towers article
+
+### 11.2. Needed ASAP
+
+These are not absolutely necessary TOD before starting to publicize these sites,
+but they are super-important:
+
 - [ ] Reconcile any differences between current versions of settings.py and what's in RCS
+- [ ] Need responsive score graphs on seeourminds.com
+- [ ] Ensure 404 - Page Not Found functionality works on all sites
+- [ ] New promotional business cards
+  - [ ] One side: Groja.com/about
+  - [ ] Other side: ArtsyVisions.com
+
 
