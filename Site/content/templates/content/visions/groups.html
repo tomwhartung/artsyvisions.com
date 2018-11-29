@@ -35,16 +35,43 @@
         </div>
        {% endfor %}
       </div><!-- .card .horizontal -->
-      {% if vis_dict.subtitle_html %}
-       {% autoescape off %}
-        <h4 class='center'>{{ vis_dict.subtitle_html|safe }}</h4>
-       {% endautoescape %}
-      {% endif %}
+      <div class="card">
+       <div class="card-content">
+        <a title="Show the backstory" class="center">
+         <span class="card-title activator grey-text text-darken-4">
+          {% if vis_dict.subtitle_html %}
+           {% autoescape off %}
+            {{ vis_dict.subtitle_html|safe }}
+           {% endautoescape %}
+          {% endif %}
+          &nbsp;
+          <i class="fa fa-lg fa-comment blue-text darken-1" aria-hidden="true"></i></span></a>
+        {{ vis_dict.card_content_html|safe }}
+       </div>
+      </div><!-- .card -->
      </div><!-- .z-depth-3 -->
      <div class="card">
       <div class="card-content">
        {{ vis_dict.card_content_html|safe }}
       </div>
+      {% if vis_dict.card_first_person_html %}
+       <div class="card-content">
+        <div class="row">
+         <div class="col s8 offset-s2">
+            <div class="collapsible-header">
+             <i class="fa fa-lg fa-comment yellow-text text-darken-3"></i>
+            </div>
+            <p class="avs-text-to-toggle">
+             <span class="left-align">
+              {{ vis_dict.card_first_person_html|safe }}
+              <span class="right">
+               &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
+             </span>
+            </p>
+         </div><!-- .col -->
+        </div><!-- .row -->
+       </div><!-- card-content -->
+      {% endif %}
       <div class="card-action center">
        {% if vis_dict.card_first_person_html %}
         <div class="row">
