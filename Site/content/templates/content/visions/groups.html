@@ -37,7 +37,7 @@
       </div><!-- .card .horizontal -->
       <div class="card">
        <div class="card-content">
-        <a class="center" id="toggle-first-person"
+        <a class="center" id="toggle-fp-{{ vis_dict.group_slug }}"
            title="Show the first-person backstory">
          <span class="card-title activator grey-text text-darken-4">
           {% if vis_dict.subtitle_html %}
@@ -56,6 +56,7 @@
        </div><!-- .card-content -->
        {% if vis_dict.card_first_person_html %}
         <div class="card-content avs-text-to-toggle" id="first-person-backstory">
+         <hr>
          <span class="left-align">
           {{ vis_dict.card_first_person_html|safe }}
           <span class="right">
@@ -123,15 +124,23 @@
 
 {% block scripts %}
  {{ block.super }}
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+ </script>
  <script>
- console.log('Yo')
 
-  {% if vis_dict.card_first_person_html %}
-  {% endif %}
-   console.log('Hi')
-   $("#toggle-first-person").click(function() {
-    $("#first-person-backstory").toggle("bounce", "slow");
+  {% for vis_dict in visions_list_obj.visions_list_data %}
+   {% if vis_dict.group_slug %}
+    console.log('vis_dict.group_slug: {{ vis_dict.group_slug }}')
+   {% endif %}
+
+   {% if vis_dict.card_first_person_html %}
+    console.log('We have vis_dict.card_first_person_html')
+   {% endif %}
+   var first_person_selector = "#toggle-fp-{{ vis_dict.group_slug }}"
+   $(first_person_selector).click(function() {
+    $("#first-person-backstory").toggle("blind", "slow");
    });
+   {% endfor %}
 
   /* *******************
    * START OF OLD CODE
