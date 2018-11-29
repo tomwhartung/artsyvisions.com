@@ -37,7 +37,7 @@
       </div><!-- .card .horizontal -->
       <div class="card">
        <div class="card-content">
-        <a class="center" id="toggle-fp-{{ vis_dict.group_slug }}"
+        <a class="center" id="toggle-fp-{{ vis_dict.fp_toggle_id }}"
            title="Show the first-person backstory">
          <span class="card-title activator grey-text text-darken-4">
           {% if vis_dict.subtitle_html %}
@@ -45,16 +45,16 @@
             {{ vis_dict.subtitle_html|safe }}
            {% endautoescape %}
           {% endif %}
-          {% if vis_dict.card_first_person_html and vis_dict.group_slug %}
+          {% if vis_dict.card_first_person_html and vis_dict.fp_toggle_id %}
            &nbsp;
-           <i id="fp-icon-{{ vis_dict.group_slug }}"
+           <i id="fp-icon-{{ vis_dict.fp_toggle_id }}"
               class="fa fa-lg fa-comment yellow-text text-darken-3"
               aria-hidden="true"></i>
           {% endif %}
          </span>
         </a>
-        {% if vis_dict.card_first_person_html and vis_dict.group_slug %}
-         <div id="fp-backstory-{{ vis_dict.group_slug }}"
+        {% if vis_dict.card_first_person_html and vis_dict.fp_toggle_id %}
+         <div id="fp-backstory-{{ vis_dict.fp_toggle_id }}"
               class="avs-text-to-toggle">
           <p class="left-align">
            {{ vis_dict.card_first_person_html|safe }}
@@ -92,17 +92,16 @@
  </script>
  <script>
   {% for vis_dict in visions_list_obj.visions_list_data %}
-   {% if vis_dict.card_first_person_html and vis_dict.group_slug %}
-    console.log('vis_dict.group_slug: {{ vis_dict.group_slug }}');
-    $("#toggle-fp-{{ vis_dict.group_slug }}").click(function() {
-     $("#fp-backstory-{{ vis_dict.group_slug }}").toggle("blind", "slow");
-     if ( $("#fp-icon-{{ vis_dict.group_slug }}").hasClass("fa-comment") )
+   {% if vis_dict.card_first_person_html and vis_dict.fp_toggle_id %}
+    $("#toggle-fp-{{ vis_dict.fp_toggle_id }}").click(function() {
+     $("#fp-backstory-{{ vis_dict.fp_toggle_id }}").toggle("blind", "slow");
+     if ( $("#fp-icon-{{ vis_dict.fp_toggle_id }}").hasClass("fa-comment") )
      {
-      $("#fp-icon-{{ vis_dict.group_slug }}").removeClass("fa-comment")
-      $("#fp-icon-{{ vis_dict.group_slug }}").addClass("fa-window-close-o")
+      $("#fp-icon-{{ vis_dict.fp_toggle_id }}").removeClass("fa-comment")
+      $("#fp-icon-{{ vis_dict.fp_toggle_id }}").addClass("fa-window-close-o")
      } else {
-      $("#fp-icon-{{ vis_dict.group_slug }}").removeClass("fa-window-close-o")
-      $("#fp-icon-{{ vis_dict.group_slug }}").addClass("fa-comment")
+      $("#fp-icon-{{ vis_dict.fp_toggle_id }}").removeClass("fa-window-close-o")
+      $("#fp-icon-{{ vis_dict.fp_toggle_id }}").addClass("fa-comment")
      }
     });
    {% endif %}
