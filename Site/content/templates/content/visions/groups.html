@@ -129,16 +129,11 @@
  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
  </script>
  <script>
-  var first_person_selector;
-  var first_person_html_id;
   {% for vis_dict in visions_list_obj.visions_list_data %}
    {% if vis_dict.card_first_person_html and vis_dict.group_slug %}
     console.log('vis_dict.group_slug: {{ vis_dict.group_slug }}');
-    console.log('We have vis_dict.card_first_person_html');
-    first_person_selector = "#toggle-fp-{{ vis_dict.group_slug }}";
-    first_person_html_id = "#fp-backstory-{{ vis_dict.group_slug }}"
-    $(first_person_selector).click(function() {
-     $(first_person_html_id).toggle("blind", "slow");
+    $("#toggle-fp-{{ vis_dict.group_slug }}").click(function() {
+     $("#fp-backstory-{{ vis_dict.group_slug }}").toggle("blind", "slow");
     });
    {% endif %}
   {% endfor %}
