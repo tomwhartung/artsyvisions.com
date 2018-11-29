@@ -593,8 +593,8 @@ This is the definitive list of things I need to do before publicizing these site
   - [x] Check margins on all pages on groja.com
   - [x] Check margins on all pages on seeourminds.com
   - [x] Check margins on all pages on artsyvisions.com
-- [ ] Fix show/hide cloud icon functionality for groups on artsyvisions.com
-  - [ ] Use jQuery code similar to "Explain the [Color]" buttons on seeourminds.com
+- [x] Fix show/hide cloud icon functionality for groups on artsyvisions.com
+  - [x] Use jQuery code similar to "Explain the [Color]" buttons on seeourminds.com
 - [ ] Test all conversions on groja.com
   - [ ] Ensure process sends emails
   - [ ] Ensure process updates DB
@@ -622,7 +622,8 @@ but they are super-important:
 Once all three sites are stable, split time between the following tasks:
 
 - [ ] ArtsyVisions.com:
-  - [ ] Review existing articles already written and add content
+  - [ ] Review existing articles already written and tweak as necessary
+  - [ ] Post this content, adding as many affiliate links as possible
 - [ ] Groja.com:
   - [ ] Should be ok as-is for awhile
 - [ ] SeeOurMines.com:
@@ -631,8 +632,9 @@ Once all three sites are stable, split time between the following tasks:
 - [ ] Social Networking
   - [ ] Refine profiles on each site
     - [ ] Consider researching how to increase the SEO of profiles on each site
-    - [ ] Do NOT spend too much time on any single site at this time
   - [ ] Join groups, follow people, etc. as seems reasonable
+  - [ ] **Do NOT spend too much time on any single site at this time**
+    - [ ] Be mindful and avoid getting distracted, etc.
   - [ ] Post at least one or two links to articles on ArtsyVisions.com on each site
 
 
