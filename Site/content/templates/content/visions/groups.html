@@ -47,14 +47,14 @@
           {% endif %}
           {% if vis_dict.card_first_person_html and vis_dict.fp_toggle_id %}
            &nbsp;
-           <i id="fp-icon-{{ vis_dict.fp_toggle_id }}"
+           <i id="first-person-icon-{{ vis_dict.fp_toggle_id }}"
               class="fa fa-lg fa-comment yellow-text text-darken-3"
               aria-hidden="true"></i>
           {% endif %}
          </span>
         </a>
         {% if vis_dict.card_first_person_html and vis_dict.fp_toggle_id %}
-         <div id="fp-backstory-{{ vis_dict.fp_toggle_id }}"
+         <div id="first-person-html-{{ vis_dict.fp_toggle_id }}"
               class="avs-text-to-toggle">
           <p class="left-align">
            {{ vis_dict.card_first_person_html|safe }}
@@ -64,9 +64,11 @@
            <br>
           </p>
           <hr>
-         </div><!-- .fp-backstory-* -->
+         </div><!-- #first-person-html-* -->
         {% endif %}
-        {{ vis_dict.card_content_html|safe }}
+        <div id="card-content-html-{{ vis_dict.fp_toggle_id }}">
+         {{ vis_dict.card_content_html|safe }}
+        </div><!-- #card-content-html-* -->
        </div><!-- .card-content -->
       </div><!-- .card -->
      </div><!-- .z-depth-3 -->
@@ -94,14 +96,15 @@
   {% for vis_dict in visions_list_obj.visions_list_data %}
    {% if vis_dict.card_first_person_html and vis_dict.fp_toggle_id %}
     $("#toggle-fp-{{ vis_dict.fp_toggle_id }}").click(function() {
-     $("#fp-backstory-{{ vis_dict.fp_toggle_id }}").toggle("blind", "slow");
-     if ( $("#fp-icon-{{ vis_dict.fp_toggle_id }}").hasClass("fa-comment") )
+     $("#card-content-html-{{ vis_dict.fp_toggle_id }}").toggle("blind", "slow");
+     $("#first-person-html-{{ vis_dict.fp_toggle_id }}").toggle("blind", "slow");
+     if ( $("#first-person-icon-{{ vis_dict.fp_toggle_id }}").hasClass("fa-comment") )
      {
-      $("#fp-icon-{{ vis_dict.fp_toggle_id }}").removeClass("fa-comment")
-      $("#fp-icon-{{ vis_dict.fp_toggle_id }}").addClass("fa-window-close-o")
+      $("#first-person-icon-{{ vis_dict.fp_toggle_id }}").removeClass("fa-comment")
+      $("#first-person-icon-{{ vis_dict.fp_toggle_id }}").addClass("fa-window-close-o")
      } else {
-      $("#fp-icon-{{ vis_dict.fp_toggle_id }}").removeClass("fa-window-close-o")
-      $("#fp-icon-{{ vis_dict.fp_toggle_id }}").addClass("fa-comment")
+      $("#first-person-icon-{{ vis_dict.fp_toggle_id }}").removeClass("fa-window-close-o")
+      $("#first-person-icon-{{ vis_dict.fp_toggle_id }}").addClass("fa-comment")
      }
     });
    {% endif %}
