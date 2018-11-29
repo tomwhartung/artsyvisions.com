@@ -47,7 +47,8 @@
           {% endif %}
           {% if vis_dict.card_first_person_html and vis_dict.group_slug %}
            &nbsp;
-           <i class="fa fa-lg fa-comment yellow-text text-darken-3"
+           <i id="fp-icon-{{ vis_dict.group_slug }}"
+              class="fa fa-lg fa-comment yellow-text text-darken-3"
               aria-hidden="true"></i>
           {% endif %}
          </span>
@@ -95,6 +96,14 @@
     console.log('vis_dict.group_slug: {{ vis_dict.group_slug }}');
     $("#toggle-fp-{{ vis_dict.group_slug }}").click(function() {
      $("#fp-backstory-{{ vis_dict.group_slug }}").toggle("blind", "slow");
+     if ( $("#fp-icon-{{ vis_dict.group_slug }}").hasClass("fa-comment") )
+     {
+      $("#fp-icon-{{ vis_dict.group_slug }}").removeClass("fa-comment")
+      $("#fp-icon-{{ vis_dict.group_slug }}").addClass("fa-window-close-o")
+     } else {
+      $("#fp-icon-{{ vis_dict.group_slug }}").removeClass("fa-window-close-o")
+      $("#fp-icon-{{ vis_dict.group_slug }}").addClass("fa-comment")
+     }
     });
    {% endif %}
   {% endfor %}
