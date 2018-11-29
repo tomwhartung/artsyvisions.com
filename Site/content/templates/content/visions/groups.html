@@ -68,46 +68,6 @@
        </div><!-- .card-content -->
       </div><!-- .card -->
      </div><!-- .z-depth-3 -->
-     <hr>
-     <hr>
-     <!-- START OF OLD CODE -->
-     <hr>
-     <hr>
-     <div class="card">
-      <div class="card-content">
-       {{ vis_dict.card_content_html|safe }}
-      </div>
-      <div class="card-action center">
-       {% if vis_dict.card_first_person_html %}
-        <div class="row">
-         <div class="col s8 offset-s2">
-          <ul class="collapsible">
-           <li>
-            <div class="collapsible-header">
-             <i class="fa fa-lg fa-comment yellow-text text-darken-3"></i>
-            </div>
-            <div class="collapsible-body">
-             <span class="left-align">
-              {{ vis_dict.card_first_person_html|safe }}
-              <span class="right">
-               &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
-             </span>
-            </div>
-           </li>
-          </ul>
-         </div><!-- .col -->
-        </div><!-- .row -->
-       {% endif %}
-       <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
-          title="Read the story about {{ vis_dict.title }}"
-          class="waves-effect waves-light yellow darken-1 black-text btn">Read the Story</a>
-      </div><!-- .card-action -->
-     </div><!-- .card -->
-     <hr>
-     <hr>
-     <!-- END OF OLD CODE -->
-     <hr>
-     <hr>
     </div><!-- .groups-card  .z-depth-3 -->
    {% else %}
     <div class="card z-depth-3">
@@ -137,16 +97,5 @@
     });
    {% endif %}
   {% endfor %}
-
-  /* *******************
-   * START OF OLD CODE
-   */
-  $(document).ready(function(){
-    $('.collapsible').collapsible();
-  });
-  /* *******************
-   * END OF OLD CODE
-   */
-
  </script>
 {% endblock %}
