@@ -45,7 +45,7 @@
             {{ vis_dict.subtitle_html|safe }}
            {% endautoescape %}
           {% endif %}
-          {% if vis_dict.card_first_person_html %}
+          {% if vis_dict.card_first_person_html and vis_dict.group_slug %}
            &nbsp;
            <i class="fa fa-lg fa-comment yellow-text text-darken-3"
               aria-hidden="true"></i>
@@ -53,18 +53,19 @@
          </span>
         </a>
         {{ vis_dict.card_content_html|safe }}
-       </div><!-- .card-content -->
-       {% if vis_dict.card_first_person_html %}
-        <div id="fp-backstory-{{ vis_dict.group_slug }}"
-             class="card-content avs-text-to-toggle">
-         <hr>
+        {% if vis_dict.card_first_person_html and vis_dict.group_slug %}
+         <div id="fp-backstory-{{ vis_dict.group_slug }}"
+              class="avs-text-to-toggle">
+          <hr>
           <span class="left-align">
            {{ vis_dict.card_first_person_html|safe }}
-           <span class="right">
-            &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
           </span>
-        </div><!-- .card-content -->
-       {% endif %}
+          <span class="right">
+            &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.
+          </span>
+         </div><!-- .fp-backstory-* -->
+        {% endif %}
+       </div><!-- .card-content -->
       </div><!-- .card -->
      </div><!-- .z-depth-3 -->
      <hr>
@@ -131,7 +132,7 @@
   var first_person_selector;
   var first_person_html_id;
   {% for vis_dict in visions_list_obj.visions_list_data %}
-   {% if vis_dict.group_slug and vis_dict.card_first_person_html %}
+   {% if vis_dict.card_first_person_html and vis_dict.group_slug %}
     console.log('vis_dict.group_slug: {{ vis_dict.group_slug }}');
     console.log('We have vis_dict.card_first_person_html');
     first_person_selector = "#toggle-fp-{{ vis_dict.group_slug }}";
