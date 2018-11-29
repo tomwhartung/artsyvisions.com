@@ -37,22 +37,25 @@
       </div><!-- .card .horizontal -->
       <div class="card">
        <div class="card-content">
-        <a title="Show the backstory" class="center">
+        <a class="center" id="toggle-first-person"
+           title="Show the first-person backstory">
          <span class="card-title activator grey-text text-darken-4">
           {% if vis_dict.subtitle_html %}
            {% autoescape off %}
             {{ vis_dict.subtitle_html|safe }}
            {% endautoescape %}
           {% endif %}
-          &nbsp;
-          <i class="fa fa-lg fa-comment yellow-text text-darken-3"
-             aria-hidden="true"></i>
+          {% if vis_dict.card_first_person_html %}
+           &nbsp;
+           <i class="fa fa-lg fa-comment yellow-text text-darken-3"
+              aria-hidden="true"></i>
+          {% endif %}
          </span>
         </a>
         {{ vis_dict.card_content_html|safe }}
        </div><!-- .card-content -->
        {% if vis_dict.card_first_person_html %}
-        <div class="card-content avs-text-to-toggle">
+        <div class="card-content avs-text-to-toggle" id="first-person-backstory">
          <span class="left-align">
           {{ vis_dict.card_first_person_html|safe }}
           <span class="right">
@@ -71,8 +74,6 @@
       <div class="card-content">
        {{ vis_dict.card_content_html|safe }}
       </div>
-      {% if vis_dict.card_first_person_html %}
-      {% endif %}
       <div class="card-action center">
        {% if vis_dict.card_first_person_html %}
         <div class="row">
@@ -123,8 +124,24 @@
 {% block scripts %}
  {{ block.super }}
  <script>
+ console.log('Yo')
+
+  {% if vis_dict.card_first_person_html %}
+  {% endif %}
+   console.log('Hi')
+   $("#toggle-first-person").click(function() {
+    $("#first-person-backstory").toggle("bounce", "slow");
+   });
+
+  /* *******************
+   * START OF OLD CODE
+   */
   $(document).ready(function(){
     $('.collapsible').collapsible();
   });
+  /* *******************
+   * END OF OLD CODE
+   */
+
  </script>
 {% endblock %}
