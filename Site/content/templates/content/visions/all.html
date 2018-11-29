@@ -46,7 +46,7 @@
         &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
       </div>
       <div class="card-content">
-       <a title="Show the backstory" class="center">
+       <a title="Show the first-person backstory" class="center">
         <span class="card-title activator grey-text text-darken-4">
          {% if vis_dict.subtitle_html %}
           {% autoescape off %}
@@ -89,7 +89,7 @@
         &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
       </div>
       <div class="card-content">
-       <a title="Show the backstory" class="center">
+       <a title="Show the first-person backstory" class="center">
         <span class="card-title activator grey-text text-darken-4">
          {% if vis_dict.subtitle_html %}
           {% autoescape off %}
@@ -121,42 +121,49 @@
         </div>
        {% endfor %}
       </div><!-- .card .horizontal -->
-      {% if vis_dict.subtitle_html %}
-       {% autoescape off %}
-        <h4 class='center'>{{ vis_dict.subtitle_html|safe }}</h4>
-       {% endautoescape %}
-      {% endif %}
-     </div><!-- .z-depth-3 -->
-     <div class="card">
-      <div class="card-content">
-       {{ vis_dict.card_content_html|safe }}
-      </div>
-      <div class="card-action center">
-       {% if vis_dict.card_first_person_html %}
-        <div class="row">
-         <div class="col s8 offset-s2">
-          <ul class="collapsible">
-           <li>
-            <div class="collapsible-header">
-             <i class="fa fa-lg fa-comment yellow-text text-darken-3"></i>
-            </div>
-            <div class="collapsible-body">
-             <span class="left-align">
-              {{ vis_dict.card_first_person_html|safe }}
-              <span class="right">
-               &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.</span>
-             </span>
-            </div>
-           </li>
-          </ul>
-         </div><!-- .col -->
-        </div><!-- .row -->
-       {% endif %}
-       <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
-          title="Read the story about {{ vis_dict.title }}"
-          class="waves-effect waves-light yellow darken-1 black-text btn">Read the Story</a>
-      </div>
-     </div><!-- .card -->
+      <div class="card">
+       <div class="card-content">
+        <a class="center" id="toggle-fp-{{ vis_dict.fp_toggle_id }}"
+           title="Show the first-person backstory">
+         <span class="card-title activator grey-text text-darken-4">
+          {% if vis_dict.subtitle_html %}
+           {% autoescape off %}
+            {{ vis_dict.subtitle_html|safe }}
+           {% endautoescape %}
+          {% endif %}
+          {% if vis_dict.card_first_person_html and vis_dict.fp_toggle_id %}
+           &nbsp;
+           <i id="first-person-icon-{{ vis_dict.fp_toggle_id }}"
+              class="fa fa-lg fa-comment yellow-text text-darken-1"
+              aria-hidden="true"></i>
+          {% endif %}
+         </span>
+        </a>
+        {% if vis_dict.card_first_person_html and vis_dict.fp_toggle_id %}
+         <div id="first-person-html-{{ vis_dict.fp_toggle_id }}"
+              class="avs-text-to-toggle">
+          <p class="left-align">
+           {{ vis_dict.card_first_person_html|safe }}
+           <span class="right">
+             &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.
+           </span>
+           <br>
+          </p>
+          <hr>
+         </div><!-- #first-person-html-* -->
+        {% endif %}
+        <div id="card-content-html-{{ vis_dict.fp_toggle_id }}">
+         {{ vis_dict.card_content_html|safe }}
+        </div><!-- #card-content-html-* -->
+       </div><!-- .card-content -->
+       <div class="card-action center">
+        <a href="/visions/story/{{ vis_dict.vision_file_no_ext }}"
+           title="Read the story about {{ vis_dict.title }}"
+           class="waves-effect waves-light yellow darken-1 black-text btn">
+         Read the Story</a>
+       </div><!-- .card-action -->
+      </div><!-- .card -->
+     </div><!-- .z-depth-3 .groups-images -->
     </div><!-- .groups-card  .z-depth-3 -->
    {% else %}
     <div class="card z-depth-3">
@@ -175,9 +182,26 @@
 
 {% block scripts %}
  {{ block.super }}
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+ </script>
  <script>
-  $(document).ready(function(){
-    $('.collapsible').collapsible();
-  });
+  {% for vis_dict in visions_list_obj.visions_list_data %}
+   {% if vis_dict.vision_type == 'groups' %}
+    {% if vis_dict.card_first_person_html and vis_dict.fp_toggle_id %}
+     $("#toggle-fp-{{ vis_dict.fp_toggle_id }}").click(function() {
+      $("#card-content-html-{{ vis_dict.fp_toggle_id }}").toggle("blind", "slow");
+      $("#first-person-html-{{ vis_dict.fp_toggle_id }}").toggle("blind", "slow");
+      if ( $("#first-person-icon-{{ vis_dict.fp_toggle_id }}").hasClass("fa-comment") )
+      {
+       $("#first-person-icon-{{ vis_dict.fp_toggle_id }}").removeClass("fa-comment")
+       $("#first-person-icon-{{ vis_dict.fp_toggle_id }}").addClass("fa-window-close-o")
+      } else {
+       $("#first-person-icon-{{ vis_dict.fp_toggle_id }}").removeClass("fa-window-close-o")
+       $("#first-person-icon-{{ vis_dict.fp_toggle_id }}").addClass("fa-comment")
+      }
+     });
+    {% endif %}
+   {% endif %}
+  {% endfor %}
  </script>
 {% endblock %}
