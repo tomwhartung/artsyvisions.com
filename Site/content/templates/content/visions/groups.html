@@ -52,19 +52,20 @@
           {% endif %}
          </span>
         </a>
-        {{ vis_dict.card_content_html|safe }}
         {% if vis_dict.card_first_person_html and vis_dict.group_slug %}
          <div id="fp-backstory-{{ vis_dict.group_slug }}"
               class="avs-text-to-toggle">
-          <hr>
-          <span class="left-align">
+          <p class="left-align">
            {{ vis_dict.card_first_person_html|safe }}
-          </span>
-          <span class="right">
-            &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.
-          </span>
+           <span class="right">
+             &nbsp;&ndash;&nbsp;{{ vis_dict.author }}, {{ vis_dict.date }}.
+           </span>
+           <br>
+          </p>
+          <hr>
          </div><!-- .fp-backstory-* -->
         {% endif %}
+        {{ vis_dict.card_content_html|safe }}
        </div><!-- .card-content -->
       </div><!-- .card -->
      </div><!-- .z-depth-3 -->
