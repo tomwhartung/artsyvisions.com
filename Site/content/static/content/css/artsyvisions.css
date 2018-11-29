@@ -134,6 +134,9 @@ li.social-icon {
   margin: .5%;
   padding: 1%;
 }
+.avs-text-to-toggle {
+  display: none;
+}
 
 /*
  * Story Page
