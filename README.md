@@ -596,6 +596,16 @@ This is the definitive list of things I need to do before publicizing these site
 - [x] Fix show/hide cloud icon functionality for groups on artsyvisions.com
   - [x] Use jQuery code similar to "Explain the [Color]" buttons on seeourminds.com
 - [ ] Test all conversions on groja.com
+  - [ ] avmn
+  - [ ] free_offer
+  - [ ] get_your_portrait
+  - [ ] seeourminds
+  - [ ] tomwhartung
+- [ ] Test all conversions on seeourminds.com
+  - [ ] Quiz - get results - should it send an email?
+  - [ ] Quiz - save results - definitely should send an email
+  - [ ] Other?
+- [ ] Conversion tests:
   - [ ] Ensure process sends emails
   - [ ] Ensure process updates DB
   - [ ] Ensure current version of DB is backed up
@@ -609,6 +619,7 @@ but they are super-important:
 - [ ] Reconcile any differences between current versions of settings.py and what's in RCS
 - [ ] Need responsive score graphs on seeourminds.com
 - [ ] Ensure 404 - Page Not Found functionality works on all sites
+- [ ] Margins and centering on seeourminds.com's image page for large screens need work
 - [ ] New promotional business cards
   - [ ] One side: Groja.com/about
   - [ ] Other side: ArtsyVisions.com
