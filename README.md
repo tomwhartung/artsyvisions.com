@@ -613,13 +613,13 @@ This is the definitive list of things I need to do before publicizing these site
 
 ### 11.2. Needed ASAP
 
-These are not absolutely necessary TOD before starting to publicize these sites,
+These are not absolutely necessary TODO before starting to publicize these sites,
 but they are super-important:
 
 - [ ] Reconcile any differences between current versions of settings.py and what's in RCS
 - [ ] Need responsive score graphs on seeourminds.com
 - [ ] Ensure 404 - Page Not Found functionality works on all sites
-- [ ] Margins and centering on seeourminds.com's image page for large screens need work
+- [x] Margins and centering on seeourminds.com's image page for large screens need work
 - [ ] New promotional business cards
   - [ ] One side: Groja.com/about
   - [ ] Other side: ArtsyVisions.com
@@ -627,6 +627,8 @@ but they are super-important:
   - [ ] Add events for ArtsyVisions.com
   - [ ] Add events for conversions on Groja.com
   - [ ] They should be ok, but review GA events for SeeOurMinds.com anyway
+- [ ] Centering the score on seeourminds.com's image page would be nice
+- [ ] Making the score on seeourminds.com's image page responsive would also be nice
 
 ### 11.3. Ongoing
 
