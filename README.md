@@ -620,9 +620,9 @@ but they are super-important:
 - [ ] Need responsive score graphs on seeourminds.com
 - [ ] Ensure 404 - Page Not Found functionality works on all sites
 - [x] Margins and centering on seeourminds.com's image page for large screens need work
-- [ ] New promotional business cards
-  - [ ] One side: Groja.com/about
-  - [ ] Other side: ArtsyVisions.com
+- [x] New promotional business cards
+  - [x] One side: Groja.com/about
+  - [x] Other side: ArtsyVisions.com
 - [ ] Revisit Google Analytics and refine settings and code as necessary
   - [ ] Add events for ArtsyVisions.com
   - [ ] Add events for conversions on Groja.com
