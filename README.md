@@ -609,7 +609,7 @@ This is the definitive list of things I need to do before publicizing these site
   - [ ] Ensure process sends emails
   - [ ] Ensure process updates DB
   - [ ] Ensure current version of DB is backed up
-- [ ] Final review of Fawlty Towers article
+- [x] Final review of Fawlty Towers article
 
 ### 11.2. Needed ASAP
 
