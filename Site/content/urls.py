@@ -60,7 +60,7 @@ urlpatterns = [
     url(r'^legal/terms_of_service$',
         views.terms_of_service,
         name='terms_of_service'),
-    url(r'^<path:unknown_page>$',
+    url(r'^(?P<unknown_page>[\w\W]+)$',
         views.not_found,
         name='not_found'),
 
