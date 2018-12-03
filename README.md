@@ -595,12 +595,12 @@ This is the definitive list of things I need to do before publicizing these site
   - [x] Check margins on all pages on artsyvisions.com
 - [x] Fix show/hide cloud icon functionality for groups on artsyvisions.com
   - [x] Use jQuery code similar to "Explain the [Color]" buttons on seeourminds.com
-- [ ] Test all conversions on groja.com
-  - [ ] avmn
-  - [ ] free_offer
-  - [ ] get_your_portrait
-  - [ ] seeourminds
-  - [ ] tomwhartung
+- [x] Test all conversions on groja.com
+  - [x] avmn
+  - [x] free_offer
+  - [x] get_your_portrait
+  - [x] seeourminds
+  - [x] tomwhartung
 - [ ] Test all conversions on seeourminds.com
   - [ ] Quiz - get results - should it send an email?
   - [ ] Quiz - save results - definitely should send an email
@@ -608,7 +608,6 @@ This is the definitive list of things I need to do before publicizing these site
 - [ ] Conversion tests:
   - [ ] Ensure process sends emails
   - [ ] Ensure process updates DB
-  - [ ] Ensure current version of DB is backed up
 - [x] Final review of Fawlty Towers article
 
 ### 11.2. Needed ASAP
@@ -629,6 +628,17 @@ but they are super-important:
   - [ ] They should be ok, but review GA events for SeeOurMinds.com anyway
 - [ ] Centering the score on seeourminds.com's image page would be nice
 - [ ] Making the score on seeourminds.com's image page responsive would also be nice
+- [ ] Check database used by all conversions on groja.com
+  - [ ] Ensure current version of DB is backed up
+    - [ ] avmn
+    - [ ] free_offer
+    - [ ] get_your_portrait
+    - [ ] seeourminds
+    - [ ] tomwhartung
+- [ ] Check database used by all conversions on seeourminds.com
+  - [ ] Ensure current version of DB is backed up
+  - [ ] Quiz - get results - should it send an email?
+  - [ ] Quiz - save results - definitely should send an email
 
 ### 11.3. Ongoing
 
@@ -649,5 +659,3 @@ Once all three sites are stable, split time between the following tasks:
   - [ ] **Do NOT spend too much time on any single site at this time**
     - [ ] Be mindful and avoid getting distracted, etc.
   - [ ] Post at least one or two links to articles on ArtsyVisions.com on each site
-
-
