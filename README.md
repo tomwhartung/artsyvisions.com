@@ -612,12 +612,10 @@ This is the definitive list of things I need to do before publicizing these site
   - [x] Artsyvisions.com
   - [x] Groja.com
   - [x] Seeourminds.com
-- [ ] Ensure 404 - Page Not Found functionality works on all sites
-  - [ ] Artsyvisions.com
-  - [ ] Groja.com
-  - [ ] Seeourminds.com
-- [ ] SeeOurMines.com:
-  - [ ] Add affiliate marketing links - see list
+- [x] Ensure 404 - Page Not Found functionality works on all sites
+  - [x] Artsyvisions.com
+  - [x] Groja.com
+  - [x] Seeourminds.com
 
 ### 11.2. Start Social Networking
 
@@ -642,6 +640,14 @@ See which sites, if any, get any response.
 These are not absolutely necessary TODO before starting to publicize these sites,
 but they are super-important:
 
+- [ ] SeeOurMines.com - add affiliate marketing links
+  - [ ] Decide how the links and disclaimer should look
+    - [ ] Seeourminds.com gallery page
+    - [ ] Seeourminds.com image page
+  - [ ] Star Trek and Fawlty Towers
+    - [ ] Gallery page
+    - [ ] Image pages
+  - [ ] See list in notebook
 - [x] New promotional business cards
   - [x] One side: Groja.com/about
   - [x] Other side: ArtsyVisions.com
