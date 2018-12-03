@@ -608,14 +608,16 @@ This is the definitive list of things I need to do before publicizing these site
   - [x] Ensure process sends emails
 - [x] Final review of Fawlty Towers article
 - [x] Margins and centering on seeourminds.com's image page for large screens need work
-- [ ] Reconcile any differences between current versions of settings.py and what's in RCS
-  - [ ] artsyvisions.com
-  - [ ] groja.com
-  - [ ] seeourminds.com
+- [x] Reconcile any differences between current versions of settings.py and what's in RCS
+  - [x] Artsyvisions.com
+  - [x] Groja.com
+  - [x] Seeourminds.com
 - [ ] Ensure 404 - Page Not Found functionality works on all sites
-  - [ ] artsyvisions.com
-  - [ ] groja.com
-  - [ ] seeourminds.com
+  - [ ] Artsyvisions.com
+  - [ ] Groja.com
+  - [ ] Seeourminds.com
+- [ ] SeeOurMines.com:
+  - [ ] Add affiliate marketing links - see list
 
 ### 11.2. Start Social Networking
 
@@ -677,5 +679,5 @@ Once all three sites are stable, split time between the following tasks:
 - [ ] Groja.com:
   - [ ] Should be ok as-is for awhile
 - [ ] SeeOurMines.com:
-  - [ ] Add affiliate marketing links - see list
   - [ ] Soon: Firefly!
+
