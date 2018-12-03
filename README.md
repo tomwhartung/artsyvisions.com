@@ -607,16 +607,39 @@ This is the definitive list of things I need to do before publicizing these site
 - [x] Conversion tests:
   - [x] Ensure process sends emails
 - [x] Final review of Fawlty Towers article
+- [x] Margins and centering on seeourminds.com's image page for large screens need work
+- [ ] Reconcile any differences between current versions of settings.py and what's in RCS
+  - [ ] artsyvisions.com
+  - [ ] groja.com
+  - [ ] seeourminds.com
+- [ ] Ensure 404 - Page Not Found functionality works on all sites
+  - [ ] artsyvisions.com
+  - [ ] groja.com
+  - [ ] seeourminds.com
 
-### 11.2. Needed ASAP
+### 11.2. Start Social Networking
+
+Time to start updating social networking sites!
+
+- [ ] Review sequence of icons appearing in menus on each of my sites
+- [ ] **Do NOT spend too much time on any single site at this time**
+
+Minimum tasks TODO for each social networking site:
+
+- [ ] Refine profiles on each social networking site
+  - [ ] Consider researching how to increase the SEO of profiles on each site
+- [ ] Join groups, follow people, etc. as seems reasonable
+  - [ ] Be mindful and avoid getting distracted, etc.
+- [ ] Announce launch of ArtsyVisions.com on each site
+- [ ] Post at least one or two links to articles on ArtsyVisions.com on each site
+
+See which sites, if any, get any response.
+
+### 11.3. Technical Changes Needed ASAP
 
 These are not absolutely necessary TODO before starting to publicize these sites,
 but they are super-important:
 
-- [ ] Reconcile any differences between current versions of settings.py and what's in RCS
-- [ ] Need responsive score graphs on seeourminds.com
-- [ ] Ensure 404 - Page Not Found functionality works on all sites
-- [x] Margins and centering on seeourminds.com's image page for large screens need work
 - [x] New promotional business cards
   - [x] One side: Groja.com/about
   - [x] Other side: ArtsyVisions.com
@@ -644,7 +667,7 @@ but they are super-important:
     - Possible to use code similar to that used in groja.com?
   - [ ] Quiz - get saved results - should it send an email?
 
-### 11.3. Ongoing
+### 11.4. Ongoing
 
 Once all three sites are stable, split time between the following tasks:
 
@@ -656,10 +679,3 @@ Once all three sites are stable, split time between the following tasks:
 - [ ] SeeOurMines.com:
   - [ ] Add affiliate marketing links - see list
   - [ ] Soon: Firefly!
-- [ ] Social Networking
-  - [ ] Refine profiles on each site
-    - [ ] Consider researching how to increase the SEO of profiles on each site
-  - [ ] Join groups, follow people, etc. as seems reasonable
-  - [ ] **Do NOT spend too much time on any single site at this time**
-    - [ ] Be mindful and avoid getting distracted, etc.
-  - [ ] Post at least one or two links to articles on ArtsyVisions.com on each site
