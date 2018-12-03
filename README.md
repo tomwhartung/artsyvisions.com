@@ -601,13 +601,11 @@ This is the definitive list of things I need to do before publicizing these site
   - [x] get_your_portrait
   - [x] seeourminds
   - [x] tomwhartung
-- [ ] Test all conversions on seeourminds.com
-  - [ ] Quiz - get results - should it send an email?
-  - [ ] Quiz - save results - definitely should send an email
-  - [ ] Other?
-- [ ] Conversion tests:
-  - [ ] Ensure process sends emails
-  - [ ] Ensure process updates DB
+- [x] Test Quiz on seeourminds.com
+  - [x] Save results - use gmail acct
+  - [x] Get results - access using gmail acct
+- [x] Conversion tests:
+  - [x] Ensure process sends emails
 - [x] Final review of Fawlty Towers article
 
 ### 11.2. Needed ASAP
@@ -630,6 +628,7 @@ but they are super-important:
 - [ ] Making the score on seeourminds.com's image page responsive would also be nice
 - [ ] Check database used by all conversions on groja.com
   - [ ] Ensure current version of DB is backed up
+  - [ ] Ensure process updates DB
     - [ ] avmn
     - [ ] free_offer
     - [ ] get_your_portrait
@@ -637,8 +636,13 @@ but they are super-important:
     - [ ] tomwhartung
 - [ ] Check database used by all conversions on seeourminds.com
   - [ ] Ensure current version of DB is backed up
-  - [ ] Quiz - get results - should it send an email?
+- [ ] Review handling of quiz taking on seeourminds.com
+  - [ ] Quiz - take the quiz - should it send an email?
+    - Probably should (think about it)
   - [ ] Quiz - save results - definitely should send an email
+    - Will need to update the code
+    - Possible to use code similar to that used in groja.com?
+  - [ ] Quiz - get saved results - should it send an email?
 
 ### 11.3. Ongoing
 
