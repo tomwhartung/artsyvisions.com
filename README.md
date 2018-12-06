@@ -617,11 +617,11 @@ This is the definitive list of things I need to do before publicizing these site
   - [x] Groja.com
   - [x] Seeourminds.com
 - [ ] SeeOurMinds.com - add affiliate marketing links
-  - [ ] Decide how the links and disclaimer should look
-    - [ ] Seeourminds.com gallery page
+  - [x] Decide how the links and disclaimer should look
+    - [x] Seeourminds.com gallery page
     - [x] Seeourminds.com image page
-  - [ ] Star Trek
-    - [ ] Gallery page
+  - [x] Star Trek
+    - [x] Gallery page
     - [x] Image pages
   - [ ] Fawlty Towers
     - [ ] Gallery page
