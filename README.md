@@ -616,16 +616,16 @@ This is the definitive list of things I need to do before publicizing these site
   - [x] Artsyvisions.com
   - [x] Groja.com
   - [x] Seeourminds.com
-- [ ] SeeOurMinds.com - add affiliate marketing links
+- [x] SeeOurMinds.com - add affiliate marketing links - Phase I
   - [x] Decide how the links and disclaimer should look
     - [x] Seeourminds.com gallery page
     - [x] Seeourminds.com image page
   - [x] Star Trek
     - [x] Gallery page
     - [x] Image pages
-  - [ ] Fawlty Towers
-    - [ ] Gallery page
-    - [ ] Image pages
+  - [x] Fawlty Towers
+    - [x] Gallery page
+    - [x] Image pages
 
 ### 11.2. Start Social Networking
 
@@ -650,8 +650,9 @@ See which sites, if any, get any response.
 These are not absolutely necessary TODO before starting to publicize these sites,
 but they are super-important:
 
-- [ ] SeeOurMinds.com - continue adding affiliate marketing links
+- [ ] SeeOurMinds.com - continue adding affiliate marketing links - Phase II
   - [ ] See list in notebook
+  - [ ] Always fix pages referred to by stories on ArtsyVisions.com
 - [x] New promotional business cards
   - [x] One side: Groja.com/about
   - [x] Other side: ArtsyVisions.com
