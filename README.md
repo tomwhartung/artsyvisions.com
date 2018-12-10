@@ -650,9 +650,36 @@ See which sites, if any, get any response.
 These are not absolutely necessary TODO before starting to publicize these sites,
 but they are super-important:
 
+- [ ] Copy and update as appropriate articles about these high-priority people and shows:
+  - [ ] Jefferson
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] Hamilton
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] X-Files
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] Woody Allen
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] Roosevelts - ALL
+    - [ ] DVD
+    - [ ] Magazine
+    - [ ] Keirsey E-book
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+- [ ] Finish up and launch the new django version of tomhartung.com
+- [ ] Add TomHartung.com and JooMooWebSites.com to the lists of sites in all legal documents for:
+  - [ ] See TomHartung.com for the preferred sequence
+  - [ ] ArtsyVisions.com
+  - [ ] Groja.com
+  - [ ] SeeOurMinds.com
 - [ ] SeeOurMinds.com - continue adding affiliate marketing links - Phase II
   - [ ] See list in notebook
   - [ ] Always fix pages referred to by stories on ArtsyVisions.com
+- [ ] SeeOurMinds.com image page
+  - [ ] Fix alignment of title and Back button
 - [x] New promotional business cards
   - [x] One side: Groja.com/about
   - [x] Other side: ArtsyVisions.com
@@ -679,6 +706,9 @@ but they are super-important:
     - Will need to update the code
     - Possible to use code similar to that used in groja.com?
   - [ ] Quiz - get saved results - should it send an email?
+- [ ] Update JooMooWebSites.com
+  - [ ] Spend some time re-reading Daniel Pink's book, To Sell Is Human
+  - [ ] Use MDL and Flask
 
 ### 11.4. Ongoing
 
