@@ -76,10 +76,14 @@ a.artsy-btn {
 }
 
 q.dialog,
-q.document-title,
-q.from-book {
+q.document-title {
   font-style: italic;
   font-weight: bold;
+}
+q.from-article,
+q.from-book,
+q.from-document {
+  font-style: italic;
 }
 q.mantra,
 q.slang {
@@ -91,6 +95,7 @@ q.slang {
 }
 .book-title,
 .episode-title,
+.job-title,
 .mental-function,
 .movie-title,
 .series-title {
@@ -166,6 +171,13 @@ li.social-icon {
 .notes-html-inner {
   margin: .5em;
   padding: 1.5em;
+}
+
+blockquote.avs-blockquote {
+  border-left: 5px solid grey;
+  font-size: 110%;
+  font-style: italic;
+  line-height: 2em;
 }
 
 /*
