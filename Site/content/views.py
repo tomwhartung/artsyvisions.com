@@ -8,7 +8,8 @@ Reference:
   (none)
 """
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import redirect
 from django.template import loader
 from django.shortcuts import render
 from django.views.generic.base import View
@@ -64,17 +65,6 @@ def versions(request):
         'python_version': python_version,
         'DJANGO_DEBUG': DJANGO_DEBUG,
         'RUNNING_LOCALLY': RUNNING_LOCALLY,
-    }
-    return HttpResponse(template.render(context, request))
-
-
-def not_found(request, unknown_page='default_unknown_page'):
-
-    """ Load and render the 404 not found template """
-
-    template = loader.get_template('content/404.html')
-    context = {
-        'unknown_page': unknown_page,
     }
     return HttpResponse(template.render(context, request))
 
@@ -213,3 +203,53 @@ def terms_of_service(request):
         'title': title,
     }
     return render(request, template, context)
+
+
+##
+## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+##   Views to suppoert shortcuts e.g., to a specific gallery and 404 not found
+## -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+##
+
+def process_shortcut(request, unknown_page='default_unk_pg_1'):
+
+    """ Process recognized shortcuts, and default to 404 """
+
+    redirect_dict = {
+        'ah': '/visions/story/0060-person-alexander_hamilton',
+        'alexander_hamilton': '/visions/story/0060-person-alexander_hamilton',
+        'er': '/tbd',
+        'eleanor_roosevelt': '/tbd',
+        'fdr': '/tbd',
+        'franklin_roosevelt': '/tbd',
+        'st': '/visions/story/0020-pairs-star_trek-spock_and_mccoy',
+        'star_trek': '/visions/story/0020-pairs-star_trek-spock_and_mccoy',
+        'sw': '/0070-pairs-star_wars-leia_and_han',
+        'tj': '/visions/story/0040-person-thomas_jefferson',
+        'thomas_jefferson': '/visions/story/0040-person-thomas_jefferson',
+        'tr': '/visions/story/0060-person-theodore_roosevelt',
+        'theodore_roosevelt': '/visions/story/0060-person-theodore_roosevelt',
+        'xf': '/visions/story/0050-pairs-x_files-mulder_and_scully',
+        'x-files': '/visions/story/0050-pairs-x_files-mulder_and_scully',
+        'x_files': '/visions/story/0050-pairs-x_files-mulder_and_scully',
+    }
+
+    unk_pg_lc = unknown_page.lower()
+
+    if unk_pg_lc in redirect_dict.keys():
+        redirect_url = redirect_dict[unk_pg_lc]
+    else:
+        redirect_url = '/404/' + unk_pg_lc
+
+    return redirect(redirect_url, unknown_page=unk_pg_lc)
+
+
+def not_found(request, unknown_page='default_unk_pg_2'):
+
+    """ Load and render the 404 not found template """
+
+    template = loader.get_template('content/404.html')
+    context = {
+        'unknown_page': unknown_page,
+    }
+    return HttpResponse(template.render(context, request))
