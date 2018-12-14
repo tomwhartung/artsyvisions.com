@@ -87,6 +87,7 @@ q.from-document {
 }
 q.mantra,
 q.name,
+q.nickname,
 q.slang {
   font-style: italic;
 }
