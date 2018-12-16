@@ -75,8 +75,7 @@ a.artsy-btn {
   margin: 1em .5em 0em .5em;
 }
 
-q.dialog,
-q.document-title {
+q.dialog {
   font-style: italic;
   font-weight: bold;
 }
@@ -92,6 +91,10 @@ q.slang {
   font-style: italic;
 }
 
+.document-title {
+  font-style: italic;
+  font-weight: bold;
+}
 .foreign-term {
   font-style: italic;
 }
