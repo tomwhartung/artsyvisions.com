@@ -651,15 +651,16 @@ These are not absolutely necessary TODO before starting to publicize these sites
 but they are super-important:
 
 - [ ] Copy and update as appropriate articles about these high-priority people and shows:
-  - [ ] Jefferson
-    - [ ] ArtsyVisions.com
-    - [ ] SeeOurMinds.com
-  - [ ] Hamilton
-    - [ ] ArtsyVisions.com
-    - [ ] SeeOurMinds.com
-  - [ ] X-Files
-    - [ ] ArtsyVisions.com
-    - [ ] SeeOurMinds.com
+  - [x] Jefferson
+    - [x] ArtsyVisions.com
+    - [x] SeeOurMinds.com
+  - [x] Hamilton
+    - [x] ArtsyVisions.com
+    - [x] SeeOurMinds.com
+  - [x] X-Files
+    - [x] ArtsyVisions.com
+    - [x] SeeOurMinds.com
+  - [ ] Audrey Horne?
   - [ ] Woody Allen
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
@@ -669,6 +670,9 @@ but they are super-important:
     - [ ] Keirsey E-book
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
+  - [ ] Leia and Han
+  - [ ] Trixie and Shae
+- [ ] Ensure base.html on each site has a meta tag for the description
 - [ ] Finish up and launch the new django version of tomhartung.com
 - [ ] Add TomHartung.com and JooMooWebSites.com to the lists of sites in all legal documents for:
   - [ ] See TomHartung.com for the preferred sequence
