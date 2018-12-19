@@ -645,7 +645,7 @@ Minimum tasks TODO for each social networking site:
 
 See which sites, if any, get any response.
 
-### 11.3. Technical Changes Needed ASAP
+### 11.3. Technical and Content Updates - Phase 1
 
 These are not absolutely necessary TODO before starting to publicize these sites,
 but they are super-important:
@@ -660,10 +660,40 @@ but they are super-important:
   - [x] X-Files
     - [x] ArtsyVisions.com
     - [x] SeeOurMinds.com
-  - [ ] Audrey Horne?
+- [x] Ensure base.html on each site has a meta tag for the description
+  - [x] ArtsyVisions.com
+  - [x] Groja.com
+  - [x] SeeOurMinds.com
+  - [x] TomHartung.com
+- [ ] Finish up an initial version of tomhartung.com and launch the new django version of it
+  - [ ] Minimum of four opinions and four stories selected from the following:
+    - [ ] Hamilton
+    - [ ] Deep Work
+    - [ ] Tech shortage is complete BS
+    - [ ] To Sell Is Human
+    - [ ] Liberal who is just as bad as Trump
+- [ ] Add TomHartung.com and JooMooWebSites.com to the lists of sites in all legal documents for:
+  - [ ] See TomHartung.com for the preferred sequence
+  - [ ] ArtsyVisions.com
+  - [ ] Groja.com
+  - [ ] SeeOurMinds.com
+- [x] New promotional business cards
+  - [x] One side: Groja.com/about
+  - [x] Other side: ArtsyVisions.com
+- [ ] Revisit Google Analytics and refine settings and code as necessary
+  - [ ] Add events for ArtsyVisions.com
+  - [ ] Add events for conversions on Groja.com
+  - [ ] They should be ok, but review GA events for SeeOurMinds.com anyway
+- [ ] SeeOurMinds.com image page
+  - [ ] Fix alignment of title and Back button
+
+### 11.4. Technical and Content Updates - Phase 2
+
+- [ ] Copy and update as appropriate articles about these high-priority people and shows:
   - [ ] Woody Allen
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
+  - [ ] Audrey Horne?
   - [ ] Roosevelts - ALL
     - [ ] DVD
     - [ ] Magazine
@@ -672,27 +702,6 @@ but they are super-important:
     - [ ] SeeOurMinds.com
   - [ ] Leia and Han
   - [ ] Trixie and Shae
-- [ ] Ensure base.html on each site has a meta tag for the description
-- [ ] Finish up and launch the new django version of tomhartung.com
-- [ ] Add TomHartung.com and JooMooWebSites.com to the lists of sites in all legal documents for:
-  - [ ] See TomHartung.com for the preferred sequence
-  - [ ] ArtsyVisions.com
-  - [ ] Groja.com
-  - [ ] SeeOurMinds.com
-- [ ] SeeOurMinds.com - continue adding affiliate marketing links - Phase II
-  - [ ] See list in notebook
-  - [ ] Always fix pages referred to by stories on ArtsyVisions.com
-- [ ] SeeOurMinds.com image page
-  - [ ] Fix alignment of title and Back button
-- [x] New promotional business cards
-  - [x] One side: Groja.com/about
-  - [x] Other side: ArtsyVisions.com
-- [ ] Revisit Google Analytics and refine settings and code as necessary
-  - [ ] Add events for ArtsyVisions.com
-  - [ ] Add events for conversions on Groja.com
-  - [ ] They should be ok, but review GA events for SeeOurMinds.com anyway
-- [ ] Centering the score on seeourminds.com's image page would be nice
-- [ ] Making the score on seeourminds.com's image page responsive would also be nice
 - [ ] Check database used by all conversions on groja.com
   - [ ] Ensure current version of DB is backed up
   - [ ] Ensure process updates DB
@@ -703,6 +712,12 @@ but they are super-important:
     - [ ] tomwhartung
 - [ ] Check database used by all conversions on seeourminds.com
   - [ ] Ensure current version of DB is backed up
+- [ ] SeeOurMinds.com - continue adding affiliate marketing links - Phase II
+  - [ ] See list in notebook
+  - [ ] Always fix pages referred to by stories on ArtsyVisions.com
+- [ ] Changes desired to presentation of the score on seeourminds.com's image page
+  - [ ] Centering the score would be nice
+  - [ ] Making the score responsive would also be nice
 - [ ] Review handling of quiz taking on seeourminds.com
   - [ ] Quiz - take the quiz - should it send an email?
     - Probably should (think about it)
@@ -710,11 +725,14 @@ but they are super-important:
     - Will need to update the code
     - Possible to use code similar to that used in groja.com?
   - [ ] Quiz - get saved results - should it send an email?
-- [ ] Update JooMooWebSites.com
-  - [ ] Spend some time re-reading Daniel Pink's book, To Sell Is Human
-  - [ ] Use MDL and Flask
 
-### 11.4. Ongoing
+### 11.5. Technical and Content Updates - Phase 3
+
+- [ ] Update JooMooWebSites.com
+  - [ ] Use MDL and Flask
+  - [ ] Spend some time re-reading Daniel Pink's book, To Sell Is Human
+
+### 11.6. Ongoing
 
 Once all three sites are stable, split time between the following tasks:
 
