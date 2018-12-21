@@ -650,7 +650,7 @@ See which sites, if any, get any response.
 These are not absolutely necessary TODO before starting to publicize these sites,
 but they are super-important:
 
-- [ ] Copy and update as appropriate articles about these high-priority people and shows:
+- [x] Copy and update as appropriate articles about these high-priority people and shows:
   - [x] Jefferson
     - [x] ArtsyVisions.com
     - [x] SeeOurMinds.com
@@ -665,30 +665,37 @@ but they are super-important:
   - [x] Groja.com
   - [x] SeeOurMinds.com
   - [x] TomHartung.com
-- [ ] Finish up an initial version of tomhartung.com and launch the new django version of it
-  - [ ] Minimum of four opinions and four stories selected from the following:
-    - [ ] Hamilton
-    - [ ] Deep Work
-    - [ ] Tech shortage is complete BS
-    - [ ] To Sell Is Human
-    - [ ] Liberal who is just as bad as Trump
-- [ ] Add TomHartung.com and JooMooWebSites.com to the lists of sites in all legal documents for:
-  - [ ] See TomHartung.com for the preferred sequence
-  - [ ] ArtsyVisions.com
-  - [ ] Groja.com
-  - [ ] SeeOurMinds.com
 - [x] New promotional business cards
   - [x] One side: Groja.com/about
   - [x] Other side: ArtsyVisions.com
+- [ ] Finish up an initial version of tomhartung.com and launch the new django version of it
+  - [ ] Minimum of three opinions and three stories selected from the following:
+    - [ ] It's ok to admire both Alexander Hamilton and Thomas Jefferson
+    - [ ] 4-Hour Workweek
+    - [ ] Deep Work
+    - [ ] Fb is the new tobacco
+    - [ ] To Sell Is Human
+    - [ ] Liberal who is just as bad as Trump
+    - [ ] It's possible to belong to a third party, or even no party at all
+    - [ ] Tech shortage is complete BS
+- [ ] Launch the new django version of tomhartung.com
+  - [ ] Publicize on Fb
+  - [ ] Don't expect much, though
 - [ ] Revisit Google Analytics and refine settings and code as necessary
   - [ ] Add events for ArtsyVisions.com
   - [ ] Add events for conversions on Groja.com
   - [ ] They should be ok, but review GA events for SeeOurMinds.com anyway
-- [ ] SeeOurMinds.com image page
-  - [ ] Fix alignment of title and Back button
+  - [ ] Add events for TomHartung.com
+- [ ] Add TomHartung.com and JooMooWebSites.com to the lists of sites in all legal documents for:
+  - [ ] See TomHartung.com for the preferred sequence of sites
+  - [ ] ArtsyVisions.com
+  - [ ] Groja.com
+  - [ ] SeeOurMinds.com
 
 ### 11.4. Technical and Content Updates - Phase 2
 
+- [ ] SeeOurMinds.com image page
+  - [ ] Fix alignment of title and Back button
 - [ ] Copy and update as appropriate articles about these high-priority people and shows:
   - [ ] Woody Allen
     - [ ] ArtsyVisions.com
