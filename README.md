@@ -668,16 +668,12 @@ but they are super-important:
 - [x] New promotional business cards
   - [x] One side: Groja.com/about
   - [x] Other side: ArtsyVisions.com
-- [ ] Finish up an initial version of tomhartung.com and launch the new django version of it
-  - [ ] Minimum of three opinions and three stories selected from the following:
-    - [ ] It's ok to admire both Alexander Hamilton and Thomas Jefferson
-    - [ ] 4-Hour Workweek
-    - [ ] Deep Work
-    - [ ] Fb is the new tobacco
-    - [ ] To Sell Is Human
-    - [ ] Liberal who is just as bad as Trump
-    - [ ] It's possible to belong to a third party, or even no party at all
-    - [ ] Tech shortage is complete BS
+- [x] Finish up an initial version of tomhartung.com
+  - [x] Minimum of three opinions and three stories selected from the following:
+    - [x] It's ok to admire both Alexander Hamilton and Thomas Jefferson
+    - [x] Dear Facebook: You're Not the Boss of Me!
+    - [x] Deep Work
+    - [x] It's possible to belong to a third party, or even no party at all
 - [ ] Launch the new django version of tomhartung.com
   - [ ] Publicize on Fb
   - [ ] Don't expect much, though
