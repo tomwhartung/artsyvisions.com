@@ -1,31 +1,41 @@
 <!doctype html>
 <html lang="en">
 <head>
-  {% block head %}
+ {% block head %}
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>
-    {% if title %}
-      {{ title }}
-    {% else %}
-      {{ 'ArtsyVisions.com' }}
-    {% endif %}
-    </title>
-    <meta name="description"
-          content="Visualizations of personalities from the galleries at SeeOurMinds.com with consistently high-quality stories">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- For pinterest -->
-    <meta name="p:domain_verify" content="35aa8a06547bbbbd2b6e7efab351272e"/>
+   {% if title %}
+    {{ title }}
+   {% else %}
+    {{ 'ArtsyVisions.com' }}
+   {% endif %}
+  </title>
+  <meta name="description"
+        content="Visualizations of personalities from the galleries at SeeOurMinds.com with consistently high-quality stories">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- For pinterest -->
+  <meta name="p:domain_verify" content="35aa8a06547bbbbd2b6e7efab351272e"/>
 
-    <!-- CSS -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    {% load static %}
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'content/css/materialize.min.css' %}">
-    <link rel="stylesheet" href="{% static 'content/css/artsyvisions.css' %}">
-    <link rel="shortcut icon" href="{% static 'content/favicon.ico' %}">
-  {% endblock %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87860502-6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-87860502-6');
+  </script>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'content/css/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'content/css/artsyvisions.css' %}">
+  <link rel="shortcut icon" href="{% static 'content/favicon.ico' %}">
+ {% endblock %}
 </head>
 
 <body>
