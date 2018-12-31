@@ -674,14 +674,14 @@ but they are super-important:
     - [x] Dear Facebook: You're Not the Boss of Me!
     - [x] Deep Work
     - [x] It's possible to belong to a third party, or even no party at all
-- [ ] Launch the new django version of tomhartung.com
-  - [ ] Publicize on Fb
-  - [ ] Don't expect much, though
-- [ ] Revisit Google Analytics and refine settings and code as necessary
-  - [ ] Add events for ArtsyVisions.com
-  - [ ] Add events for conversions on Groja.com
-  - [ ] They should be ok, but review GA events for SeeOurMinds.com anyway
-  - [ ] Add events for TomHartung.com
+- [x] Launch the new django version of tomhartung.com
+  - [x] Publicize on Fb
+  - [x] Don't expect much, though
+- [x] Ensure each site has latest Google Analytics code snippet
+  - [x] Check code snippet for ArtsyVisions.com
+  - [x] Check code snippet for Groja.com
+  - [x] Check code snippet for SeeOurMinds.com
+  - [x] Check code snippet for TomHartung.com
 - [ ] Add TomHartung.com and JooMooWebSites.com to the lists of sites in all legal documents for:
   - [ ] See TomHartung.com for the preferred sequence of sites
   - [ ] ArtsyVisions.com
@@ -734,6 +734,11 @@ but they are super-important:
 - [ ] Update JooMooWebSites.com
   - [ ] Use MDL and Flask
   - [ ] Spend some time re-reading Daniel Pink's book, To Sell Is Human
+- [ ] Revisit Google Analytics and set up event tracking
+  - [ ] Add events for ArtsyVisions.com, if deemed necessary
+  - [ ] Add events for conversions on Groja.com, as necessary
+  - [ ] Review existing event tracking and add additional event tracking for SeeOurMinds.com, as necessary
+  - [ ] Add events for TomHartung.com, if deemed necessary
 
 ### 11.6. Ongoing
 
