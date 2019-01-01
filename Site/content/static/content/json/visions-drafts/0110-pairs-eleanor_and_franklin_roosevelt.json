@@ -1,0 +1,14 @@
+{
+  "title": "Eleanor and Franklin Roosevelt",
+  "subtitle_html": "",
+  "col_classes": "s12 l6",
+  "author": "Thomas Hartung",
+  "date": "Winter 2019",
+  "image_file_name": "eleanor_and_franklin_roosevelt.jpg",
+  "card_content_html": "<p><span class='first-letter'>T</span>hese images show _____ and _____ are _____.</p>",
+  "card_first_person_html": "<p><span class='first-letter'>M</span>y subjective, personal opinion, possibly using the first person or containing a link, if desired.</p>",
+  "disclosure_text": "",
+  "disclosure_btn_text": "",
+  "story_file_name": "eleanor_and_franklin_roosevelt-body.html",
+  "notes_file_name": "eleanor_and_franklin_roosevelt-notes.html"
+}
