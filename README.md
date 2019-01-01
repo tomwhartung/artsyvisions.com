@@ -692,11 +692,17 @@ but they are super-important:
 
 - [ ] SeeOurMinds.com image page
   - [ ] Fix alignment of title and Back button
+- [ ] Add new articles:
+  - [ ] Wild at Heart
+    - [ ] ArtsyVisions.com
+    - [x] SeeOurMinds.com
+  - [ ] Audrey Horne?
+    - [ ] ArtsyVisions.com
+    - [x] SeeOurMinds.com
 - [ ] Copy and update as appropriate articles about these high-priority people and shows:
   - [ ] Woody Allen
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
-  - [ ] Audrey Horne?
   - [ ] Roosevelts - ALL
     - [ ] DVD
     - [ ] Magazine
