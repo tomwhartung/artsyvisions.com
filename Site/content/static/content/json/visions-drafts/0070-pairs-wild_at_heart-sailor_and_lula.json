@@ -1,11 +1,11 @@
 {
   "title": "Sailor and Lula",
-  "subtitle_html": "Are Wild at Heart",
+  "subtitle_html": "Are <span class='movie-title'>Wild at Heart</span>",
   "col_classes": "s12 l6",
   "author": "Tom H.",
   "date": "January 2019",
   "image_file_name": "wild_at_heart-sailor_and_lula.jpg",
-  "card_content_html": "<p><span class='first-letter'>T</span>hese images show _____ and _____ are _____.</p>",
+  "card_content_html": "<p><span class='first-letter'>S</span>ailor Ripley and Lula Fortune are passionately in love.  There's just one problem: Marietta Fortune &mdash; Lula's mom.</p>",
   "card_first_person_html": "<p><span class='first-letter'>M</span>y subjective, personal opinion, possibly using the first person or containing a link, if desired.</p>",
   "disclosure_text": "",
   "disclosure_btn_text": "",
