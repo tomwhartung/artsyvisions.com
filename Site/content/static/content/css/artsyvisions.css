@@ -75,6 +75,19 @@ a.artsy-btn {
   margin: 1em .5em 0em .5em;
 }
 
+/*
+ * Semantic classes
+ */
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+
 q.dialog {
   font-style: italic;
   font-weight: bold;
