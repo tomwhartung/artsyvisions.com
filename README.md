@@ -693,11 +693,8 @@ but they are super-important:
 - [ ] SeeOurMinds.com image page
   - [ ] Fix alignment of title and Back button
 - [ ] Add new articles:
-  - [ ] Wild at Heart
-    - [ ] ArtsyVisions.com
-    - [x] SeeOurMinds.com
-  - [ ] Audrey Horne?
-    - [ ] ArtsyVisions.com
+  - [x] Wild at Heart
+    - [x] ArtsyVisions.com
     - [x] SeeOurMinds.com
 - [ ] Copy and update as appropriate articles about these high-priority people and shows:
   - [ ] Woody Allen
@@ -711,6 +708,12 @@ but they are super-important:
     - [ ] SeeOurMinds.com
   - [ ] Leia and Han
   - [ ] Trixie and Shae
+  - [ ] Audrey Horne?
+    - [ ] ArtsyVisions.com
+    - [x] SeeOurMinds.com
+- [ ] Implement RSS feed
+    - [ ] ArtsyVisions.com
+    - [ ] TomHartung.com?
 - [ ] Check database used by all conversions on groja.com
   - [ ] Ensure current version of DB is backed up
   - [ ] Ensure process updates DB
