@@ -627,25 +627,7 @@ This is the definitive list of things I need to do before publicizing these site
     - [x] Gallery page
     - [x] Image pages
 
-### 11.2. Start Social Networking
-
-Time to start updating social networking sites!
-
-- [ ] Review sequence of icons appearing in menus on each of my sites
-- [ ] **Do NOT spend too much time on any single site at this time**
-
-Minimum tasks TODO for each social networking site:
-
-- [ ] Refine profiles on each social networking site
-  - [ ] Consider researching how to increase the SEO of profiles on each site
-- [ ] Join groups, follow people, etc. as seems reasonable
-  - [ ] Be mindful and avoid getting distracted, etc.
-- [ ] Announce launch of ArtsyVisions.com on each site
-- [ ] Post at least one or two links to articles on ArtsyVisions.com on each site
-
-See which sites, if any, get any response.
-
-### 11.3. Technical and Content Updates - Phase 1
+### 11.2. Technical and Content Updates - Phase 1
 
 These are not absolutely necessary TODO before starting to publicize these sites,
 but they are super-important:
@@ -682,11 +664,29 @@ but they are super-important:
   - [x] Check code snippet for Groja.com
   - [x] Check code snippet for SeeOurMinds.com
   - [x] Check code snippet for TomHartung.com
-- [ ] Add TomHartung.com and JooMooWebSites.com to the lists of sites in all legal documents for:
-  - [ ] See TomHartung.com for the preferred sequence of sites
-  - [ ] ArtsyVisions.com
-  - [ ] Groja.com
-  - [ ] SeeOurMinds.com
+- [x] Add TomHartung.com and JooMooWebSites.com to the lists of sites in all legal documents for:
+  - [x] See TomHartung.com for the preferred sequence of sites
+  - [x] ArtsyVisions.com
+  - [x] Groja.com
+  - [x] SeeOurMinds.com
+
+### 11.3. Start Social Networking
+
+Time to start updating social networking sites!
+
+- [ ] Review sequence of icons appearing in menus on each of my sites
+- [ ] **Do NOT spend too much time on any single site at this time**
+
+Minimum tasks TODO for each social networking site:
+
+- [ ] Refine profiles on each social networking site
+  - [ ] Consider researching how to increase the SEO of profiles on each site
+- [ ] Join groups, follow people, etc. as seems reasonable
+  - [ ] Be mindful and avoid getting distracted, etc.
+- [ ] Announce launch of ArtsyVisions.com on each site
+- [ ] Post at least one or two links to articles on ArtsyVisions.com on each site
+
+See which sites, if any, get any response.
 
 ### 11.4. Technical and Content Updates - Phase 2
 
@@ -697,6 +697,9 @@ but they are super-important:
     - [x] ArtsyVisions.com
     - [x] SeeOurMinds.com
 - [ ] Copy and update as appropriate articles about these high-priority people and shows:
+  - [ ] Populist Politicians
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
   - [ ] Woody Allen
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
