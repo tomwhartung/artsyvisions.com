@@ -1,14 +1,14 @@
 {
-  "title": "",
-  "subtitle_html": "",
+  "title": "Catelyn Stark",
+  "subtitle_html": "Lady of Winterfell",
   "col_classes": "s12 l6",
-  "author": "",
-  "date": "",
-  "image_file_name": "type-person_name-x.jpg",
+  "author": "Tom Hartung",
+  "date": "January, 2019",
+  "image_file_name": "esfj-catelyn_stark-1.jpg",
   "card_content_html": "<p><span class='first-letter'>T</span>his image of _____'s personality shows he/she is _____.</p>",
   "card_first_person_html": "<p><span class='first-letter'>M</span>y subjective, personal opinion, possibly using the first person or containing a link, if desired.</p>",
   "disclosure_text": "",
   "disclosure_btn_text": "",
-  "story_file_name": "person_name-body.html",
-  "notes_file_name": "person_name-notes.html"
+  "story_file_name": "catelyn_stark-body.html",
+  "notes_file_name": "catelyn_stark-notes.html"
 }
