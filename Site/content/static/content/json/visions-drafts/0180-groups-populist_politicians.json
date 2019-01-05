@@ -1,8 +1,8 @@
 {
   "title": "Populist Politicians",
-  "subtitle_html": "Give the People What They Want",
+  "subtitle_html": "Open Challenge to All Politicians",
   "fp_toggle_id": "populist-politicians",
-  "col_classes": "s12 m10 l8",
+  "col_classes": "s12",
   "author": "",
   "date": "",
   "image_file_list": [
@@ -12,9 +12,9 @@
     { "name": "Donald Trump", "image_file_name": "esfj-donald_trump-1.jpg" }
   ],
   "card_content_html": "<p><span class='first-letter'>T</span>hese images of the personalities of Founding Father Patrick Henry, Orson Welles' Charles Foster Kane, the Wire's Clay Davis, and 45<span class='ordinal'>th</span> president of the US Donald Trump all look very similar.</p><p>These spiritual portraits show all four are warm, personal, down-to-earth and outgoing, and &mdash; in some respects, at least &mdash; quite different from many other politicians, who tend to be more logical.</p>",
-  "card_first_person_html": "<p><span class='first-letter'>D</span>etermining someone else's personality type is problematic, but that doesn't stop some of us from trying.</p><p>A glance at the lists of Presidents and their four-letter types on the <a href='http://thesixteentypes.tumblr.com/post/60372674743/personality-types-of-all-us-presidents' title='Link to a page with a list of presidents and their four-letter types at thesixteentypes.tumblr.com' target='_blank'>tumblr</a> and <a href='https://thoughtcatalog.com/lorenzo-jensen-iii/2015/06/44-presidents-1-myers-briggs-test/' title='Link to a page with a list of presidents and their four-letter types at thoughtcatalog.com' target='_blank'>thoughtcatalog</a> sites shows a majority of presidents are logical rather than emotional.  This makes sense because voters &mdash; in general &mdash; are more likely to agree with a person who makes objective, rational, logical decisions than someone who is subjective, irrational, and emotional.</p><p>This vision looks into what makes the people this group similar to each other &mdash; and different from the rest.</p>",
-  "disclosure_text": "",
-  "disclosure_btn_text": "",
+  "card_first_person_html": "<p><span class='first-letter'>D</span>etermining someone else's personality type is problematic, but that doesn't stop some of us from trying.</p><p>It makes sense for leaders and authority figures to be more logical rather than emotional, because in general, voters are more likely to see the reasoning of and hence agree with a person who makes objective, rational, logical decisions than someone who is subjective, irrational, and emotional.</p><p></p>",
+  "disclosure_text": "This page contains one affiliate marketing link at the very very end.  Thank you in advance for supporting this site by purchasing Patrick Henry's biography at no additional cost to you.",
+  "disclosure_btn_text": "How to Support This Site",
   "story_file_name": "populist_politicians-body.html",
   "notes_file_name": "populist_politicians-notes.html"
 }
