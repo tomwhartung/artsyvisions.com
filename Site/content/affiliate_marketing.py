@@ -19,20 +19,18 @@ class AffiliateLinks:
     # Source Link Dictionaries:
     #
     afl_none = {
-        'concerning': '',
-        'psychological_types': '',
-        'point_and_line': '',
-        'gifts_differing': '',
-        'understand_1': '',
-        'new_art_life': '',
-        'understand_spanish': '',
-        'understand_2': '',
-        'presidents': '',
+        'star_trek': '',
+        'fawlty_towers': '',
+        'tj_himself': '',
+        'x_files': '',
+        'ah_chernow': '',
+        'wild_at_heart': '',
     }
 
     #
     # Active Link Dictionaries:
     #
+    afl_content = {}
     afl_button = {}
 
     def __init__(self):
@@ -41,12 +39,16 @@ class AffiliateLinks:
         Assign source links to active links
         """
 
-        self.afl_button['concerning'] = afl_none['concerning']
-        self.afl_button['psychological_types'] = afl_none['psychological_types']
-        self.afl_button['point_and_line'] = afl_none['point_and_line']
-        self.afl_button['gifts_differing'] = afl_none['gifts_differing']
-        self.afl_button['understand_1'] = afl_none['understand_1']
-        self.afl_button['new_art_life'] = afl_none['new_art_life']
-        self.afl_button['understand_spanish'] = afl_none['understand_spanish']
-        self.afl_button['understand_2'] = afl_none['understand_2']
-        self.afl_button['presidents'] = afl_none['presidents']
+        self.afl_content['star_trek'] = afl_none['star_trek']
+        self.afl_content['fawlty_towers'] = afl_none['fawlty_towers']
+        self.afl_content['tj_himself'] = afl_none['tj_himself']
+        self.afl_content['x_files'] = afl_none['x_files']
+        self.afl_content['ah_chernow'] = afl_none['ah_chernow']
+        self.afl_content['wild_at_heart'] = afl_none['wild_at_heart']
+
+        self.afl_button['star_trek'] = afl_none['star_trek']
+        self.afl_button['fawlty_towers'] = afl_none['fawlty_towers']
+        self.afl_button['tj_himself'] = afl_none['tj_himself']
+        self.afl_button['x_files'] = afl_none['x_files']
+        self.afl_button['ah_chernow'] = afl_none['ah_chernow']
+        self.afl_button['wild_at_heart'] = afl_none['wild_at_heart']
