@@ -72,7 +72,9 @@
    </div><!-- .col -->
   </div><!-- .row -->
   <a name="story"></a>
-  {% if visions_story_data.story_html %}
+  {% if visions_story_data.vision_dict.story_template_path %}
+   {% include visions_story_data.vision_dict.story_template_path %}
+  {% elif visions_story_data.story_html %}
    {{ visions_story_data.story_html|safe }}
   {% endif %}
   <a name="footnotes"></a>
