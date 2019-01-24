@@ -9,6 +9,6 @@
   "card_first_person_html": "<p><span class='first-letter'>T</span>he profiles and images of the three main characters in the Original Star Trek series &mdash; Kirk, Spock, and McCoy &mdash; were among the first I did back in the 1980s, so it makes sense they should be among the first posted on this site.</p><p>It is interesting to see how Captain Kirk's image is similar to Mr. Spock's, while showing how Kirk's personality is much less extreme.  Kirk's image shows how his being decisive yet well-rounded helps him be a more sympathetic and <q>human</q> leader than the cold and extremely logical Spock.</p>",
   "disclosure_text": "This page contains affiliate marketing links.  If you use one of them to make a purchase, it helps to support this site, without any additional cost to you.",
   "disclosure_btn_text": "Learn More",
-  "story_file_name": "captain_kirk-body.html",
-  "notes_file_name": "captain_kirk-notes.html"
+  "story_template_path": "content/stories/person/captain_kirk-body.html",
+  "notes_template_path": "content/stories/person/captain_kirk-notes.html"
 }
