@@ -19,12 +19,13 @@ class AffiliateLinks:
     # Source Link Dictionaries:
     #
     afl_none = {
-        'star_trek': '',
+        'star_trek_tos': '',
         'fawlty_towers': '',
         'tj_himself': '',
         'x_files': '',
         'ah_chernow': '',
         'wild_at_heart': '',
+        'xxx': '',
     }
 
     #
@@ -39,16 +40,17 @@ class AffiliateLinks:
         Assign source links to active links
         """
 
-        self.afl_content['star_trek'] = afl_none['star_trek']
+        self.afl_content['star_trek_tos'] = afl_none['star_trek_tos']
         self.afl_content['fawlty_towers'] = afl_none['fawlty_towers']
         self.afl_content['tj_himself'] = afl_none['tj_himself']
         self.afl_content['x_files'] = afl_none['x_files']
         self.afl_content['ah_chernow'] = afl_none['ah_chernow']
         self.afl_content['wild_at_heart'] = afl_none['wild_at_heart']
 
-        self.afl_button['star_trek'] = afl_none['star_trek']
+        self.afl_button['star_trek_tos'] = afl_none['star_trek_tos']
         self.afl_button['fawlty_towers'] = afl_none['fawlty_towers']
         self.afl_button['tj_himself'] = afl_none['tj_himself']
         self.afl_button['x_files'] = afl_none['x_files']
         self.afl_button['ah_chernow'] = afl_none['ah_chernow']
         self.afl_button['wild_at_heart'] = afl_none['wild_at_heart']
+        self.afl_button['xxx'] = afl_none['xxx']
