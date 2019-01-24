@@ -142,10 +142,17 @@ def visions_story(request, vision_file_no_ext=''):
     visions_story_obj = VisionStory(vision_file_no_ext)
     visions_story_data = visions_story_obj.visions_story_data
     title = visions_story_data['vision_dict']['title'] + ' - ArtsyVisions.com'
+
+    from .affiliate_marketing import AffiliateLinks
+    afl_content = AffiliateLinks.afl_content
+    afl_button = AffiliateLinks.afl_content
+
     template = 'content/visions/story.html'
     context = {
         'title': title,
         'visions_story_data': visions_story_data,
+        'afl_content': afl_content,
+        'afl_button': afl_button,
     }
     return render(request, template, context)
 
