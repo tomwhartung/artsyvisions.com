@@ -79,14 +79,18 @@
   {% endif %}
   <a name="footnotes"></a>
   <a name="notes"></a>
-  {% if visions_story_data.notes_html %}
+  {% if visions_story_data.vision_dict.notes_template_path or visions_story_data.notes_html %}
    <div class="row">
     <div class="col s12">
       <div class="notes-html-outer z-depth-3">
        <div class="notes-html-inner hoverable">
         <h5 class="center">Notes</h5>
         <div>
-         {{ visions_story_data.notes_html|safe }}
+         {% if visions_story_data.vision_dict.notes_template_path %}
+          {% include visions_story_data.vision_dict.notes_template_path %}
+         {% elif visions_story_data.notes_html %}
+          {{ visions_story_data.notes_html|safe }}
+         {% endif %}
         </div>
        </div><!-- .notes-html-inner -->
       </div><!-- .notes-html-outer -->
