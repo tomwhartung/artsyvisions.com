@@ -174,8 +174,11 @@ class VisionStory:
             else:
                 story_html_string = '<p>Invalid story_file_name: '
                 story_html_string += '<q>' + '</q></p>'
+        elif 'story_template_path' in self.vision_file_obj.vision_dict:
+            story_html_string = ''
         else:
-            story_html_string = '<p>No story_file_name in the json file.</p>'
+            story_html_string = '<p>There is no story_file_name or ' \
+                + 'story_template_path in the json file.</p>'
 
         return story_html_string
 
@@ -184,15 +187,11 @@ class VisionStory:
 
         """ Read the notes file, if there is one, and return the html """
 
-        notes_html_string = ''
-
         if 'notes_file_name' in self.vision_file_obj.vision_dict:
             file_name = self.vision_file_obj.vision_dict['notes_file_name']
-        else:
-            file_name = ''
-
-        if len(file_name) > 5:
             notes_html_string = self.read_html_file(file_name)
+        else:
+            notes_html_string = ''
 
         return notes_html_string
 
