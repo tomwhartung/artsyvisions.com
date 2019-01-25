@@ -9,6 +9,6 @@
   "card_first_person_html": "<p><span class='first-letter'>A</span>lexander Hamilton's image contrasts strongly with Thomas Jefferson's, and I believe finding a balance between their differences enabled them to envision and create a powerful government dedicated to preserving the freedoms of the individual citizens.</p><p>As a lawyer determined to see the new nation he'd fought for succeed, Hamilton looked at other governments throughout history and sought to build a strong central government.  Ultimately he was able to work with the other Founding Fathers to build a resilient government that nations throughout the world would come to emulate.</p><p>The ability of the United States to withstand tyranical politicians and crises such as the Civil War is largely due to the conscientious work of Alexander Hamilton and the other Founding Fathers.</p>",
   "disclosure_text": "The Resources and Recommendations section near the end of this page contains affiliate marketing links.  Following an affiliate link and then purchasing the item helps us to recoup some of the expenses incurred in running this site.",
   "disclosure_btn_text": "",
-  "story_file_name": "alexander_hamilton-body.html",
-  "notes_file_name": "alexander_hamilton-notes.html"
+  "story_template_path": "content/stories/person/alexander_hamilton-body.html",
+  "notes_template_path": "content/stories/person/alexander_hamilton-notes.html"
 }
