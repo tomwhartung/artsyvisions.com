@@ -15,6 +15,6 @@
   "card_first_person_html": "<p><span class='first-letter'>M</span>onty Python's John Cleese is the creator, writer and star of Fawlty Towers.  In 2000 the British Film Institute placed the show in first place, at the very top on its list of Top 100 TV Shows.</p><p>The entire series consists of just two seasons of six episodes each &mdash; for a total of twelve 30-40 minute episodes &mdash; making it easy for even the busiest people to watch!</p>",
   "disclosure_text": "This page contains affiliate marketing links.  In addition to taking you to the merchant's site, clicking on one of these then making a purchase helps to support this site, without any additional cost to you.",
   "disclosure_btn_text": "More Information",
-  "story_file_name": "fawlty_towers-team_fawlty-body.html",
-  "notes_file_name": "fawlty_towers-team_fawlty-notes.html"
+  "story_template_path": "content/stories/groups/fawlty_towers-team_fawlty-body.html",
+  "notes_template_path": "content/stories/groups/fawlty_towers-team_fawlty-notes.html"
 }
