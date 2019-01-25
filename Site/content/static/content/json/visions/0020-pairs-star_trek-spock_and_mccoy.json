@@ -9,6 +9,6 @@
   "card_first_person_html": "<p><span class='first-letter'>T</span>he profiles and images of the three main characters in the Original Star Trek series &mdash; Mr. Spock, Dr. McCoy, and Captain Kirk &mdash; were among the first I did back in the 1980s, so it makes sense they should be among the first posted on this site.</p><p>In addition to showing the contrast between Spock's coolness and McCoy's warmth, the images show McCoy is both more outgoing and open-minded than Spock.  These qualities help make McCoy seem much more <q>human</q> than Spock, who in contrast can be calculating, a bit aloof, and quite stubborn.</p>",
   "disclosure_text": "This page contains affiliate links.  Clicking on one takes you to the merchant's site and sets a cookie in your browser, identifying you as a visitor coming from this site.  If you ultimately make a purchase, it helps to support this site, without any additional cost to you.",
   "disclosure_btn_text": "Find out More",
-  "story_file_name": "star_trek-spock_and_mccoy-body.html",
-  "notes_file_name": "star_trek-spock_and_mccoy-notes.html"
+  "story_template_path": "content/stories/pairs/star_trek-spock_and_mccoy-body.html",
+  "notes_template_path": "content/stories/pairs/star_trek-spock_and_mccoy-notes.html"
 }
