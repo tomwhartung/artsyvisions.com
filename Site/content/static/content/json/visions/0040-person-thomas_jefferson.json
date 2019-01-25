@@ -9,6 +9,6 @@
   "card_first_person_html": "<p><span class='first-letter'>T</span>homas Jefferson's image contrasts strongly with Alexander Hamilton's, and I believe finding a balance between their differences enabled them to envision and create a powerful government dedicated to preserving the freedoms of the individual citizens.</p><p>As a plantation owner with a variety of interests, Jefferson was determined to build a democratic nation based on the ideals of freedom and individual responsibility.  Ultimately he was able to work with the other Founding Fathers and build a resilient government that nations throughout the world would come to emulate.</p><p>The ability of the United States to withstand tyranical politicians and crises such as the Civil War is largely due to the conscientious work of Thomas Jefferson and the other Founding Fathers.</p>",
   "disclosure_text": "The Resources and Recommendations section near the end of this page contains affiliate marketing links.  Following one of these links then purchasing the item helps support this site.",
   "disclosure_btn_text": "More About These Links",
-  "story_file_name": "thomas_jefferson-body.html",
-  "notes_file_name": "thomas_jefferson-notes.html"
+  "story_template_path": "content/stories/person/thomas_jefferson-body.html",
+  "notes_template_path": "content/stories/person/thomas_jefferson-notes.html"
 }
