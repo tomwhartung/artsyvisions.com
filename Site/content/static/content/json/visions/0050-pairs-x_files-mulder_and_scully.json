@@ -9,6 +9,6 @@
   "card_first_person_html": "<p><span class='first-letter'>A</span>long with the main characters of Star Trek, Special Agents Fox Mulder and Dana Scully were among the first profiles and images I developed back in the 1980s.  Learning and seeing how these opposite personalities look proved &mdash; to me, anyway &mdash; my idea was a good one!</p><p>Of course, I didn't need to talk to very many people to figure out the world at the time was not quite ready for this idea.  Fortunately, though, things have changed quite a bit since then!</p>",
   "disclosure_text": "This page contains affiliate marketing links.  Using one of these links to purchase a recommended product helps cover the cost of creating and maintaining this site.",
   "disclosure_btn_text": "Read the Disclosure",
-  "story_file_name": "x_files-mulder_and_scully-body.html",
-  "notes_file_name": "x_files-mulder_and_scully-notes.html"
+  "story_template_path": "content/stories/pairs/x_files-mulder_and_scully-body.html",
+  "notes_template_path": "content/stories/pairs/x_files-mulder_and_scully-notes.html"
 }
