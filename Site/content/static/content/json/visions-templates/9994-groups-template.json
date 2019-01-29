@@ -13,6 +13,6 @@
   "card_first_person_html": "<p><span class='first-letter'>T</span>he blah blah blah me me me part.</p>",
   "disclosure_text": "",
   "disclosure_btn_text": "",
-  "story_file_name": "team_name-body.html",
-  "notes_file_name": "team_name-notes.html"
+  "story_template_path": "content/stories/groups/team_name-body.html",
+  "notes_template_path": "content/stories/groups/team_name-notes.html"
 }
