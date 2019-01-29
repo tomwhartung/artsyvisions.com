@@ -15,6 +15,6 @@
   "card_first_person_html": "<p><span class='first-letter'>D</span>etermining someone else's personality type is problematic, but that doesn't stop some of us from trying.</p><p>It makes sense for leaders and authority figures to be more logical rather than emotional, because in general, voters are more likely to see the reasoning of and hence agree with a person who makes objective, rational, logical decisions than someone who is subjective, irrational, and emotional.</p><p></p>",
   "disclosure_text": "This page contains one affiliate marketing link at the very very end.  Thank you in advance for supporting this site by purchasing Patrick Henry's biography at no additional cost to you.",
   "disclosure_btn_text": "How to Support This Site",
-  "story_file_name": "populist_politicians-body.html",
-  "notes_file_name": "populist_politicians-notes.html"
+  "story_template_path": "content/stories/groups/populist_politicians-body.html",
+  "notes_template_path": "content/stories/groups/populist_politicians-notes.html"
 }
