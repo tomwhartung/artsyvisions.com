@@ -3,12 +3,12 @@
   "subtitle_html": "Comedian, Filmmaker, Auteur",
   "col_classes": "s12 l6",
   "author": "T. Hartung, INFP",
-  "date": "January, 2019",
+  "date": "Winter, 2019",
   "image_file_name": "infp-woody_allen-1.jpg",
   "card_content_html": "<p><span class='first-letter'>T</span>his image of the personality of Woody Allen, </p>",
   "card_first_person_html": "<p><span class='first-letter'>W</span>oody's image is </p><p></p>",
   "disclosure_text": "This page contains affiliate marketing links.  Following one and purchasing the product helps keep our lights on.",
   "disclosure_btn_text": "All About Affiliate Links",
-  "story_file_name": "woody_allen-body.html",
-  "notes_file_name": "woody_allen-notes.html"
+  "story_template_path": "content/stories/person/woody_allen-body.html",
+  "notes_template_path": "content/stories/person/woody_allen-notes.html"
 }
