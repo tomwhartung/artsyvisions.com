@@ -227,11 +227,14 @@ class VisionStory:
 
         self.vision_file_obj = VisionFile()
         self.vision_file_obj.vision_dict = {}
-        self.vision_file_obj.vision_dict['story_file_name'] = 'body.html'
-        self.vision_file_obj.vision_dict['notes_file_name'] = 'notes.html'
-        self.vision_file_obj.vision_dict['vision_type'] = 'templates'
+        self.vision_file_obj.vision_dict['story_template_path'] \
+            = 'content/stories/index/body.html'
+        self.vision_file_obj.vision_dict['notes_template_path'] \
+            = 'content/stories/index/notes.html'
+        self.vision_file_obj.vision_dict['vision_type'] = 'index'
         self.vision_file_obj.vision_dict['title'] = 'index'
-        self.vision_file_obj.vision_dict['subtitle_html'] = 'html/templates/*'
+        self.vision_file_obj.vision_dict['subtitle_html'] = \
+            'templates/content/stories/index/*'
         self.vision_file_obj.vision_dict['author'] = 'Mr. Templates Person'
         self.vision_file_obj.vision_dict['date'] = '2018'
         self.vision_file_obj.vision_dict['disclosure_text'] = 'Disclosure Text'
