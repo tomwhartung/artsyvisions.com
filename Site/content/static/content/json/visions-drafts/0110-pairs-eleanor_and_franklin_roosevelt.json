@@ -9,6 +9,6 @@
   "card_first_person_html": "<p><span class='first-letter'>M</span>y subjective, personal opinion, possibly using the first person or containing a link, if desired.</p>",
   "disclosure_text": "",
   "disclosure_btn_text": "",
-  "story_file_name": "eleanor_and_franklin_roosevelt-body.html",
-  "notes_file_name": "eleanor_and_franklin_roosevelt-notes.html"
+  "story_template_path": "content/stories/pairs/eleanor_and_franklin_roosevelt-body.html",
+  "notes_template_path": "content/stories/pairs/eleanor_and_franklin_roosevelt-notes.html"
 }
