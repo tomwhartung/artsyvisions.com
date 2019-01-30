@@ -1,14 +1,14 @@
 {
   "title": "Princess Leia and Han Solo",
   "subtitle_html": "The Princess and the Scoundrel",
-  "col_classes": "s12 m6 l6",
+  "col_classes": "s12 l6",
   "author": "Tom W. Hartung",
-  "date": "Fall of 2018",
+  "date": "Winter of 2019",
   "image_file_name": "star_wars-leia_and_han.jpg",
   "card_content_html": "<p><span class='first-letter'>T</span>he colorful image of Princess Leia's personality shows her preferences are very slight, making it easy for people to identify with her.</p><p>The portrait of Han Solo's personality is not quite as colorful as Leia's, showing his preferences are a bit more well-defined than hers, and that he craves new experiences.</p>",
   "card_first_person_html": "<p><span class='first-letter'>T</span>hese spiritual portraits show Leia and Han are, in many ways, opposites.  Although they are both outgoing, Leia is more decisive &mdash; and certainly more logical &mdash; than Han.</p><p>Being able to visualize these differences helps us see how their differences could be the source of both the attraction and the bickering we see early on in their relationship.</p>",
   "disclosure_text": "",
   "disclosure_btn_text": "",
-  "story_file_name": "star_wars-leia_and_han-body.html",
-  "notes_file_name": "star_wars-leia_and_han-notes.html"
+  "story_template_path": "content/stories/pairs/star_wars-leia_and_han-body.html",
+  "notes_template_path": "content/stories/pairs/star_wars-leia_and_han-notes.html"
 }
