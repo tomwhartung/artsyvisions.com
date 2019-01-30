@@ -2,7 +2,7 @@
   "title": "Star Trek's Bridge Crew",
   "subtitle_html": "An Ostensibly Diverse Team",
   "fp_toggle_id": "star-trek-bridge-crew",
-  "col_classes": "s12 m10 l8",
+  "col_classes": "s12 l6",
   "author": "Tom H.",
   "date": "Fall, 2018",
   "image_file_list": [
@@ -15,6 +15,6 @@
   "card_first_person_html": "<p><span class='first-letter'>O</span>n the surface, the crew on the bridge of the starship in the original series is fairly diverse.  Looking at their personalities, however, shows the main characters &mdash; with the exception of the extremely logical Mr. Spock, of course &mdash; are fairly <q>normal.</q>  Psychologically speaking, each character is quite well-suited for their role, and any claim that any one of them is out of place in their position is completely unfounded.</p>",
   "disclosure_text": "As an Amazon Associate I earn from qualifying purchases.",
   "disclosure_btn_text": "About Affiliate Marketing",
-  "story_file_name": "star_trek-bridge_crew-body.html",
-  "notes_file_name": "star_trek-bridge_crew-notes.html"
+  "story_template_path": "content/stories/groups/star_trek-bridge_crew-body.html",
+  "notes_template_path": "content/stories/groups/star_trek-bridge_crew-notes.html"
 }
