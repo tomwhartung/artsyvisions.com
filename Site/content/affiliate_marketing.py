@@ -19,18 +19,19 @@ class AffiliateLinks:
     # Source Link Dictionaries:
     #
     afl_none = {
-        'concerning': '',
-        'star_trek_tos': '',
-        'fawlty_towers': '',
-        'tj_himself': '',
-        'tj_by_burns': '',
-        'x_files': '',
         'ah_chernow': '',
         'ah_ax_video': '',
+        'concerning': '',
+        'fawlty_towers': '',
+        'game_of_thrones': '',
+        'star_trek_tos': '',
+        'tj_himself': '',
+        'tj_by_burns': '',
         'twin_peaks': '',
+        'weirdsville_usa': '',
         'wild_at_heart': '',
         'wild_heart_book': '',
-        'weirdsville_usa': '',
+        'x_files': '',
         'xxx': '',
     }
 
@@ -46,13 +47,21 @@ class AffiliateLinks:
         Assign source links to active links
         """
 
-        self.afl_content['concerning'] = afl_none['concerning']
+        self.afl_content['ah_chernow'] = afl_none['ah_chernow']
+        self.afl_button['ah_chernow'] = afl_none['ah_chernow']
+        self.afl_content['ah_ax_video'] = afl_none['ah_ax_video']
+        self.afl_button['ah_ax_video'] = afl_none['ah_ax_video']
 
-        self.afl_content['star_trek_tos'] = afl_none['star_trek_tos']
-        self.afl_button['star_trek_tos'] = afl_none['star_trek_tos']
+        self.afl_content['concerning'] = afl_none['concerning']
 
         self.afl_content['fawlty_towers'] = afl_none['fawlty_towers']
         self.afl_button['fawlty_towers'] = afl_none['fawlty_towers']
+
+        self.afl_content['game_of_thrones'] = afl_none['game_of_thrones']
+        self.afl_button['game_of_thrones'] = afl_none['game_of_thrones']
+
+        self.afl_content['star_trek_tos'] = afl_none['star_trek_tos']
+        self.afl_button['star_trek_tos'] = afl_none['star_trek_tos']
 
         self.afl_content['tj_himself'] = afl_none['tj_himself']
         self.afl_button['tj_himself'] = afl_none['tj_himself']
@@ -62,10 +71,6 @@ class AffiliateLinks:
         self.afl_content['x_files'] = afl_none['x_files']
         self.afl_button['x_files'] = afl_none['x_files']
 
-        self.afl_content['ah_chernow'] = afl_none['ah_chernow']
-        self.afl_button['ah_chernow'] = afl_none['ah_chernow']
-        self.afl_content['ah_ax_video'] = afl_none['ah_ax_video']
-        self.afl_button['ah_ax_video'] = afl_none['ah_ax_video']
 
         self.afl_content['twin_peaks'] = afl_none['twin_peaks']
         self.afl_button['twin_peaks'] = afl_none['twin_peaks']
