@@ -88,6 +88,12 @@ a.artsy-btn {
   text-decoration: underline;
 }
 
+figcaption.figcaption {
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 q.dialog {
   font-style: italic;
   font-weight: bold;
