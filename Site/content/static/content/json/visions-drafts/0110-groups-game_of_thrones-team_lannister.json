@@ -1,7 +1,8 @@
 {
-  "title": "'Team' Lannister - Lol as If",
+  "title": "\"Team\" Lannister",
   "subtitle_html": "A Seriously Siloed Team",
-  "col_classes": "s12 l6",
+  "fp_toggle_id": "game_of_thrones-team_lannister",
+  "col_classes": "s12",
   "author": "Thomas W. Hartung",
   "date": "February, 2019",
   "image_file_list": [
@@ -9,8 +10,8 @@
     { "name": "Cersei Lannister", "image_file_name": "istj-cersei_lannister-1.jpg" },
     { "name": "Jamie Lannister", "image_file_name": "estj-jamie_lannister-1.jpg" }
   ],
-  "card_content_html": "<p><span class='first-letter'>T</span>.</p>",
-  "card_first_person_html": "<p><span class='first-letter'>T</span>he blah blah blah me me me part.</p>",
+  "card_content_html": "<p><span class='first-letter'>T</span>here are not many teams in <span class='series-title'>Game of Thrones.</span>  In George R. R. Martin's Westeros it's mostly every man for himself &mdash; and if you're a woman, that's just too bad, it's mostly a man's world.</p><p>As an ambitious family, the Lannisters comprise a team, regardless of whether they know it, or like it, or both.</p><p>As a team of three people with similar personalities, their team is far from diverse &mdash; a <q class='slang'>siloed team</q> &mdash; and hence more vulnerable than they realize.</p>",
+  "card_first_person_html": "<p><span class='first-letter'>T</span>ywin is the father of twins Cersei and Jamie, and it's clear that one or both are on track to take Tywin's place when his time comes.  However, despite everyone's best efforts, Tywin makes it clear they are failures in his eyes.  These images show the twins are doing their best to measure up, though!</p><p>Tywin has another son, <b>**fix me**</b> <a href='https://SeeOurMinds.com/gallery/1430-fictional-tv-game_of_thrones-house_lannister/' title='Spiritual portrait of Tyrion Lannister on SeeOurMinds.com' target='_blank'>Tyrion Lannister</a> <b>**fix me**</b>, but they are not close &mdash; which is very sad!  Tyrion's personality complements theirs, and the relatively shallow members of <em><q>Team</q> Lannister</em> would benefit greatly from his insight.</p>",
   "disclosure_text": "",
   "disclosure_btn_text": "",
   "story_template_path": "content/stories/groups/game_of_thrones-team_lannister-body.html",
