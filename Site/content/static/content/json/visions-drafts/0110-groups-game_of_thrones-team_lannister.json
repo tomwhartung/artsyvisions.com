@@ -1,0 +1,18 @@
+{
+  "title": "'Team' Lannister - Lol as If",
+  "subtitle_html": "A Seriously Siloed Team",
+  "col_classes": "s12 l6",
+  "author": "Thomas W. Hartung",
+  "date": "February, 2019",
+  "image_file_list": [
+    { "name": "Tywin Lannister", "image_file_name": "istj-tywin_lannister-1.jpg" },
+    { "name": "Cersei Lannister", "image_file_name": "istj-cersei_lannister-1.jpg" },
+    { "name": "Jamie Lannister", "image_file_name": "estj-jamie_lannister-1.jpg" }
+  ],
+  "card_content_html": "<p><span class='first-letter'>T</span>.</p>",
+  "card_first_person_html": "<p><span class='first-letter'>T</span>he blah blah blah me me me part.</p>",
+  "disclosure_text": "",
+  "disclosure_btn_text": "",
+  "story_template_path": "content/stories/groups/game_of_thrones-team_lannister-body.html",
+  "notes_template_path": "content/stories/groups/game_of_thrones-team_lannister-notes.html"
+}
