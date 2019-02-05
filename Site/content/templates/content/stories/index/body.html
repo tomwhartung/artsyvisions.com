@@ -435,6 +435,9 @@
       </p>
      </div><!-- .col -->
      <div class="col m12">
+
+      <hr>
+      <!-- Single Image Row -->
       <div class="row">
        <div class="col m8">
         <p>
@@ -474,13 +477,16 @@
       </p>
       <p>
       </p>
+
+      <hr>
+      <!-- Stacked Row -->
       <div class="row">
-       <div class="col m9">
+       <div class="col l9">
         <p>
-         Use this markup for embedding an image in the content.
+         Use this markup for embedding two stacked images in the content.
          <br>
-         Text: "col m9".
-         Image: "col m3".
+         Text: "col l9".
+         Images in a single: "col l3".
         </p>
         <p>
          See, the thing about it, Preston, is that you're unbelievably stupid.
@@ -500,7 +506,7 @@
         <p>
         </p>
        </div><!-- .col -->
-       <div class="col m3">
+       <div class="col l3">
         <div class="card-image">
          <figure class="center">
           <a href="/static/content/images/stories/estj-captain_kirk-3.jpg"
@@ -532,6 +538,70 @@
       </p>
       <p>
       </p>
+
+      <hr>
+      <!-- Side-by-side Row -->
+      <p>
+       Use this markup for embedding two images side-by-side in the content.
+       <br>
+       Text: "col l6".
+       First Image: "col l3".
+       Second Image: "col l3".
+       <br>
+       <b>Don't</b> use "col m2" because it will look even worse.
+      </p>
+      <div class="row">
+       <div class="col l6">
+        <p>
+         For people who know the story of this family, seeing these images is so sad.
+         Tyrion has the qualities the others lack &mdash; insight and compassion
+          &mdash; in abundance.
+        </p>
+        <p>
+         With two images side-by-side, we don't need as much text to
+          go along with it.
+        </p>
+        <p>
+        </p>
+       </div><!-- .col -->
+
+       <div class="col l3">
+        <div class="card-image">
+         <figure class="center">
+          <a href="/static/content/images/stories/game_of_thrones/istj-tywin_lannister-1.jpg"
+             title="Click on the image to see a full-size version in a new window or tab"
+             target="_blank">
+           <img src="/static/content/images/stories/game_of_thrones/istj-tywin_lannister-1.jpg"
+                height="100px">
+          </a>
+          <figcaption class="figcaption center">Tywin Lannister</figcaption>
+         </figure>
+        </div><!-- .card-image -->
+       </div><!-- .col -->
+
+       <div class="col l3">
+        <div class="card-image">
+         <figure class="center">
+          <a href="/static/content/images/stories/game_of_thrones/enfp-tyrion_lannister-1.jpg"
+             title="Click on the image to see a full-size version in a new window or tab"
+             target="_blank">
+           <img src="/static/content/images/stories/game_of_thrones/enfp-tyrion_lannister-1.jpg"
+                height="100px">
+          </a>
+          <figcaption class="figcaption center">Tyrion Lannister</figcaption>
+         </figure>
+        </div><!-- .card-image -->
+       </div><!-- .col -->
+      </div><!-- .row -->
+      <p>
+       This text is outside of the nested row does not need to be in a new row.
+       We probably want there to be enough text that it will
+        span the entire width of the page.
+      </p>
+      <p>
+      </p>
+
+      <hr>
       <div class="row">
        <div class="col m10">
         <p>
@@ -542,7 +612,7 @@
         </p>
         <p>
          The image clearly needs more than two columns, else it spills
-          outside of the enclosing card
+          outside of the enclosing card at smaller screen sizes - sloppy!
         </p>
         <p>
          See, the thing about it, Preston, is that you're unbelievably stupid.
