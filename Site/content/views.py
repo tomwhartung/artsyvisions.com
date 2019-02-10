@@ -14,6 +14,7 @@ from django.template import loader
 from django.shortcuts import render
 from django.views.generic.base import View
 
+from .affiliate_marketing import AffiliateLinks
 from .models import VisionsList
 from .models import VisionStory
 
@@ -143,9 +144,9 @@ def visions_story(request, vision_file_no_ext=''):
     visions_story_data = visions_story_obj.visions_story_data
     title = visions_story_data['vision_dict']['title'] + ' - ArtsyVisions.com'
 
-    from .affiliate_marketing import AffiliateLinks
-    afl_content = AffiliateLinks.afl_content
-    afl_button = AffiliateLinks.afl_content
+    afl_links = AffiliateLinks()
+    afl_content = afl_links.afl_content
+    afl_button = afl_links.afl_content
 
     template = 'content/visions/story.html'
     context = {
