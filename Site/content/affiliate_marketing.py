@@ -24,6 +24,7 @@ class AffiliateLinks:
         'concerning_by_kandinsky': 'https://groja.com/conversion/afl_default',
         'fawlty_towers': 'https://groja.com/conversion/afl_default',
         'game_of_thrones': 'https://groja.com/conversion/afl_default',
+        'im_video': 'https://groja.com/conversion/afl_default',
         'star_trek_tos': 'https://groja.com/conversion/afl_default',
         'tj_himself': 'https://groja.com/conversion/afl_default',
         'tj_by_burns': 'https://groja.com/conversion/afl_default',
@@ -41,6 +42,7 @@ class AffiliateLinks:
         'concerning_by_kandinsky': '',
         'fawlty_towers': '',
         'game_of_thrones': '',
+        'im_video': '',
         'star_trek_tos': '',
         'tj_himself': '',
         'tj_by_burns': '',
@@ -77,6 +79,8 @@ class AffiliateLinks:
 
         self.afl_content['game_of_thrones'] = self.afl_default['game_of_thrones']
         self.afl_button['game_of_thrones'] = self.afl_default['game_of_thrones']
+
+        self.afl_content['im_video'] = self.afl_default['im_video']
 
         self.afl_content['star_trek_tos'] = self.afl_default['star_trek_tos']
         self.afl_button['star_trek_tos'] = self.afl_default['star_trek_tos']
