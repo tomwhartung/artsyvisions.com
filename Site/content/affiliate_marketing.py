@@ -21,10 +21,12 @@ class AffiliateLinks:
     afl_default = {
         'ah_by_chernow': 'https://groja.com/conversion/afl_default',
         'ah_ax_video': 'https://groja.com/conversion/afl_default',
+        'citizen_kane': 'https://groja.com/conversion/afl_default',
         'concerning_by_kandinsky': 'https://groja.com/conversion/afl_default',
         'fawlty_towers': 'https://groja.com/conversion/afl_default',
         'game_of_thrones': 'https://groja.com/conversion/afl_default',
         'im_video': 'https://groja.com/conversion/afl_default',
+        'ph_kukla': 'https://groja.com/conversion/afl_default',
         'star_trek_tos': 'https://groja.com/conversion/afl_default',
         'tj_himself': 'https://groja.com/conversion/afl_default',
         'tj_by_burns': 'https://groja.com/conversion/afl_default',
@@ -32,6 +34,7 @@ class AffiliateLinks:
         'weirdsville_usa': 'https://groja.com/conversion/afl_default',
         'wild_at_heart': 'https://groja.com/conversion/afl_default',
         'wild_heart_book': 'https://groja.com/conversion/afl_default',
+        'wire': 'https://groja.com/conversion/afl_default',
         'x_files': 'https://groja.com/conversion/afl_default',
         'xxx': 'https://groja.com/conversion/afl_default',
     }
@@ -39,10 +42,12 @@ class AffiliateLinks:
     afl_none = {
         'ah_by_chernow': '',
         'ah_ax_video': '',
+        'citizen_kane': '',
         'concerning_by_kandinsky': '',
         'fawlty_towers': '',
         'game_of_thrones': '',
         'im_video': '',
+        'ph_kukla': '',
         'star_trek_tos': '',
         'tj_himself': '',
         'tj_by_burns': '',
@@ -50,6 +55,7 @@ class AffiliateLinks:
         'weirdsville_usa': '',
         'wild_at_heart': '',
         'wild_heart_book': '',
+        'wire': '',
         'x_files': '',
         'xxx': '',
     }
@@ -71,6 +77,9 @@ class AffiliateLinks:
         self.afl_content['ah_ax_video'] = self.afl_default['ah_ax_video']
         self.afl_button['ah_ax_video'] = self.afl_default['ah_ax_video']
 
+        self.afl_content['citizen_kane'] = self.afl_default['citizen_kane']
+        self.afl_button['citizen_kane'] = self.afl_default['citizen_kane']
+
         self.afl_content['concerning_by_kandinsky'] \
             = self.afl_default['concerning_by_kandinsky']
 
@@ -82,13 +91,20 @@ class AffiliateLinks:
 
         self.afl_content['im_video'] = self.afl_default['im_video']
 
+        self.afl_content['ph_kukla'] = self.afl_default['ph_kukla']
+        self.afl_button['ph_kukla'] = self.afl_default['ph_kukla']
+
         self.afl_content['star_trek_tos'] = self.afl_default['star_trek_tos']
         self.afl_button['star_trek_tos'] = self.afl_default['star_trek_tos']
+
 
         self.afl_content['tj_himself'] = self.afl_default['tj_himself']
         self.afl_button['tj_himself'] = self.afl_default['tj_himself']
         self.afl_content['tj_by_burns'] = self.afl_default['tj_by_burns']
         self.afl_button['tj_by_burns'] = self.afl_default['tj_by_burns']
+
+        self.afl_content['wire'] = self.afl_default['wire']
+        self.afl_button['wire'] = self.afl_default['wire']
 
         self.afl_content['x_files'] = self.afl_default['x_files']
         self.afl_button['x_files'] = self.afl_default['x_files']
