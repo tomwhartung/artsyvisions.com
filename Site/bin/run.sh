@@ -14,8 +14,8 @@
 #
 export DJANGO_DEBUG=1
 
-export RUNNING_LOCALLY=0
-## export RUNNING_LOCALLY=1
+## export RUNNING_LOCALLY=0
+export RUNNING_LOCALLY=1
 
 export PYTHONPATH="..:${PYTHONPATH}"
 
