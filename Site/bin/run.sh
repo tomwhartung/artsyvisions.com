@@ -14,8 +14,12 @@
 #
 export DJANGO_DEBUG=1
 
-## export RUNNING_LOCALLY=0
-export RUNNING_LOCALLY=1
+#
+#   When RUNNING_LOCALLY=1, the site includes visions from json/visions AND json/visions-drafts
+#   When RUNNING_LOCALLY=0, the site includes visions from json/visions ONLY
+#
+export RUNNING_LOCALLY=0
+## export RUNNING_LOCALLY=1
 
 export PYTHONPATH="..:${PYTHONPATH}"
 
