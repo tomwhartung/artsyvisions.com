@@ -98,13 +98,16 @@ q.dialog {
   font-style: italic;
   font-weight: bold;
 }
+q.mantra {
+  font-style: italic;
+  text-decoration: underline;
+}
 q.from-article,
 q.from-book,
 q.from-document {
   font-style: italic;
 }
 q.expression,
-q.mantra,
 q.name,
 q.nickname,
 q.slang {
@@ -115,12 +118,14 @@ q.slang {
   font-style: italic;
   font-weight: bold;
 }
-.foreign-term {
+.chapter-title,
+.episode-title,
+.foreign-term,
+.job-title,
+.news-outlet {
   font-style: italic;
 }
 .book-title,
-.episode-title,
-.job-title,
 .mental-function,
 .movie-title,
 .series-title {
