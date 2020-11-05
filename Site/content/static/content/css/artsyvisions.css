@@ -108,6 +108,7 @@ q.from-document {
   font-style: italic;
 }
 q.expression,
+q.lyrics,
 q.name,
 q.nickname,
 q.slang {
@@ -122,9 +123,11 @@ q.slang {
 .episode-title,
 .foreign-term,
 .job-title,
-.news-outlet {
+.news-outlet,
+.song-title {
   font-style: italic;
 }
+.album-title,
 .book-title,
 .mental-function,
 .movie-title,
